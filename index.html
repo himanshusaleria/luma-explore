@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luma Event Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f6f7f9;
+    color: #1a1a1a;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Top Nav ─────────────────────────────────────── */
+  .top-nav {
+    background: #fff;
+    border-bottom: 1px solid #ebebeb;
+    padding: 0 24px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+
+  .nav-logo svg { width: 20px; height: 20px; }
+
+  .nav-links {
+    display: flex;
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.1s;
+  }
+  .nav-link:hover { background: #f5f5f5; color: #1a1a1a; }
+  .nav-link.active { background: #f0f0f0; color: #1a1a1a; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-box {
+    padding: 6px 10px 6px 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background: #f9f9f9;
+    color: #1a1a1a;
+    font-size: 13px;
+    font-family: inherit;
+    width: 200px;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 9px center;
+    transition: all 0.15s;
+  }
+  .search-box:focus { border-color: #999; background: #fff; }
+  .search-box::placeholder { color: #aaa; }
+
+  .btn-create {
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ── Hero Banner ─────────────────────────────────── */
+  .hero {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-meta {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+
+  /* ── City Tabs (below hero) ──────────────────────── */
+  .city-bar {
+    background: #fff;
+    padding: 10px 24px;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .city-bar::-webkit-scrollbar { display: none; }
+
+  .city-tab {
+    padding: 5px 14px;
+    border-radius: 100px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #666;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.1s;
+    white-space: nowrap;
+  }
+  .city-tab:hover { border-color: #ccc; color: #1a1a1a; }
+  .city-tab.active {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    color: #fff;
+  }
+
+  .city-tab .count {
+    font-size: 11px;
+    opacity: 0.5;
+    margin-left: 3px;
+  }
+
+  /* ── Main Layout ─────────────────────────────────── */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 24px 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .event-count-label {
+    font-size: 12px;
+    color: #999;
+  }
+
+  /* ── Date Group ──────────────────────────────────── */
+  .date-group {
+    margin-bottom: 4px;
+  }
+
+  .date-group-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding: 14px 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .date-group-title .day-label {
+    color: #1a1a1a;
+  }
+
+  .date-group-title .weekday-label {
+    color: #999;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .date-dot {
+    width: 3px;
+    height: 3px;
+    background: #ccc;
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  /* ── Event Row (Luma style: info left, cover right) ── */
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.1s;
+  }
+  .event-row:hover { opacity: 0.7; }
+  .event-row:last-child { border-bottom: none; }
+
+  .event-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .event-time {
+    font-size: 13px;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  .event-name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1a1a1a;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .event-host-line {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .host-avatar {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    flex-shrink: 0;
+  }
+
+  .event-location-line {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .event-location-line svg {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    color: #bbb;
+  }
+
+  .event-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  .event-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .tag-waitlist { background: #fef3c7; color: #d97706; }
+  .tag-capacity { background: #fee2e2; color: #ef4444; }
+  .tag-online { background: #dcfce7; color: #16a34a; }
+
+  .attendee-bubbles {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .attendee-bubble {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    border: 2px solid #fff;
+    margin-left: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    font-weight: 700;
+    color: #888;
+  }
+  .attendee-bubble:first-child { margin-left: 0; }
+  .attendee-bubble.more { background: #f0f0f0; font-size: 8px; }
+
+  /* Event cover on right side */
+  .event-cover-wrap {
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .event-cover {
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #f0f0f0;
+    display: block;
+  }
+
+  .event-cover-link {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.92);
+    font-size: 10px;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    backdrop-filter: blur(4px);
+  }
+  .event-row:hover .event-cover-link { opacity: 1; }
+
+  /* ── Disclaimer footer ───────────────────────────── */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: #bbb;
+    line-height: 1.5;
+  }
+  .footer a { color: #999; text-decoration: underline; text-underline-offset: 2px; }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 640px) {
+    .hero { height: 180px; }
+    .hero-overlay { padding: 20px 16px; }
+    .hero-title { font-size: 24px; }
+    .main { padding: 16px 16px 60px; }
+    .event-cover { width: 100px; height: 68px; }
+    .search-box { width: 140px; }
+    .nav-links { display: none; }
+    .event-cover-link { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<div class="top-nav">
+  <div class="nav-left">
+    <a class="nav-logo" href="https://luma.com" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link active" href="#">Events</a>
+      <a class="nav-link" href="https://luma.com/discover" target="_blank" rel="noopener">Discover</a>
+    </div>
+  </div>
+  <div class="nav-right">
+    <input type="text" class="search-box" id="search" placeholder="Search events...">
+    <a class="btn-create" href="https://luma.com/create" target="_blank" rel="noopener">Create Event</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="hero">
+  <div class="hero-overlay">
+    <div class="hero-subtitle" id="heroSubtitle">What's Happening In</div>
+    <div class="hero-title" id="heroTitle">Singapore</div>
+    <div class="hero-meta" id="heroMeta"></div>
+  </div>
+</div>
+
+<!-- City Tabs -->
+<div class="city-bar" id="cityBar"></div>
+
+<!-- Main Content -->
+<div class="main">
+  <div class="section-header">
+    <div class="section-title">Events</div>
+    <div class="event-count-label" id="eventCount"></div>
+  </div>
+  <div id="content">
+    <div class="loading" style="text-align:center;padding:60px 0;color:#999;">Loading events...</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  This is an unofficial tool to help you discover more events across cities.<br>
+  All events are hosted on <a href="https://luma.com" target="_blank" rel="noopener">Luma</a>. Click any event to view full details and RSVP on Luma.
+</div>
+
+<script>
+const CITIES = {
+  singapore: {
+    label: 'Singapore',
+    file: 'data/singapore_latest.json',
+    hero: 'https://images.lumacdn.com/discovery/sg-desktop.jpg',
+    count: 30,
+  },
+  bengaluru: {
+    label: 'Bengaluru',
+    file: 'data/bengaluru_latest.json',
+    hero: 'https://images.lumacdn.com/discovery/bengaluru-desktop.jpg',
+    count: 18,
+  },
+};
+
+let allEvents = {};
+let currentCity = 'singapore';
+let searchQuery = '';
+
+async function loadCity(city) {
+  if (allEvents[city]) return allEvents[city];
+  try {
+    const resp = await fetch(CITIES[city].file);
+    const data = await resp.json();
+    allEvents[city] = data;
+    return data;
+  } catch (e) {
+    console.error(`Failed to load ${city}:`, e);
+    return [];
+  }
+}
+
+function formatTime(iso, tz) {
+  const d = new Date(iso);
+  try {
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: tz });
+  } catch {
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  }
+}
+
+function getDayLabel(date) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate()+1);
+  const ed = new Date(date); ed.setHours(0,0,0,0);
+  const weekday = date.toLocaleDateString('en-US', { weekday: 'long' });
+
+  if (ed.getTime() === today.getTime()) return { day: 'Today', weekday };
+  if (ed.getTime() === tomorrow.getTime()) return { day: 'Tomorrow', weekday };
+  return {
+    day: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    weekday
+  };
+}
+
+function groupByDate(events) {
+  const groups = new Map();
+  for (const e of events) {
+    const d = new Date(e.start_at);
+    const key = d.toISOString().split('T')[0];
+    if (!groups.has(key)) groups.set(key, { label: getDayLabel(d), events: [] });
+    groups.get(key).events.push(e);
+  }
+  return groups;
+}
+
+function renderEvents(events) {
+  const content = document.getElementById('content');
+  const filtered = events.filter(e => {
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return (e.name||'').toLowerCase().includes(q)
+      || (e.hosts||'').toLowerCase().includes(q)
+      || (e.sublocality||'').toLowerCase().includes(q)
+      || (e.calendar_name||'').toLowerCase().includes(q);
+  });
+
+  document.getElementById('eventCount').textContent = `${filtered.length} event${filtered.length!==1?'s':''}`;
+
+  if (!filtered.length) {
+    content.innerHTML = '<div style="text-align:center;padding:60px 0;color:#999;">No events found</div>';
+    return;
+  }
+
+  const groups = groupByDate(filtered);
+  let html = '';
+
+  for (const [, group] of groups) {
+    html += `<div class="date-group">`;
+    html += `<div class="date-group-title">
+      <span class="day-label">${group.label.day}</span>
+      <span class="date-dot"></span>
+      <span class="weekday-label">${group.label.weekday}</span>
+    </div>`;
+
+    for (const e of group.events) {
+      const time = e.start_at ? formatTime(e.start_at, e.timezone) : 'TBD';
+      const lumaUrl = e.url || '#';
+      const coverImg = e.cover_url
+        ? `<img class="event-cover" src="${e.cover_url}" alt="" loading="lazy">`
+        : `<div class="event-cover"></div>`;
+
+      // Hosts
+      let hostHtml = '';
+      if (e.hosts) {
+        const hosts = e.hosts.split(',').map(h => h.trim());
+        const display = hosts.slice(0, 2).join(', ');
+        const more = hosts.length > 2 ? `, +${hosts.length - 2}` : '';
+        hostHtml = `<div class="event-host-line">
+          <div class="host-avatar"></div>
+          By ${escHtml(display)}${more}
+        </div>`;
+      }
+
+      // Location
+      let locHtml = '';
+      const locText = e.location_type === 'online' ? 'Online' : (e.sublocality || e.city || '');
+      if (locText) {
+        const pinSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
+        locHtml = `<div class="event-location-line">${pinSvg} ${escHtml(locText)}</div>`;
+      }
+
+      // Tags
+      let tagsHtml = '';
+      if (e.waitlist_active) tagsHtml += '<span class="event-tag tag-waitlist">Waitlist</span>';
+      if (e.location_type === 'online') tagsHtml += '<span class="event-tag tag-online">Online</span>';
+
+      // Attendee bubbles
+      let bubblesHtml = '';
+      if (e.guest_count && e.guest_count > 0) {
+        const show = Math.min(e.guest_count, 5);
+        let b = '';
+        for (let i = 0; i < show; i++) b += `<div class="attendee-bubble"></div>`;
+        if (e.guest_count > 5) b += `<div class="attendee-bubble more">+${e.guest_count - 5}</div>`;
+        bubblesHtml = `<div class="attendee-bubbles">${b}</div>`;
+      }
+
+      html += `
+        <a class="event-row" href="${lumaUrl}" target="_blank" rel="noopener">
+          <div class="event-details">
+            <div class="event-time">${time}</div>
+            <div class="event-name">${escHtml(e.name)}</div>
+            ${hostHtml}
+            ${locHtml}
+            <div class="event-tags">
+              ${tagsHtml}
+              ${bubblesHtml}
+            </div>
+          </div>
+          <div class="event-cover-wrap">
+            ${coverImg}
+            <span class="event-cover-link">View on Luma</span>
+          </div>
+        </a>`;
+    }
+    html += '</div>';
+  }
+
+  content.innerHTML = html;
+}
+
+function escHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function updateHero(city) {
+  const c = CITIES[city];
+  document.getElementById('heroTitle').textContent = c.label;
+  const heroEl = document.getElementById('hero');
+  // Remove old img
+  const oldImg = heroEl.querySelector('.hero-img');
+  if (oldImg) oldImg.remove();
+  // Add hero image
+  const img = document.createElement('img');
+  img.className = 'hero-img';
+  img.src = c.hero;
+  img.alt = c.label;
+  img.onerror = () => { img.style.display = 'none'; };
+  heroEl.insertBefore(img, heroEl.firstChild);
+
+  const count = allEvents[city] ? allEvents[city].length : c.count;
+  document.getElementById('heroMeta').textContent = `${count} upcoming events`;
+}
+
+function renderCityTabs() {
+  const container = document.getElementById('cityBar');
+  container.innerHTML = Object.entries(CITIES).map(([key, val]) => {
+    const active = key === currentCity ? 'active' : '';
+    return `<button class="city-tab ${active}" data-city="${key}">${val.label}</button>`;
+  }).join('');
+
+  container.querySelectorAll('.city-tab').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      currentCity = btn.dataset.city;
+      await loadCity(currentCity);
+      renderCityTabs();
+      updateHero(currentCity);
+      renderEvents(allEvents[currentCity] || []);
+    });
+  });
+}
+
+document.getElementById('search').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  renderEvents(allEvents[currentCity] || []);
+});
+
+(async () => {
+  await Promise.all(Object.keys(CITIES).map(loadCity));
+  renderCityTabs();
+  updateHero(currentCity);
+  renderEvents(allEvents[currentCity] || []);
+})();
+</script>
+
+</body>
+</html>
