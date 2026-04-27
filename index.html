@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luma Event Explorer — Discover Every Event, Not Just the Featured Ones</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZKK4LPJB7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KZKK4LPJB7');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -189,56 +197,24 @@
   /* ── Subscribe Form ──────────────────────────────── */
   .subscribe-form {
     display: flex;
-    gap: 8px;
-    max-width: 420px;
+    justify-content: center;
     margin: 0 auto;
   }
 
-  .subscribe-input {
-    flex: 1;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    font-size: 14px;
-    font-family: inherit;
-    outline: none;
-    backdrop-filter: blur(8px);
-    transition: all 0.15s;
-  }
-  .subscribe-input::placeholder { color: rgba(255,255,255,0.35); }
-  .subscribe-input:focus {
-    border-color: rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.12);
-  }
-
   .subscribe-btn {
-    padding: 10px 20px;
+    padding: 12px 28px;
     border-radius: 10px;
     border: none;
     background: #fff;
     color: #1a1a1a;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.15s;
     white-space: nowrap;
   }
-  .subscribe-btn:hover { background: #f0f0f0; }
-  .subscribe-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-  .subscribe-success {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    color: #34d399;
-    font-size: 14px;
-    font-weight: 500;
-  }
+  .subscribe-btn:hover { background: #f0f0f0; transform: translateY(-1px); }
 
   .subscribe-note {
     font-size: 11px;
@@ -499,15 +475,10 @@
     <div class="hero-desc">
       Luma only shows a handful of featured events. We surface all of them across cities so you never miss what's happening around you.
     </div>
-    <form class="subscribe-form" id="subscribeForm">
-      <input type="email" class="subscribe-input" id="subscribeEmail" placeholder="Enter your email" required>
-      <button type="submit" class="subscribe-btn" id="subscribeBtn">Get Notified</button>
-    </form>
-    <div class="subscribe-success" id="subscribeSuccess">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-      You're in! We'll send you new events weekly.
+    <div class="subscribe-form" id="subscribeForm">
+      <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Get Notified</button>
     </div>
-    <div class="subscribe-note">No spam. Unsubscribe anytime. We'll send a weekly digest of new events in your selected cities.</div>
+    <div class="subscribe-note">Click to send us a quick email and we'll add you to the weekly digest for your city.</div>
   </div>
 </div>
 
@@ -530,48 +501,24 @@
 
 <script>
 const CITIES = {
-  singapore: { label: 'Singapore', file: 'data/singapore_latest.json' },
   bengaluru: { label: 'Bengaluru', file: 'data/bengaluru_latest.json' },
+  singapore: { label: 'Singapore', file: 'data/singapore_latest.json' },
+  sf: { label: 'San Francisco', file: 'data/sf_latest.json' },
+  mumbai: { label: 'Mumbai', file: 'data/mumbai_latest.json' },
+  'new-delhi': { label: 'New Delhi', file: 'data/new-delhi_latest.json' },
 };
 
 let allEvents = {};
-let currentCity = 'singapore';
+let currentCity = 'bengaluru';
 let searchQuery = '';
 
-// ── Email subscription (saves to localStorage for now) ──
-const SUBSCRIBERS_KEY = 'luma_explorer_subscribers';
-
-function getSubscribers() {
-  try { return JSON.parse(localStorage.getItem(SUBSCRIBERS_KEY) || '[]'); }
-  catch { return []; }
+// ── Email subscription via mailto ──
+function openSubscribe() {
+  const cityLabel = CITIES[currentCity].label;
+  const subject = encodeURIComponent(`Add me to mailing list:${cityLabel}`);
+  const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly event digest for ${cityLabel}.\n\nThank you!`);
+  window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
 }
-
-function saveSubscriber(email) {
-  const subs = getSubscribers();
-  if (!subs.includes(email)) {
-    subs.push(email);
-    localStorage.setItem(SUBSCRIBERS_KEY, JSON.stringify(subs));
-  }
-}
-
-document.getElementById('subscribeForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = document.getElementById('subscribeEmail').value.trim();
-  if (!email) return;
-
-  const btn = document.getElementById('subscribeBtn');
-  btn.disabled = true;
-  btn.textContent = 'Subscribing...';
-
-  // Save locally (replace with API call when backend is ready)
-  setTimeout(() => {
-    saveSubscriber(email);
-    document.getElementById('subscribeForm').style.display = 'none';
-    document.getElementById('subscribeSuccess').style.display = 'flex';
-    document.querySelector('.subscribe-note').style.display = 'none';
-    console.log('Subscriber added:', email, 'All subscribers:', getSubscribers());
-  }, 600);
-});
 
 // ── Data loading ──
 async function loadCity(city) {
