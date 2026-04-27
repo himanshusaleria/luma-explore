@@ -1,0 +1,437 @@
+{
+  "cal-TOpA5LAFfuDeFpu": {
+    "name": "Claude Community Events",
+    "slug": "claudecommunity",
+    "added": "2026-04-27T11:35:52.302994+00:00"
+  },
+  "cal-yi89DuFp8oeOEAZ": {
+    "name": "Hustle Fund Events",
+    "slug": "hustlefund",
+    "added": "2026-04-27T11:35:52.304875+00:00"
+  },
+  "cal-yKEcLsUM2G3oXEk": {
+    "name": "Nebius",
+    "slug": "nebius-builders",
+    "added": "2026-04-27T11:35:52.304914+00:00"
+  },
+  "cal-AB5kFmGE7bTGu5P": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.304939+00:00"
+  },
+  "cal-NKiN770f0nAeAFv": {
+    "name": "Startup Grind",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.304955+00:00"
+  },
+  "cal-lYa2810srHvkQRC": {
+    "name": "Modal",
+    "slug": "modal-labs",
+    "added": "2026-04-27T11:35:52.304975+00:00"
+  },
+  "cal-l76607AsonZ1F7F": {
+    "name": "Baseten Events",
+    "slug": "baseten",
+    "added": "2026-04-27T11:35:52.304991+00:00"
+  },
+  "cal-BBo0vKODoP8HXyP": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305005+00:00"
+  },
+  "cal-wrc0xVzHdDyipCn": {
+    "name": "Viaka Events",
+    "slug": "viaka",
+    "added": "2026-04-27T11:35:52.305032+00:00"
+  },
+  "cal-8x55tE86VtAD07z": {
+    "name": "Supabase Community Events",
+    "slug": "supabase_community_events",
+    "added": "2026-04-27T11:35:52.305046+00:00"
+  },
+  "cal-oWJafai4qVBegex": {
+    "name": "Big Brain Lectures - SF",
+    "slug": "Big-Brain-SF",
+    "added": "2026-04-27T11:35:52.305068+00:00"
+  },
+  "cal-S7gDcd9Akzu62RD": {
+    "name": "[SF] Builders Collective",
+    "slug": "sf-builders-collective",
+    "added": "2026-04-27T11:35:52.305087+00:00"
+  },
+  "cal-wOo9bVQxUSPEseb": {
+    "name": "Catalyst Bay",
+    "slug": "catalystbay",
+    "added": "2026-04-27T11:35:52.305105+00:00"
+  },
+  "cal-3AAimKnRVQEId4r": {
+    "name": "All Things Web",
+    "slug": "allthingsweb",
+    "added": "2026-04-27T11:35:52.305120+00:00"
+  },
+  "cal-I5rifmRfyFtKZ4i": {
+    "name": "Asian American Voices Foundation",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305146+00:00"
+  },
+  "cal-ouvsbv3Gj9kvRGD": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305162+00:00"
+  },
+  "cal-izRShKebf6yH30s": {
+    "name": "Snorkel AI Community Events",
+    "slug": "snorkel-ai",
+    "added": "2026-04-27T11:35:52.305179+00:00"
+  },
+  "cal-UfMxOJl3hlqvCM8": {
+    "name": "Unicorner",
+    "slug": "unicorner",
+    "added": "2026-04-27T11:35:52.305193+00:00"
+  },
+  "cal-L8EuVHDQtkwVTxa": {
+    "name": "GMI Cloud",
+    "slug": "gmicloud",
+    "added": "2026-04-27T11:35:52.305213+00:00"
+  },
+  "cal-qRQSPj2xdR4Gmsl": {
+    "name": "Modular",
+    "slug": "modular-ai",
+    "added": "2026-04-27T11:35:52.305227+00:00"
+  },
+  "cal-u8CSkwKEMkKf9F9": {
+    "name": "The Community Collective",
+    "slug": "thecommunitycollectiveevents",
+    "added": "2026-04-27T11:35:52.305240+00:00"
+  },
+  "cal-OgMmaSRvOB1NUGY": {
+    "name": "dstack San Francisco",
+    "slug": "dstack-sf",
+    "added": "2026-04-27T11:35:52.305261+00:00"
+  },
+  "cal-WTwZvrEngtsSvkx": {
+    "name": "Neon",
+    "slug": "neontech",
+    "added": "2026-04-27T11:35:52.305280+00:00"
+  },
+  "cal-TGqTNpY4iyl7XYe": {
+    "name": "Postman Developer Events",
+    "slug": "postman-dev-events",
+    "added": "2026-04-27T11:35:52.305298+00:00"
+  },
+  "cal-Dx4zEy3RMwB5hlr": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305317+00:00"
+  },
+  "cal-pXMLqU05Slt3XYm": {
+    "name": "South Bay Systems",
+    "slug": "southbaysystems",
+    "added": "2026-04-27T11:35:52.305329+00:00"
+  },
+  "cal-3pjUoPJ7xfaPj9o": {
+    "name": "Circleback Events",
+    "slug": "circlebackai",
+    "added": "2026-04-27T11:35:52.305345+00:00"
+  },
+  "cal-twiOosdGMMY66DI": {
+    "name": "tiat (the intersection of art & technology)",
+    "slug": "tiat",
+    "added": "2026-04-27T11:35:52.305366+00:00"
+  },
+  "cal-EmDgE5KIVBHgKiW": {
+    "name": "Akash Community Events",
+    "slug": "akashnetworkevents",
+    "added": "2026-04-27T11:35:52.305386+00:00"
+  },
+  "cal-7Q5A70Bz5Idxopu": {
+    "name": "Google DeepMind",
+    "slug": "deepmind",
+    "added": "2026-04-27T11:35:52.305398+00:00"
+  },
+  "cal-7e3UHJX4UgCZaoW": {
+    "name": "Local Economy",
+    "slug": "localeconomy",
+    "added": "2026-04-27T11:35:52.305423+00:00"
+  },
+  "cal-20hTcPR3DQ1SKUj": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305437+00:00"
+  },
+  "cal-vH0avsiSKkbUthy": {
+    "name": "Read in the park \ud83d\udcda",
+    "slug": "readinthepark",
+    "added": "2026-04-27T11:35:52.305469+00:00"
+  },
+  "cal-OjsOmzMIOr5LDix": {
+    "name": "Bay Area A Cappella",
+    "slug": "acahub",
+    "added": "2026-04-27T11:35:52.305487+00:00"
+  },
+  "cal-oOBz9Y16qzmpxg2": {
+    "name": "mahjong.mami",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305501+00:00"
+  },
+  "cal-kCqjMUlXxYm4C1u": {
+    "name": "That Art Party",
+    "slug": "thatartparty",
+    "added": "2026-04-27T11:35:52.305518+00:00"
+  },
+  "cal-K6VNg8ez4q79WJg": {
+    "name": "SF Game Development",
+    "slug": "sfgamedevelopment",
+    "added": "2026-04-27T11:35:52.305531+00:00"
+  },
+  "cal-Ve0M7LoDOpdnF3z": {
+    "name": "South Park Commons",
+    "slug": "southparkcommons-events",
+    "added": "2026-04-27T11:35:52.305563+00:00"
+  },
+  "cal-mgPuSIGV2Ur9hpR": {
+    "name": "San Francisco Small Business Week 2026",
+    "slug": "sfsbw2026",
+    "added": "2026-04-27T11:35:52.305580+00:00"
+  },
+  "cal-E77CGDBvOMJvycX": {
+    "name": "Pathway",
+    "slug": "pathway.com",
+    "added": "2026-04-27T11:35:52.305597+00:00"
+  },
+  "cal-OvN4uztvSHHp6t1": {
+    "name": "Apify Events",
+    "slug": "apify",
+    "added": "2026-04-27T11:35:52.305627+00:00"
+  },
+  "cal-9ayUEmrnbmiwqPh": {
+    "name": "Daxe Calendar",
+    "slug": "daxe",
+    "added": "2026-04-27T11:35:52.305645+00:00"
+  },
+  "cal-mJEPpUBzj1x7Rqr": {
+    "name": "Heavybit Events",
+    "slug": "heavybit",
+    "added": "2026-04-27T11:35:52.305664+00:00"
+  },
+  "cal-EHvDh6vhawZP9k8": {
+    "name": "Agentic + AI Observability",
+    "slug": "AgenticAIObservability",
+    "added": "2026-04-27T11:35:52.305699+00:00"
+  },
+  "cal-PE4mtChUkOcaLla": {
+    "name": "Workato Developer Events",
+    "slug": "workatodevs",
+    "added": "2026-04-27T11:35:52.305713+00:00"
+  },
+  "cal-cpKxSl3b8oZHxVY": {
+    "name": "Imbue Events",
+    "slug": "imbue_ai",
+    "added": "2026-04-27T11:35:52.305726+00:00"
+  },
+  "cal-tFAzNGOZ9xn6kT2": {
+    "name": "SF Hardware Meetup",
+    "slug": "sf-hardware-meetup",
+    "added": "2026-04-27T11:35:52.305739+00:00"
+  },
+  "cal-73npgAGiXlXPWTm": {
+    "name": "Anchor Events",
+    "slug": "AnalystConnect",
+    "added": "2026-04-27T11:35:52.305753+00:00"
+  },
+  "cal-tN4xy3r4rk6G9TN": {
+    "name": "MakerMods Robotics",
+    "slug": "makermods",
+    "added": "2026-04-27T11:35:52.305770+00:00"
+  },
+  "cal-2RzLBdd4W0L5YLD": {
+    "name": "Learners",
+    "slug": "learners",
+    "added": "2026-04-27T11:35:52.305785+00:00"
+  },
+  "cal-0O61Lnas6DJ1Xqd": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305799+00:00"
+  },
+  "cal-XqDIe2oUVLcybKK": {
+    "name": "Fin",
+    "slug": "fin",
+    "added": "2026-04-27T11:35:52.305837+00:00"
+  },
+  "cal-uRHzehffAetGMKs": {
+    "name": "SF Longevity",
+    "slug": "SFLongevity",
+    "added": "2026-04-27T11:35:52.305855+00:00"
+  },
+  "cal-ZDQrtBgbNzSJZkh": {
+    "name": "Notion",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305873+00:00"
+  },
+  "cal-vqCPLI4FBPqx0Pe": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305889+00:00"
+  },
+  "cal-ghx2orvtJw9d5Dw": {
+    "name": "FYSK",
+    "slug": "fysk",
+    "added": "2026-04-27T11:35:52.305916+00:00"
+  },
+  "cal-nCQ5ETPHrbVdMQd": {
+    "name": "Bay Area Rust",
+    "slug": "bayarearust",
+    "added": "2026-04-27T11:35:52.305937+00:00"
+  },
+  "cal-h6HBtGHV5PdpxbY": {
+    "name": "Anything",
+    "slug": "anything",
+    "added": "2026-04-27T11:35:52.305952+00:00"
+  },
+  "cal-Z1tslEBMjjCh4fd": {
+    "name": "WorkOS Events",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305965+00:00"
+  },
+  "cal-mqqsxUcYL42wHDX": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305983+00:00"
+  },
+  "cal-u9ljJTp5Iv35WNa": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.305997+00:00"
+  },
+  "cal-FMV6wfJdLGbj7Au": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306013+00:00"
+  },
+  "cal-PKTAt8IpN9ZHTFK": {
+    "name": "Codex SF",
+    "slug": "codex-sf",
+    "added": "2026-04-27T11:35:52.306036+00:00"
+  },
+  "cal-XAEXgeIcIkHKMDH": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306066+00:00"
+  },
+  "cal-FECUhuflDRZbLxi": {
+    "name": "AI Mad Lab",
+    "slug": "aimadlab",
+    "added": "2026-04-27T11:35:52.306097+00:00"
+  },
+  "cal-r9MCQlDkATaFQoW": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306124+00:00"
+  },
+  "cal-UXuaKnJMzHzH64W": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306148+00:00"
+  },
+  "cal-RECcDoH3YZGpLeD": {
+    "name": "Qdrant",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306166+00:00"
+  },
+  "cal-DrJuPzKHjuCP1Af": {
+    "name": "Bubbl social houses for major events",
+    "slug": "letsbubbl",
+    "added": "2026-04-27T11:35:52.306207+00:00"
+  },
+  "cal-jeylSPNEDMkuwMy": {
+    "name": "Worldwide Studios",
+    "slug": "worldwide-studios",
+    "added": "2026-04-27T11:35:52.306254+00:00"
+  },
+  "cal-NF1CPspH4D8VSDp": {
+    "name": "Pilot",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306309+00:00"
+  },
+  "cal-a7fdlFz8rgkYA7t": {
+    "name": "Events by Nes",
+    "slug": "nes",
+    "added": "2026-04-27T11:35:52.306375+00:00"
+  },
+  "cal-02QaeFbIEQAKYVR": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306410+00:00"
+  },
+  "cal-PuFzb115XJDoaYO": {
+    "name": "Bright Data",
+    "slug": "BrightData",
+    "added": "2026-04-27T11:35:52.306433+00:00"
+  },
+  "cal-03Oy7sYPjdCKcja": {
+    "name": "Rootly",
+    "slug": "rootlyhq",
+    "added": "2026-04-27T11:35:52.306489+00:00"
+  },
+  "cal-0miH0VkzT9eIOCo": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306517+00:00"
+  },
+  "cal-UnI4f4BhUDYndI8": {
+    "name": "GLO (Global Entrepreneurs Hub)",
+    "slug": "glo_community",
+    "added": "2026-04-27T11:35:52.306574+00:00"
+  },
+  "cal-enEj9FOgzmSrJAR": {
+    "name": "Raisable",
+    "slug": "raisable",
+    "added": "2026-04-27T11:35:52.306606+00:00"
+  },
+  "cal-JqDqHjtzvmYl1wp": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306658+00:00"
+  },
+  "cal-H8fROD9MfJ3Crj6": {
+    "name": "Don't Die SF",
+    "slug": "dontdiesf",
+    "added": "2026-04-27T11:35:52.306727+00:00"
+  },
+  "cal-OWgi80Cjay4pEZN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306751+00:00"
+  },
+  "cal-fFfd2VzqxjeHqaK": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306766+00:00"
+  },
+  "cal-UYhjekA0U9UijLo": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306800+00:00"
+  },
+  "cal-DLnDn5YJ0jvMlCU": {
+    "name": "Stories By Design",
+    "slug": "storiesbydesign",
+    "added": "2026-04-27T11:35:52.306814+00:00"
+  },
+  "cal-k5fXCUEl81Vr2QZ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306834+00:00"
+  },
+  "cal-qpSoLcrfmHDvuBJ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:35:52.306848+00:00"
+  },
+  "cal-MClaBgTM0tqdJ0Z": {
+    "name": "Meridian",
+    "slug": "meridian.club",
+    "added": "2026-04-27T11:35:52.306868+00:00"
+  }
+}

@@ -19,7 +19,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-izBkr5j9u4rq8tP",
@@ -35,13 +36,14 @@
     "latitude": 19.1305758,
     "longitude": 72.8163178,
     "cover_url": "https://images.lumacdn.com/event-covers/94/cc32ddbb-83ff-403f-a06c-bab43350f565.png",
-    "guest_count": 43,
+    "guest_count": 44,
     "hosts": "Uhtend, Anthony Stephen Mendes",
     "calendar_name": "Uhtend - discover events in Mumbai with a subscription.",
     "calendar_slug": "uhtend",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-OpDwMP9XrxLpupl",
@@ -63,7 +65,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-rpU645jdeqgaCjN",
@@ -85,7 +88,8 @@
     "calendar_slug": "lsegenerate",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-aArb0molG3lAbF9",
@@ -107,7 +111,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-qqSsYnACdKzEYiU",
@@ -129,7 +134,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-w6E4baznX2aixdC",
@@ -151,7 +157,8 @@
     "calendar_slug": "deeptechstars",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-vH73udtx0VYsArp",
@@ -173,6 +180,7 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   }
 ]

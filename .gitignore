@@ -3,3 +3,4 @@ data/*_raw_*.json
 data/*_events_*.csv
 *.har
 .DS_Store
+__pycache__/

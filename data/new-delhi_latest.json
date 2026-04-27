@@ -1,27 +1,5 @@
 [
   {
-    "event_id": "evt-dxQm3zLWhUBCqUQ",
-    "name": "Zero to Agent: Noida (W/ Nerds Room)",
-    "url": "https://lu.ma/icexhw4f",
-    "start_at": "2026-04-27T07:30:00.000Z",
-    "end_at": "2026-04-27T11:30:00.000Z",
-    "timezone": "Asia/Kolkata",
-    "location_type": "offline",
-    "city": "Noida",
-    "sublocality": "Sector 136",
-    "country": "India",
-    "latitude": 28.505,
-    "longitude": 77.4,
-    "cover_url": "https://images.lumacdn.com/event-covers/l6/3ebf60db-258a-40c3-992d-e2cbfb0eae1f.png",
-    "guest_count": 0,
-    "hosts": "Nerds Room, Caroline Ciaramitaro, Marc Baiza, Aditya, Nayansh Jain, Yug Rajvanshi, Kumari Vrishti",
-    "calendar_name": "Nerds Room",
-    "calendar_slug": "nerdsroom",
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false
-  },
-  {
     "event_id": "evt-1vL0Ax1TD8IxnKf",
     "name": "A Cohrrt's Networking Evening!",
     "url": "https://lu.ma/rom89n6q",
@@ -41,7 +19,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-VqCbxaYYG8xZht8",
@@ -63,7 +42,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-8wSFInhZa43Z0Zc",
@@ -85,7 +65,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-RTl0K2DveJWrE2L",
@@ -107,7 +88,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-zGA15qOBTYSwFyU",
@@ -129,7 +111,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-FFdn5ph6DRmD7PM",
@@ -151,7 +134,8 @@
     "calendar_slug": "Tencent",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-U6A6bnKw9CdnlFl",
@@ -173,6 +157,7 @@
     "calendar_slug": "spc-india",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   }
 ]

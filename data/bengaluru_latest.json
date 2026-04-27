@@ -19,7 +19,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-xNOMDFHIU7mIK2z",
@@ -41,7 +42,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-tA9awwLdV5DD9c9",
@@ -63,7 +65,31 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-AFOyeksef0evBl5",
+    "name": "HealthTech Mixer: Builders\u2019 Playbook for 0\u21921 in Diagnostics, Therapeutics, and Telehealth",
+    "url": "https://lu.ma/tob3zf9a",
+    "start_at": "2026-04-29T04:30:00.000Z",
+    "end_at": "2026-04-29T07:00:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Yellappa Garden",
+    "country": "India",
+    "latitude": 12.9725,
+    "longitude": 77.62,
+    "cover_url": "https://images.lumacdn.com/event-covers/cu/60cfdc38-99da-4cb6-a623-1c10087520ec.png",
+    "guest_count": 0,
+    "hosts": "IIMA Ventures",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-P53tQ1iRuLmrCvO",
@@ -85,7 +111,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-UDjPF3trgWHjDDH",
@@ -107,7 +134,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-cNLuFOnS1T8hpg6",
@@ -129,7 +157,8 @@
     "calendar_slug": "hsr-founders-club-events",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-vNgjipfmJFD0FA8",
@@ -151,7 +180,8 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-nBAijcc2Gw2HWhE",
@@ -173,7 +203,54 @@
     "calendar_slug": "genai-collective",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-DDx0SEhD8ePkDy9",
+    "name": "Hands-on Workshop & Buildathon: Ship Your First Chrome Extension with AI Tools",
+    "url": "https://lu.ma/ujkpfm4z",
+    "start_at": "2026-05-02T09:30:00.000Z",
+    "end_at": "2026-05-02T13:00:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Indira Nagar 1st Stage",
+    "country": "India",
+    "latitude": 12.978672099999999,
+    "longitude": 77.6449446,
+    "cover_url": "https://images.lumacdn.com/event-covers/wp/37e4783b-74b7-48a0-8a5d-49e197473239.png",
+    "guest_count": 0,
+    "hosts": "Harkirat (Rocket) Singh",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
+  },
+  {
+    "event_id": "evt-K7uy1CDprXqdzqc",
+    "name": "Gemma 4 On-Device Meetup",
+    "url": "https://lu.ma/9t2074yp",
+    "start_at": "2026-05-07T12:00:00.000Z",
+    "end_at": "2026-05-07T16:00:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Mahadevapura",
+    "country": "India",
+    "latitude": 12.9825603,
+    "longitude": 77.6916342,
+    "cover_url": "https://images.lumacdn.com/event-covers/v7/0ef996b4-1111-4b30-ba0f-e4629ba910a6.png",
+    "guest_count": 0,
+    "hosts": "Nilay",
+    "calendar_name": "Google Gemma",
+    "calendar_slug": "gemma-events",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-BiQ5A5DLT8hShow",
@@ -195,7 +272,8 @@
     "calendar_slug": "gemma-events",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-C0aeLR3cdOIkiIK",
@@ -217,7 +295,8 @@
     "calendar_slug": "fof_blr",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-78S0wTWuT9Qnjjd",
@@ -239,7 +318,31 @@
     "calendar_slug": "spc-india",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-Z63eezuLJ9R1V30",
+    "name": "Bitcoin, Through a Designer's Lens",
+    "url": "https://lu.ma/kjlst8g7",
+    "start_at": "2026-05-09T06:30:00.000Z",
+    "end_at": "2026-05-09T11:30:00.000Z",
+    "timezone": "Asia/Calcutta",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "7th Sector",
+    "country": "India",
+    "latitude": 12.9125,
+    "longitude": 77.6325,
+    "cover_url": "https://images.lumacdn.com/event-covers/gg/305e499f-7d87-49a1-a83a-9aa54ef03d67.png",
+    "guest_count": 0,
+    "hosts": "Bitshala Bitspace, Veronika Dorson, paperpsych",
+    "calendar_name": "Bitshala Bitspace Events and Meetups",
+    "calendar_slug": "bitspace",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-i7cR2XpquBmYGYv",
@@ -255,13 +358,14 @@
     "latitude": 12.9125,
     "longitude": 77.6325,
     "cover_url": "https://images.lumacdn.com/event-covers/rd/9cf4b239-69b1-4a88-82a9-5786b43e1d4c.jpg",
-    "guest_count": 89,
+    "guest_count": 91,
     "hosts": "Bitshala Bitspace, madkilla",
     "calendar_name": "Bitshala Bitspace Events and Meetups",
     "calendar_slug": "bitspace",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-qrqmty89XKPyVXN",
@@ -283,7 +387,8 @@
     "calendar_slug": "spc-india",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-06wJWcG3mHuBxTO",
@@ -305,7 +410,54 @@
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-wBjXUYG4zgjRGq8",
+    "name": "Startup Community Meetup by CEDAT",
+    "url": "https://lu.ma/ummya8mz",
+    "start_at": "2026-05-19T12:30:00.000Z",
+    "end_at": "2026-05-19T14:30:00.000Z",
+    "timezone": "Asia/Calcutta",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Nagarjun Enclave",
+    "country": "India",
+    "latitude": 12.9066301,
+    "longitude": 77.5766065,
+    "cover_url": "https://images.lumacdn.com/event-covers/a0/74fd96c8-ec99-4a9d-90ff-ee374b543a04.png",
+    "guest_count": 17,
+    "hosts": "Akash Akku, CEDAT",
+    "calendar_name": "Nexusof - Meetups & Events",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
+  },
+  {
+    "event_id": "evt-FkA83ZiOCOAUKt3",
+    "name": "PLG Breakdown: Duolingo",
+    "url": "https://lu.ma/rtc0ja1k",
+    "start_at": "2026-06-06T05:30:00.000Z",
+    "end_at": "2026-06-06T07:00:00.000Z",
+    "timezone": "Asia/Calcutta",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Cambridge Layout",
+    "country": "India",
+    "latitude": 12.97,
+    "longitude": 77.6275,
+    "cover_url": "https://images.lumacdn.com/event-covers/ha/d65ca89b-8dee-4df4-a74f-70d11846375d.png",
+    "guest_count": 113,
+    "hosts": "Prabhakaran",
+    "calendar_name": "Product Reactor",
+    "calendar_slug": "productreactor",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-DDmUEbajq0m0rFu",
@@ -327,7 +479,31 @@
     "calendar_slug": "productreactor",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-vGhkEDWEY1PhVh9",
+    "name": "TSOW HR Meetup in Bangalore",
+    "url": "https://lu.ma/hr73ft1g",
+    "start_at": "2026-07-18T10:30:00.000Z",
+    "end_at": "2026-07-18T13:30:00.000Z",
+    "timezone": "Asia/Calcutta",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": null,
+    "country": "India",
+    "latitude": 12.9625,
+    "longitude": 77.5775,
+    "cover_url": "https://images.lumacdn.com/event-covers/d3/63192e3a-225d-4935-9899-e52d3aeb827a.png",
+    "guest_count": 0,
+    "hosts": "The Shape of Work by Springworks",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-9RCMPCEvN4CfqKH",
@@ -349,7 +525,31 @@
     "calendar_slug": "magicball",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
+  },
+  {
+    "event_id": "evt-P1Mao6LoVeHRwz6",
+    "name": "Product Professionals Meetup #3 | Product Reactor",
+    "url": "https://lu.ma/ejczj9dx",
+    "start_at": "2026-08-02T04:00:00.000Z",
+    "end_at": "2026-08-02T05:00:00.000Z",
+    "timezone": "Asia/Calcutta",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "Santhosapuram",
+    "country": "India",
+    "latitude": 12.9175,
+    "longitude": 77.6275,
+    "cover_url": "https://images.lumacdn.com/event-covers/3g/721a8e3c-0a2f-49c4-a684-7ac71a5a69a7.png",
+    "guest_count": 6,
+    "hosts": "Coffee with Founders",
+    "calendar_name": "Product Reactor",
+    "calendar_slug": "productreactor",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball"
   },
   {
     "event_id": "evt-ad7IIFc1VqRmHOB",
@@ -371,7 +571,8 @@
     "calendar_slug": "productreactor",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   },
   {
     "event_id": "evt-8UnEB3aD0CxoQ24",
@@ -393,6 +594,7 @@
     "calendar_slug": "founderlocal",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false
+    "waitlist_active": false,
+    "source": "featured"
   }
 ]

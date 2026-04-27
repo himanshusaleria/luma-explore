@@ -367,6 +367,41 @@
   .event-tag { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
   .tag-waitlist { background: #fef3c7; color: #d97706; }
   .tag-online { background: #dcfce7; color: #16a34a; }
+  .tag-hidden { background: #ede9fe; color: #7c3aed; }
+  .tag-featured { background: #f0f0f0; color: #888; }
+
+  /* ── Stats Bar ───────────────────────────────────── */
+  .stats-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .stat-number {
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 18px;
+  }
+
+  .stat-hidden .stat-number { color: #7c3aed; }
+  .stat-hidden { color: #7c3aed; }
+
+  .stat-divider {
+    width: 1px;
+    height: 20px;
+    background: #e5e5e5;
+  }
 
   .guest-count {
     display: flex; align-items: center; gap: 3px;
@@ -471,14 +506,14 @@
       <span class="hero-badge-dot"></span>
       Updated every 2 hours
     </div>
-    <div class="hero-title">Discover every event,<br>not just the featured ones</div>
+    <div class="hero-title">Stop missing hidden events<br>in your city</div>
     <div class="hero-desc">
-      Luma only shows a handful of featured events. We surface all of them across cities so you never miss what's happening around you.
+      Luma shows you a handful of featured events. We uncover the rest — the hidden meetups, invite-only dinners, and niche gatherings you'd never find on your own.
     </div>
     <div class="subscribe-form" id="subscribeForm">
-      <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Get Notified</button>
+      <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Get hidden events in your inbox</button>
     </div>
-    <div class="subscribe-note">Click to send us a quick email and we'll add you to the weekly digest for your city.</div>
+    <div class="subscribe-note">We'll send you a weekly digest of newly discovered events. No spam, unsubscribe anytime.</div>
   </div>
 </div>
 
@@ -496,7 +531,8 @@
 <!-- Footer -->
 <div class="footer">
   This is an unofficial tool to help you discover more events. Not affiliated with or endorsed by Luma.<br>
-  All events are hosted on <a href="https://luma.com" target="_blank" rel="noopener">luma.com</a>. Click any event to view details and RSVP.
+  All events are hosted on <a href="https://luma.com" target="_blank" rel="noopener">luma.com</a>. Click any event to view details and RSVP.<br><br>
+  Want your event listed here? <a href="mailto:himanshusaleria@gmail.com?subject=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!">Email us</a> with your Luma event link.
 </div>
 
 <script>
@@ -512,12 +548,13 @@ let allEvents = {};
 let currentCity = 'bengaluru';
 let searchQuery = '';
 
-// ── Email subscription via mailto ──
+// ── Email subscription via Gmail ──
 function openSubscribe() {
   const cityLabel = CITIES[currentCity].label;
   const subject = encodeURIComponent(`Add me to mailing list:${cityLabel}`);
-  const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly event digest for ${cityLabel}.\n\nThank you!`);
-  window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
+  const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly hidden events digest for ${cityLabel}.\n\nThank you!`);
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`;
+  window.open(gmailUrl, '_blank');
 }
 
 // ── Data loading ──
@@ -575,6 +612,9 @@ function renderEvents(events) {
       || (e.calendar_name||'').toLowerCase().includes(q);
   });
 
+  const hiddenCount = filtered.filter(e => e.source && e.source !== 'featured').length;
+  const featuredCount = filtered.length - hiddenCount;
+
   document.getElementById('eventCount').textContent = `${filtered.length} event${filtered.length!==1?'s':''}`;
   document.getElementById('cityLabel').textContent = ` in ${CITIES[currentCity].label}`;
 
@@ -583,8 +623,15 @@ function renderEvents(events) {
     return;
   }
 
+  // Stats bar
+  let html = `<div class="stats-bar">
+    <div class="stat-item"><span class="stat-number">${filtered.length}</span> total events</div>
+    <div class="stat-divider"></div>
+    <div class="stat-item stat-hidden"><span class="stat-number">${hiddenCount}</span> hidden events uncovered</div>
+  </div>`;
+
   const groups = groupByDate(filtered);
-  let html = '<div class="timeline">';
+  html += '<div class="timeline">';
 
   for (const [, group] of groups) {
     const isToday = group.label.day === 'Today';
@@ -618,6 +665,11 @@ function renderEvents(events) {
       }
 
       let tagsHtml = '';
+      if (e.source && e.source !== 'featured') {
+        tagsHtml += '<span class="event-tag tag-hidden">Hidden</span>';
+      } else {
+        tagsHtml += '<span class="event-tag tag-featured">Featured</span>';
+      }
       if (e.waitlist_active) tagsHtml += '<span class="event-tag tag-waitlist">Waitlist</span>';
       if (e.location_type === 'online') tagsHtml += '<span class="event-tag tag-online">Online</span>';
 
