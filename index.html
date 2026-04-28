@@ -126,6 +126,20 @@
   .search-box:focus { border-color: #999; background: #fff; }
   .search-box::placeholder { color: #aaa; }
 
+  .btn-submit {
+    padding: 7px 14px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .btn-submit:hover { background: #333; }
+
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -494,6 +508,7 @@
   </div>
   <div class="nav-right">
     <input type="text" class="search-box" id="search" placeholder="Search events...">
+    <a class="btn-submit" href="mailto:himanshusaleria@gmail.com?subject=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener">Submit Event</a>
   </div>
 </div>
 
