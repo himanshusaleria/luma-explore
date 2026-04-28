@@ -4,3 +4,4 @@ data/*_events_*.csv
 *.har
 .DS_Store
 __pycache__/
+social_posts.md
