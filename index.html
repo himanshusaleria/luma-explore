@@ -369,6 +369,7 @@
   .tag-online { background: #dcfce7; color: #16a34a; }
   .tag-hidden { background: #ede9fe; color: #7c3aed; }
   .tag-featured { background: #f0f0f0; color: #888; }
+  .tag-category { background: #e0f2fe; color: #0369a1; }
 
   /* ── Stats Bar ───────────────────────────────────── */
   .stats-bar {
@@ -609,7 +610,8 @@ function renderEvents(events) {
     return (e.name||'').toLowerCase().includes(q)
       || (e.hosts||'').toLowerCase().includes(q)
       || (e.sublocality||'').toLowerCase().includes(q)
-      || (e.calendar_name||'').toLowerCase().includes(q);
+      || (e.calendar_name||'').toLowerCase().includes(q)
+      || (e.tags||'').toLowerCase().includes(q);
   });
 
   const hiddenCount = filtered.filter(e => e.source && e.source !== 'featured').length;
@@ -672,6 +674,11 @@ function renderEvents(events) {
       }
       if (e.waitlist_active) tagsHtml += '<span class="event-tag tag-waitlist">Waitlist</span>';
       if (e.location_type === 'online') tagsHtml += '<span class="event-tag tag-online">Online</span>';
+      if (e.tags) {
+        e.tags.split(',').map(t => t.trim()).filter(Boolean).forEach(t => {
+          tagsHtml += `<span class="event-tag tag-category">${escHtml(t)}</span>`;
+        });
+      }
 
       let guestHtml = '';
       if (e.guest_count && e.guest_count > 0) {

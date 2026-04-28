@@ -52,6 +52,10 @@ def flatten_event(entry: dict) -> dict:
 
     source = entry.get("source", "featured")
 
+    # Extract category tags
+    categories = entry.get("categories", [])
+    cat_names = [c.get("name", "") for c in categories if isinstance(c, dict) and c.get("name")]
+
     return {
         "event_id": event.get("api_id", entry.get("api_id", "")),
         "name": event.get("name", ""),
@@ -74,6 +78,7 @@ def flatten_event(entry: dict) -> dict:
         "visibility": event.get("visibility", ""),
         "waitlist_active": entry.get("waitlist_active", False),
         "source": source,
+        "tags": ", ".join(cat_names),
     }
 
 
