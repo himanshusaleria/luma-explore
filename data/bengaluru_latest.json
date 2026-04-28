@@ -20,7 +20,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-xNOMDFHIU7mIK2z",
@@ -43,7 +44,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-tA9awwLdV5DD9c9",
@@ -59,14 +61,15 @@
     "latitude": 12.950979199999999,
     "longitude": 77.644257,
     "cover_url": "https://images.lumacdn.com/event-covers/sy/ae1d049c-8df3-489b-8bd4-b040257f706b.png",
-    "guest_count": 165,
+    "guest_count": 166,
     "hosts": "Rohan Rajpal, Royal Tomar, Prince Kuriakose, Divyansh, Eashita M",
     "calendar_name": "Personal",
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-AFOyeksef0evBl5",
@@ -89,7 +92,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-P53tQ1iRuLmrCvO",
@@ -112,7 +116,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-UDjPF3trgWHjDDH",
@@ -135,7 +140,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-cNLuFOnS1T8hpg6",
@@ -151,14 +157,15 @@
     "latitude": 12.9425,
     "longitude": 77.6975,
     "cover_url": "https://images.lumacdn.com/event-covers/r4/1f0f67dc-062b-416e-9879-913595cd43d7.png",
-    "guest_count": 124,
+    "guest_count": 126,
     "hosts": "HSR Founders Club",
     "calendar_name": "HSR Founders Club - Events Calendar",
     "calendar_slug": "hsr-founders-club-events",
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-vNgjipfmJFD0FA8",
@@ -174,14 +181,15 @@
     "latitude": 12.913355,
     "longitude": 77.638311,
     "cover_url": "https://images.lumacdn.com/event-covers/gh/50c9ea5a-220c-4ef9-9ea4-ec35350d9cbc.png",
-    "guest_count": 41,
+    "guest_count": 39,
     "hosts": "Indians In AI, Deependra Singh",
     "calendar_name": "Indians in AI events",
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-nBAijcc2Gw2HWhE",
@@ -204,7 +212,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-DDx0SEhD8ePkDy9",
@@ -227,7 +236,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-K7uy1CDprXqdzqc",
@@ -250,7 +260,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-BiQ5A5DLT8hShow",
@@ -273,7 +284,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-C0aeLR3cdOIkiIK",
@@ -296,7 +308,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-78S0wTWuT9Qnjjd",
@@ -319,7 +332,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-Z63eezuLJ9R1V30",
@@ -342,7 +356,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture, Crypto"
   },
   {
     "event_id": "evt-i7cR2XpquBmYGYv",
@@ -365,7 +380,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-qrqmty89XKPyVXN",
@@ -388,7 +404,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-06wJWcG3mHuBxTO",
@@ -411,7 +428,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-wBjXUYG4zgjRGq8",
@@ -434,7 +452,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-FkA83ZiOCOAUKt3",
@@ -457,7 +476,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-DDmUEbajq0m0rFu",
@@ -480,7 +500,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-vGhkEDWEY1PhVh9",
@@ -503,7 +524,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-9RCMPCEvN4CfqKH",
@@ -526,7 +548,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-P1Mao6LoVeHRwz6",
@@ -549,7 +572,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-ad7IIFc1VqRmHOB",
@@ -572,7 +596,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-8UnEB3aD0CxoQ24",
@@ -595,6 +620,7 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   }
 ]

@@ -20,7 +20,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Crypto"
   },
   {
     "event_id": "evt-gYEePkFLTQtooVN",
@@ -43,7 +44,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI, Food & Drink"
   },
   {
     "event_id": "evt-1vkwPsJYjujOOa3",
@@ -66,7 +68,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": true,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-1MGYNNZczruWN0e",
@@ -82,14 +85,15 @@
     "latitude": 1.2925,
     "longitude": 103.835,
     "cover_url": "https://images.lumacdn.com/event-covers/sg/824aea11-6b8d-4ea9-b5d8-c982e40e22b8.png",
-    "guest_count": 21,
+    "guest_count": 20,
     "hosts": "Tammy, Nicole Wong, Veronica Teo",
     "calendar_name": "Personal",
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-MGEWrG6V77X7ZpR",
@@ -112,7 +116,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-bC3AsI2B993qIB7",
@@ -135,7 +140,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Fitness, Wellness"
   },
   {
     "event_id": "evt-ZlTtsTZYD5MfFO5",
@@ -158,7 +164,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-Nsv0oJQLXjHH1Jt",
@@ -181,7 +188,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-kBTIqLFwLWabqod",
@@ -204,7 +212,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-rnbB5bamelFiZCu",
@@ -227,7 +236,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-Ro8yoBlcPi88R6W",
@@ -250,7 +260,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-Dzki55gzQW4Wtly",
@@ -273,7 +284,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-XMLA1ldDt6M01zt",
@@ -296,7 +308,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-IxmXghZZ0VLJjNk",
@@ -319,7 +332,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-LAaRfibJXsF1LzH",
@@ -342,7 +356,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-H8BX6hbixhQVtup",
@@ -365,7 +380,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-qpDOMrixvMCYsSH",
@@ -388,7 +404,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI, Tech"
   },
   {
     "event_id": "evt-kZZ4ex0M0HfHpiN",
@@ -411,7 +428,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-oyTznADuNiHgB6b",
@@ -434,7 +452,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-nm5tbP9M8EkFzrB",
@@ -457,7 +476,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Crypto, Food & Drink"
   },
   {
     "event_id": "evt-Y4SLwqpClkAvbz6",
@@ -480,7 +500,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-s9FdjFJXpdCLXEc",
@@ -503,7 +524,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-ITVM6FvyfPQ1g5Y",
@@ -526,7 +548,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-4nKKStWJCVQjYm2",
@@ -549,7 +572,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-uQwOtIs1iQoGchG",
@@ -572,7 +596,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-D30i6xbWz8WZYrU",
@@ -595,7 +620,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-zNrCCiNp86RFzrt",
@@ -618,7 +644,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-vwXqflRICJhI9R2",
@@ -641,7 +668,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-CTJfzuZ6mVUMyuV",
@@ -664,7 +692,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-MASkOJjPrbS9n7Z",
@@ -687,7 +716,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-XwAfpkkZLwjn4Ra",
@@ -710,7 +740,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI, Arts & Culture"
   },
   {
     "event_id": "evt-lCPZ2DqeaJ4hCw7",
@@ -733,7 +764,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-t17jU8izhSzUBU7",
@@ -756,7 +788,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-C9hmZHQmDXcVnrV",
@@ -779,7 +812,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture, Tech"
   },
   {
     "event_id": "evt-aDzgH4KMTbARMU8",
@@ -802,7 +836,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-gUoAEi8lbMBGWHT",
@@ -825,7 +860,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-XbUiaMJ3qfrwLK2",
@@ -848,7 +884,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-R7LdXPCFji10QlQ",
@@ -871,7 +908,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-pXu2NLKIoYN7jb9",
@@ -894,7 +932,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-4Yk88tTBexZ5obM",
@@ -917,7 +956,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-77azkXdh5c0fRf9",
@@ -940,7 +980,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-MUBMCNHgqVQ3hEW",
@@ -963,7 +1004,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-UB5ILTchi2KDvni",
@@ -986,7 +1028,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-P6uCM5FSJ7QEUnK",
@@ -1009,7 +1052,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-j349hnVEbTJ2CfE",
@@ -1032,7 +1076,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-HvQM1jEtfzD3JiJ",
@@ -1055,7 +1100,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-wGXtlbqYxE7gbnZ",
@@ -1078,7 +1124,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Food & Drink"
   },
   {
     "event_id": "evt-PFXfJhHNAarptAF",
@@ -1101,7 +1148,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-DkMZ6da76gA7wnL",
@@ -1124,7 +1172,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture"
   },
   {
     "event_id": "evt-VUuyxgrr6Z1Yn0O",
@@ -1147,7 +1196,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-VVDMdmBNj7G2zKl",
@@ -1170,7 +1220,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-dYDXfQ5UP3VHiGw",
@@ -1193,7 +1244,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-LZMIGrfmpzmRhRh",
@@ -1216,7 +1268,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-FRFGOLsOrwnLwo2",
@@ -1239,7 +1292,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-7lHjoCo6zIQRLz1",
@@ -1262,7 +1316,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Food & Drink, Wellness"
   },
   {
     "event_id": "evt-RLcFRsckpmYEZWh",
@@ -1285,7 +1340,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Food & Drink, Tech"
   },
   {
     "event_id": "evt-YNJh8B5Ti9ZNntA",
@@ -1308,7 +1364,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture, Tech"
   },
   {
     "event_id": "evt-G7ZjNyRxe39i5Yr",
@@ -1331,7 +1388,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-IwbCdQLn9OymfaQ",
@@ -1354,7 +1412,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-FSRI6wgE6BDj4Dm",
@@ -1377,7 +1436,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-vbN9AOVEQGFwoXW",
@@ -1400,7 +1460,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-DkD88S0WD8O5IOp",
@@ -1423,7 +1484,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture"
   },
   {
     "event_id": "evt-vULx7qIfgwORXqm",
@@ -1446,7 +1508,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-pQpDxcKBwHL8mnu",
@@ -1469,7 +1532,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-kcyw6PGCPl2ZfiL",
@@ -1492,7 +1556,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture"
   },
   {
     "event_id": "evt-8pDt0gLPYUuK0cJ",
@@ -1515,7 +1580,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-iYrY7M62E8SWVpA",
@@ -1538,7 +1604,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-FAoseIFdmOGD4gB",
@@ -1561,7 +1628,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI, Fitness, Wellness"
   },
   {
     "event_id": "evt-KqqSmKKLBCPRuJG",
@@ -1584,7 +1652,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-pFVc0eJ3AVszaDK",
@@ -1607,7 +1676,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-g7VFrVpw5Ivv3hD",
@@ -1630,7 +1700,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-fohLoABXDoHvpks",
@@ -1653,7 +1724,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-ZiztGDvhVSgJLZ1",
@@ -1676,7 +1748,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-DdMyNFRIJHM87Zm",
@@ -1699,7 +1772,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Arts & Culture"
   },
   {
     "event_id": "evt-RQOjQlV9LUYcH7s",
@@ -1722,7 +1796,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-GACJHGzce2Nkush",
@@ -1745,7 +1820,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-c4aL2KRx3JOHdAC",
@@ -1768,7 +1844,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-yx5TMJkA5A4WXw1",
@@ -1791,7 +1868,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "Crypto"
   },
   {
     "event_id": "evt-2wd5kXEsaclwef8",
@@ -1814,7 +1892,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-CIup6yYep0IPsxY",
@@ -1837,30 +1916,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
-  },
-  {
-    "event_id": "evt-w3a8an0W752QNfs",
-    "name": "Visit the MBPSports Padel/Pickeball/Tennis Court Space (Marina Square or Suntec City) & 10% Discount",
-    "url": "https://lu.ma/finwcwj3",
-    "start_at": "2028-01-02T14:00:00.000Z",
-    "end_at": "2028-01-03T14:00:00.000Z",
-    "timezone": "Asia/Singapore",
-    "location_type": "offline",
-    "city": "Singapore",
-    "sublocality": "Downtown Core",
-    "country": "Singapore",
-    "latitude": 1.29,
-    "longitude": 103.8575,
-    "cover_url": "https://images.lumacdn.com/event-covers/6p/18bcc1a8-e46c-4d11-92eb-77a23461c276.png",
-    "guest_count": 0,
-    "hosts": "AINight",
-    "calendar_name": "Technology + Agentic AI + Databases",
-    "calendar_slug": null,
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   },
   {
     "event_id": "evt-2RWLbjAChgSZCKk",
@@ -1883,7 +1940,32 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
+  },
+  {
+    "event_id": "evt-w3a8an0W752QNfs",
+    "name": "Visit the MBPSports Padel/Pickeball/Tennis Court Space (Marina Square or Suntec City) & 10% Discount",
+    "url": "https://lu.ma/finwcwj3",
+    "start_at": "2028-01-02T14:00:00.000Z",
+    "end_at": "2028-01-03T14:00:00.000Z",
+    "timezone": "Asia/Singapore",
+    "location_type": "offline",
+    "city": "Singapore",
+    "sublocality": "Downtown Core",
+    "country": "Singapore",
+    "latitude": 1.29,
+    "longitude": 103.8575,
+    "cover_url": "https://images.lumacdn.com/event-covers/6p/18bcc1a8-e46c-4d11-92eb-77a23461c276.png",
+    "guest_count": 0,
+    "hosts": "AINight",
+    "calendar_name": "Technology + Agentic AI + Databases",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": "AI, Fitness"
   },
   {
     "event_id": "evt-LpEUQSSCRCybr6B",
@@ -1906,6 +1988,7 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball"
+    "source": "snowball",
+    "tags": "AI"
   }
 ]

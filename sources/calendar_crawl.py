@@ -4,14 +4,19 @@ Crawl organizer calendars to discover non-featured events.
 For each unique calendar/organizer found in previously fetched events,
 fetch ALL their future events. Then fetch full details for any event
 not already in the known set.
+
+Uses ThreadPoolExecutor for parallel fetching.
 """
 
 import json
 import os
-import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from lib.api import api_get, PAGE_SIZE, REQUEST_DELAY
+from lib.api import api_get, PAGE_SIZE
 from lib.utils import OUTPUT_DIR
+
+# Parallel workers for API calls
+MAX_WORKERS = 10
 
 
 def _fetch_calendar_events(calendar_id: str) -> list[dict]:
@@ -40,32 +45,24 @@ def _fetch_calendar_events(calendar_id: str) -> list[dict]:
             break
 
         cursor = data.get("next_cursor")
-        time.sleep(REQUEST_DELAY)
 
     return all_entries
 
 
-def _fetch_event_detail(event_api_id: str) -> dict | None:
-    """Fetch full details for a single event."""
+def _fetch_event_detail(event_api_id: str) -> tuple[str, dict | None]:
+    """Fetch full details for a single event. Returns (id, detail)."""
     try:
         data = api_get("/event/get", {"event_api_id": event_api_id})
-        return data
+        return (event_api_id, data)
     except Exception:
-        return None
+        return (event_api_id, None)
 
 
 def fetch(place_id: str, bounds: dict | None = None, city: str = "",
           known_entries: list[dict] | None = None) -> list[dict]:
     """Crawl organizer calendars to discover non-featured events.
 
-    Args:
-        place_id: The discover place API ID (unused here but kept for consistent interface).
-        bounds: Geo bounding box for the city. Required for filtering.
-        city: City slug, used to load saved calendar registry.
-        known_entries: Already-fetched entries from other sources, used to
-                       extract calendar IDs and avoid duplicate event fetches.
-
-    Returns a list of newly discovered event entries.
+    Uses parallel fetching for both calendar crawls and event details.
     """
     if not bounds:
         return []
@@ -91,67 +88,74 @@ def fetch(place_id: str, bounds: dict | None = None, city: str = "",
             for cal_id in saved:
                 calendar_ids.add(cal_id)
 
-    print(f"  Snowball: crawling {len(calendar_ids)} organizer calendars...")
+    print(f"  Snowball: crawling {len(calendar_ids)} calendars (parallel)...")
 
-    # Crawl each calendar
+    # ── Phase 1: Crawl all calendars in parallel ──
     new_event_ids = set()
-    for cal_id in calendar_ids:
-        cal_events = _fetch_calendar_events(cal_id)
-        for entry in cal_events:
-            ev = entry.get("event", {})
-            eid = ev.get("api_id", "")
-            if eid and eid not in known_ids and eid not in new_event_ids:
-                new_event_ids.add(eid)
-        time.sleep(REQUEST_DELAY)
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(_fetch_calendar_events, cid): cid for cid in calendar_ids}
+        for future in as_completed(futures):
+            try:
+                cal_events = future.result()
+                for entry in cal_events:
+                    ev = entry.get("event", {})
+                    eid = ev.get("api_id", "")
+                    if eid and eid not in known_ids and eid not in new_event_ids:
+                        new_event_ids.add(eid)
+            except Exception:
+                pass
 
-    print(f"  Snowball: found {len(new_event_ids)} candidate non-featured events")
+    print(f"  Snowball: found {len(new_event_ids)} candidates, fetching details...")
 
-    # Fetch full details for new events and filter by city bounds
+    # ── Phase 2: Fetch event details in parallel ──
     new_entries = []
-    for i, eid in enumerate(new_event_ids):
-        detail = _fetch_event_detail(eid)
-        if not detail:
-            continue
+    checked = 0
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
+        futures = {pool.submit(_fetch_event_detail, eid): eid for eid in new_event_ids}
+        for future in as_completed(futures):
+            checked += 1
+            try:
+                eid, detail = future.result()
+            except Exception:
+                continue
 
-        # Check if event is in the city's geo bounds
-        event = detail.get("event", {})
-        coord = event.get("coordinate") or {}
-        lat = coord.get("latitude")
-        lng = coord.get("longitude")
+            if not detail:
+                continue
 
-        in_bounds = False
-        if lat is not None and lng is not None:
-            in_bounds = (bounds["south"] <= lat <= bounds["north"] and
-                         bounds["west"] <= lng <= bounds["east"])
-        else:
-            # No coordinates — check city name in geo_address_info
-            geo = event.get("geo_address_info") or {}
-            city_name = (geo.get("city") or "").lower()
-            # Skip online-only events with no location
-            if event.get("location_type") == "online":
-                in_bounds = False
+            # Check if event is in the city's geo bounds
+            event = detail.get("event", {})
+            coord = event.get("coordinate") or {}
+            lat = coord.get("latitude")
+            lng = coord.get("longitude")
 
-        if in_bounds:
-            # Convert to the same format as featured entries
-            entry = {
-                "api_id": eid,
-                "event": event,
-                "calendar": detail.get("calendar", {}),
-                "categories": detail.get("categories", []),
-                "hosts": detail.get("hosts", []),
-                "guest_count": detail.get("guest_count"),
-                "start_at": event.get("start_at"),
-                "cover_image": None,
-                "ticket_info": detail.get("ticket_info"),
-                "featured_guests": [],
-                "waitlist_active": False,
-                "source": "snowball",
-            }
-            new_entries.append(entry)
+            in_bounds = False
+            if lat is not None and lng is not None:
+                in_bounds = (bounds["south"] <= lat <= bounds["north"] and
+                             bounds["west"] <= lng <= bounds["east"])
+            else:
+                geo = event.get("geo_address_info") or {}
+                if event.get("location_type") == "online":
+                    in_bounds = False
 
-        if (i + 1) % 20 == 0:
-            print(f"  Snowball: checked {i+1}/{len(new_event_ids)} events, {len(new_entries)} in-city")
-        time.sleep(REQUEST_DELAY)
+            if in_bounds:
+                entry = {
+                    "api_id": eid,
+                    "event": event,
+                    "calendar": detail.get("calendar", {}),
+                    "categories": detail.get("categories", []),
+                    "hosts": detail.get("hosts", []),
+                    "guest_count": detail.get("guest_count"),
+                    "start_at": event.get("start_at"),
+                    "cover_image": None,
+                    "ticket_info": detail.get("ticket_info"),
+                    "featured_guests": [],
+                    "waitlist_active": False,
+                    "source": "snowball",
+                }
+                new_entries.append(entry)
+
+            if checked % 50 == 0:
+                print(f"  Snowball: {checked}/{len(new_event_ids)} checked, {len(new_entries)} in-city")
 
     print(f"  Snowball: {len(new_entries)} new in-city events discovered")
     return new_entries

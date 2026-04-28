@@ -20,7 +20,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-8wSFInhZa43Z0Zc",
@@ -43,7 +44,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-RTl0K2DveJWrE2L",
@@ -66,7 +68,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-zGA15qOBTYSwFyU",
@@ -89,7 +92,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-FFdn5ph6DRmD7PM",
@@ -112,6 +116,7 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "featured"
+    "source": "featured",
+    "tags": ""
   }
 ]

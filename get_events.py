@@ -10,6 +10,8 @@ Strategy:
      then fetch full details for non-featured ones
   4. Deduplicate and filter by city geo-bounds
 
+Cities run in parallel for speed.
+
 Usage:
     python get_events.py                  # Get events for all configured cities
     python get_events.py singapore        # Get events for a specific city
@@ -17,11 +19,12 @@ Usage:
 """
 
 import sys
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 from lib.api import api_get
-from lib.utils import CITIES, OUTPUT_DIR, save_events, save_calendars, flatten_event
-from sources import featured, map_pins, calendar_crawl
+from lib.utils import CITIES, OUTPUT_DIR, save_events, save_calendars
 
 
 def resolve_city(slug: str) -> str | None:
@@ -32,86 +35,52 @@ def resolve_city(slug: str) -> str | None:
     return None
 
 
-def print_summary(city: str, flat_events: list[dict]):
-    """Print a human-readable summary."""
-    featured_events = [e for e in flat_events if e["source"] == "featured"]
-    discovered = [e for e in flat_events if e["source"] != "featured"]
+def get_events_for_city(city: str) -> dict:
+    """Get all events for a city using multiple sources. Returns a summary dict."""
+    from sources import featured, map_pins, calendar_crawl
 
-    print(f"\n{'='*60}")
-    print(f"  {city.upper()} — {len(flat_events)} total events")
-    print(f"  ({len(featured_events)} featured + {len(discovered)} discovered)")
-    print(f"{'='*60}")
-
-    for e in flat_events:
-        start = e["start_at"]
-        if start:
-            dt = datetime.fromisoformat(start.replace("Z", "+00:00"))
-            start_str = dt.strftime("%b %d, %I:%M %p")
-        else:
-            start_str = "TBD"
-
-        loc_detail = e["sublocality"] or e["city"] or ""
-        if e["location_type"] == "online":
-            loc_detail = "Online"
-
-        tag = "" if e["source"] == "featured" else " [NEW]"
-        guests = f"({e['guest_count']} guests)" if e.get("guest_count") else ""
-
-        print(f"\n  {start_str} | {e['name']}{tag}")
-        if e["hosts"]:
-            print(f"    by {e['hosts']}")
-        if loc_detail:
-            print(f"    {loc_detail} {guests}")
-        print(f"    {e['url']}")
-
-
-def get_events_for_city(city: str):
-    """Get all events for a city using multiple sources."""
+    t_start = time.time()
     city_config = CITIES.get(city)
 
     if not city_config:
-        # Try to resolve dynamically
-        print(f"Resolving city slug '{city}'...")
+        print(f"[{city}] Resolving slug...")
         place_id = resolve_city(city)
         if not place_id:
-            print(f"  Could not resolve '{city}' — skipping")
-            return
+            print(f"[{city}] Could not resolve — skipping")
+            return {"city": city, "total": 0, "error": "not found"}
         city_config = {"place_id": place_id, "bounds": None}
-        print(f"  Found place ID: {place_id}")
 
     place_id = city_config["place_id"]
     bounds = city_config.get("bounds")
 
     # Source 1: Featured events
     featured_entries = []
-    print(f"\n[{city}] Step 1: Fetching featured events...")
+    print(f"[{city}] Fetching featured events...")
     try:
         featured_entries = featured.fetch(place_id, bounds, city)
-        print(f"  Featured: {len(featured_entries)} events")
+        print(f"[{city}] Featured: {len(featured_entries)}")
     except Exception as e:
-        print(f"  Featured events failed: {e}")
+        print(f"[{city}] Featured failed: {e}")
 
-    # Source 2: Map pins (to catch non-featured visible on map)
+    # Source 2: Map pins
     map_entries = []
     if bounds:
-        print(f"[{city}] Step 2: Fetching map pins...")
         try:
             map_entries = map_pins.fetch(place_id, bounds, city)
-            print(f"  Map pins: {len(map_entries)} events")
+            print(f"[{city}] Map pins: {len(map_entries)}")
         except Exception as e:
-            print(f"  Map pins failed: {e}")
+            print(f"[{city}] Map pins failed: {e}")
 
     # Source 3: Calendar snowball
     snowball_entries = []
     if bounds:
-        print(f"[{city}] Step 3: Calendar snowball crawl...")
         try:
             all_so_far = featured_entries + map_entries
             snowball_entries = calendar_crawl.fetch(
                 place_id, bounds, city, known_entries=all_so_far
             )
         except Exception as e:
-            print(f"  Calendar snowball failed: {e}")
+            print(f"[{city}] Calendar snowball failed: {e}")
 
     # Merge and deduplicate
     all_events = featured_entries + map_entries + snowball_entries
@@ -123,15 +92,30 @@ def get_events_for_city(city: str):
             seen.add(eid)
             deduped.append(e)
 
-    print(f"\n[{city}] Total: {len(deduped)} unique events "
-          f"({len(featured_entries)} featured + {len(map_entries)} map + {len(snowball_entries)} snowball)")
+    elapsed = time.time() - t_start
 
-    # Save calendar registry for future runs
-    calendars = save_calendars(city, deduped)
-    print(f"  Calendar registry: {len(calendars)} organizers tracked")
+    # Save
+    try:
+        calendars = save_calendars(city, deduped)
+        flat = save_events(city, deduped)
+    except Exception as e:
+        print(f"[{city}] Save failed: {e}")
+        flat = []
+        calendars = {}
 
-    flat = save_events(city, deduped)
-    print_summary(city, flat)
+    summary = {
+        "city": city,
+        "featured": len(featured_entries),
+        "map": len(map_entries),
+        "snowball": len(snowball_entries),
+        "total": len(deduped),
+        "calendars": len(calendars),
+        "time": f"{elapsed:.1f}s",
+    }
+    print(f"[{city}] Done: {len(deduped)} events "
+          f"({len(featured_entries)}F + {len(map_entries)}M + {len(snowball_entries)}S) "
+          f"in {elapsed:.1f}s")
+    return summary
 
 
 def main():
@@ -139,12 +123,37 @@ def main():
 
     print(f"Luma Event Fetcher — {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     print(f"Cities: {', '.join(cities)}")
-    print(f"Strategy: Featured + Map Pins + Calendar Snowball")
+    print(f"Strategy: Featured + Map Pins + Calendar Snowball (parallel)\n")
 
-    for city in cities:
-        get_events_for_city(city.lower())
+    t_start = time.time()
 
-    print(f"\nDone! Data saved to {OUTPUT_DIR}/")
+    if len(cities) == 1:
+        # Single city — run directly
+        get_events_for_city(cities[0].lower())
+    else:
+        # Multiple cities — run in parallel
+        summaries = []
+        with ThreadPoolExecutor(max_workers=len(cities)) as pool:
+            futures = {pool.submit(get_events_for_city, c.lower()): c for c in cities}
+            for future in as_completed(futures):
+                try:
+                    summaries.append(future.result())
+                except Exception as e:
+                    city = futures[future]
+                    print(f"[{city}] Failed entirely: {e}")
+                    summaries.append({"city": city, "total": 0, "error": str(e)})
+
+        # Print summary table
+        print(f"\n{'='*65}")
+        print(f"  {'City':<15} {'Featured':>8} {'Map':>5} {'Hidden':>7} {'Total':>6} {'Time':>7}")
+        print(f"  {'-'*55}")
+        for s in sorted(summaries, key=lambda x: -x.get("total", 0)):
+            print(f"  {s['city']:<15} {s.get('featured',0):>8} {s.get('map',0):>5} "
+                  f"{s.get('snowball',0):>7} {s.get('total',0):>6} {s.get('time','?'):>7}")
+        print(f"{'='*65}")
+
+    total_time = time.time() - t_start
+    print(f"\nDone in {total_time:.1f}s! Data saved to {OUTPUT_DIR}/")
 
 
 if __name__ == "__main__":

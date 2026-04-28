@@ -5,7 +5,7 @@ import urllib.request
 import urllib.parse
 
 BASE_URL = "https://api2.luma.com"
-REQUEST_DELAY = 0.4  # seconds between API calls
+REQUEST_DELAY = 0.1  # seconds between sequential API calls
 PAGE_SIZE = 50
 
 HEADERS = {
