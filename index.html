@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luma Event Explorer — Discover Every Event, Not Just the Featured Ones</title>
+<title>Luma Event Explorer — Hidden Tech Events, Meetups & Hackathons in Bangalore, SF, Singapore</title>
+<meta name="description" content="Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Mumbai, Delhi, and Boston.">
+<meta name="keywords" content="luma events, lu.ma events, hidden events, tech meetups, startup events, hackathons, founder dinners, bangalore events, san francisco events, singapore events, mumbai events, delhi events, boston events, event discovery, AI meetups, builder nights">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://himanshusaleria.github.io/luma-explore/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
+<meta property="og:description" content="Stop missing hidden meetups, founder dinners, and niche gatherings. We surface Luma events that don't appear on the featured page across Bangalore, SF, Singapore, Mumbai, Delhi, and Boston.">
+<meta property="og:url" content="https://himanshusaleria.github.io/luma-explore/">
+<meta property="og:site_name" content="Luma Event Explorer">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
+<meta name="twitter:description" content="We surface Luma events that don't appear on the featured page. Browse hidden meetups, hackathons, and founder dinners across 6 cities.">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZKK4LPJB7"></script>
 <script>
@@ -11,6 +25,30 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KZKK4LPJB7');
+</script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Luma Event Explorer",
+  "url": "https://himanshusaleria.github.io/luma-explore/",
+  "description": "Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Mumbai, Delhi, and Boston.",
+  "applicationCategory": "EventApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What are hidden events on Luma?", "acceptedAnswer": { "@type": "Answer", "text": "Hidden events are public events on lu.ma that don't appear on Luma's featured Discover page. They exist in organizer calendars and map data but Luma's algorithm doesn't surface them. We find and list them here." }},
+    { "@type": "Question", "name": "Which cities do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "We currently cover Bangalore (Bengaluru), San Francisco, Singapore, Mumbai, New Delhi, and Boston. More cities coming soon." }},
+    { "@type": "Question", "name": "Is this affiliated with Luma?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is an independent, unofficial tool. All events link directly to their lu.ma pages where you can RSVP." }}
+  ]
+}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -522,10 +560,10 @@
       <span class="hero-badge-dot"></span>
       Updated every 2 hours
     </div>
-    <div class="hero-title">Stop missing hidden events<br>in your city</div>
-    <div class="hero-desc">
+    <h1 class="hero-title">Stop missing hidden events<br>in your city</h1>
+    <p class="hero-desc">
       Luma shows you a handful of featured events. We uncover the rest — the hidden meetups, invite-only dinners, and niche gatherings you'd never find on your own.
-    </div>
+    </p>
     <div class="subscribe-form" id="subscribeForm">
       <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Get hidden events in your inbox</button>
     </div>
@@ -536,7 +574,7 @@
 <!-- Main Content -->
 <div class="main">
   <div class="section-header">
-    <div class="section-title">Events<span class="city-name" id="cityLabel"></span></div>
+    <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
   </div>
   <div id="content">
@@ -544,12 +582,35 @@
   </div>
 </div>
 
+<!-- About Section -->
+<section style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+  <h2 style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">Discover Events Beyond Luma's Featured Page</h2>
+  <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">Luma's discover page only shows a curated selection of featured events. But thousands of tech meetups, hackathons, founder dinners, builder nights, and networking events are hidden from the main page. Luma Event Explorer surfaces these hidden events across <strong>Bangalore</strong>, <strong>San Francisco</strong>, <strong>Singapore</strong>, <strong>Mumbai</strong>, <strong>New Delhi</strong>, and <strong>Boston</strong>.</p>
+  <h3 style="font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:6px;">What events do we uncover?</h3>
+  <ul style="font-size:13px;color:#666;line-height:1.8;padding-left:20px;margin-bottom:24px;">
+    <li>AI and machine learning meetups and workshops</li>
+    <li>Startup founder dinners and networking events</li>
+    <li>Hackathons and builder nights</li>
+    <li>Developer community gatherings</li>
+    <li>Crypto and Web3 events</li>
+    <li>Invite-only and niche gatherings</li>
+  </ul>
+
+  <h2 style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:12px;">Frequently Asked Questions</h2>
+  <h3 style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:4px;">What are hidden events on Luma?</h3>
+  <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">Hidden events are public events on lu.ma that don't appear on Luma's featured Discover page. They exist in organizer calendars and map data but Luma's algorithm doesn't surface them. We find and list them here.</p>
+  <h3 style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:4px;">Which cities do you cover?</h3>
+  <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">We currently cover Bangalore (Bengaluru), San Francisco, Singapore, Mumbai, New Delhi, and Boston. More cities coming soon.</p>
+  <h3 style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:4px;">Is this affiliated with Luma?</h3>
+  <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">No. This is an independent, unofficial tool. All events link directly to their lu.ma pages where you can RSVP.</p>
+</section>
+
 <!-- Footer -->
-<div class="footer">
+<footer class="footer">
   This is an unofficial tool to help you discover more events. Not affiliated with or endorsed by Luma.<br>
   All events are hosted on <a href="https://luma.com" target="_blank" rel="noopener">luma.com</a>. Click any event to view details and RSVP.<br><br>
   Want your event listed here? <a href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener">Email us</a> with your Luma event link.
-</div>
+</footer>
 
 <script>
 const CITIES = {
@@ -739,6 +800,7 @@ function renderEvents(events) {
   }
   html += '</div>'; // close timeline
   content.innerHTML = html;
+  injectEventJsonLd(filtered);
 }
 
 function escHtml(s) {
@@ -747,11 +809,46 @@ function escHtml(s) {
   return d.innerHTML;
 }
 
+function updateMetaForCity(city) {
+  const label = CITIES[city].label;
+  document.title = `${label} Tech Events & Meetups — Hidden Events on Luma | Event Explorer`;
+  const desc = document.querySelector('meta[name="description"]');
+  if (desc) desc.content = `Discover ${label} tech events, meetups, hackathons, and founder dinners that don't appear on Luma's featured page.`;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = `https://himanshusaleria.github.io/luma-explore/?city=${city}`;
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.content = `Hidden Tech Events in ${label} — Luma Event Explorer`;
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.content = `Browse ${label} tech meetups, hackathons, and networking events not found on Luma's discover page.`;
+}
+
+function injectEventJsonLd(events) {
+  const jsonLd = events.slice(0, 10).map(e => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": e.name,
+    "startDate": e.start_at,
+    "url": e.url,
+    "eventAttendanceMode": e.location_type === 'online'
+      ? "https://schema.org/OnlineEventAttendanceMode"
+      : "https://schema.org/OfflineEventAttendanceMode",
+    "location": e.location_type === 'online'
+      ? { "@type": "VirtualLocation", "url": e.url }
+      : { "@type": "Place", "name": e.sublocality || e.city || CITIES[currentCity].label,
+          "address": { "@type": "PostalAddress", "addressLocality": CITIES[currentCity].label }},
+    "organizer": e.hosts ? { "@type": "Organization", "name": e.hosts.split(',')[0].trim() } : undefined
+  }));
+  let el = document.getElementById('event-jsonld');
+  if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'event-jsonld'; document.head.appendChild(el); }
+  el.textContent = JSON.stringify(jsonLd);
+}
+
 function switchCity(city) {
   currentCity = city;
   const url = new URL(window.location);
   url.searchParams.set('city', city);
   history.pushState({city}, '', url);
+  updateMetaForCity(city);
   renderCityTabs();
   renderEvents(allEvents[currentCity] || []);
 }
@@ -803,6 +900,7 @@ document.getElementById('search').addEventListener('input', (e) => {
 
 (async () => {
   await Promise.all(Object.keys(CITIES).map(loadCity));
+  updateMetaForCity(currentCity);
   renderCityTabs();
   renderEvents(allEvents[currentCity] || []);
 
