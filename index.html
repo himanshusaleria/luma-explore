@@ -508,7 +508,7 @@
   </div>
   <div class="nav-right">
     <input type="text" class="search-box" id="search" placeholder="Search events...">
-    <a class="btn-submit" href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener">Submit Event</a>
+    <a class="btn-submit" href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener" onclick="track('cta_submit_event')">Submit Event</a>
   </div>
 </div>
 
@@ -564,9 +564,17 @@ let allEvents = {};
 let currentCity = 'bengaluru';
 let searchQuery = '';
 
+// ── Analytics ──
+function track(eventName, params = {}) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, params);
+  }
+}
+
 // ── Email subscription via Gmail ──
 function openSubscribe() {
   const cityLabel = CITIES[currentCity].label;
+  track('cta_get_notified', { city: cityLabel });
   const subject = encodeURIComponent(`Add me to mailing list:${cityLabel}`);
   const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly hidden events digest for ${cityLabel}.\n\nThank you!`);
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`;
@@ -700,8 +708,9 @@ function renderEvents(events) {
         guestHtml = `<div class="guest-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>${e.guest_count} going</div>`;
       }
 
+      const eventSource = (e.source && e.source !== 'featured') ? 'hidden' : 'featured';
       html += `
-        <a class="event-row" href="${lumaUrl}" target="_blank" rel="noopener">
+        <a class="event-row" href="${lumaUrl}" target="_blank" rel="noopener" onclick="track('event_click', {event_name: '${escHtml(e.name).replace(/'/g, "\\'")}', city: '${CITIES[currentCity].label}', source: '${eventSource}', event_url: '${lumaUrl}'})">
           <div class="event-cover-wrap">
             ${coverImg}
           </div>
@@ -746,21 +755,34 @@ function renderCityTabs() {
   document.querySelectorAll('.city-tab').forEach(btn => {
     btn.addEventListener('click', async () => {
       currentCity = btn.dataset.city;
+      track('city_switch', { city: CITIES[currentCity].label });
       await loadCity(currentCity);
       switchCity(currentCity);
     });
   });
 }
 
+let searchDebounce;
 document.getElementById('search').addEventListener('input', (e) => {
   searchQuery = e.target.value;
   renderEvents(allEvents[currentCity] || []);
+  clearTimeout(searchDebounce);
+  if (searchQuery.length >= 3) {
+    searchDebounce = setTimeout(() => {
+      track('search', { query: searchQuery, city: CITIES[currentCity].label });
+    }, 800);
+  }
 });
 
 (async () => {
   await Promise.all(Object.keys(CITIES).map(loadCity));
   renderCityTabs();
   renderEvents(allEvents[currentCity] || []);
+
+  // Track page load with event counts
+  const totalEvents = Object.values(allEvents).reduce((sum, arr) => sum + arr.length, 0);
+  const totalHidden = Object.values(allEvents).reduce((sum, arr) => sum + arr.filter(e => e.source && e.source !== 'featured').length, 0);
+  track('page_load', { total_events: totalEvents, hidden_events: totalHidden, default_city: CITIES[currentCity].label });
 })();
 </script>
 
