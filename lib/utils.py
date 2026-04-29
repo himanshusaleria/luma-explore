@@ -28,6 +28,10 @@ CITIES = {
         "place_id": "discplace-CzipmKodUYN2Dfx",
         "bounds": {"north": 28.9, "south": 28.4, "east": 77.4, "west": 76.8},
     },
+    "boston": {
+        "place_id": "discplace-VWeZ1zUvnawYHMj",
+        "bounds": {"north": 42.5, "south": 42.2, "east": -70.9, "west": -71.3},
+    },
 }
 
 
