@@ -630,7 +630,16 @@ function groupByDate(events) {
 
 function renderEvents(events) {
   const content = document.getElementById('content');
+  // Filter out past events (only show today and future)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const filtered = events.filter(e => {
+    // Exclude events that have already started before today
+    if (e.start_at) {
+      const eventDate = new Date(e.start_at);
+      eventDate.setHours(0, 0, 0, 0);
+      if (eventDate < today) return false;
+    }
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (e.name||'').toLowerCase().includes(q)
