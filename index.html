@@ -562,7 +562,9 @@ const CITIES = {
 };
 
 let allEvents = {};
-let currentCity = 'bengaluru';
+const urlParams = new URLSearchParams(window.location.search);
+const cityFromUrl = urlParams.get('city');
+let currentCity = (cityFromUrl && CITIES[cityFromUrl]) ? cityFromUrl : 'bengaluru';
 let searchQuery = '';
 
 // ── Analytics ──
@@ -738,9 +740,24 @@ function escHtml(s) {
 
 function switchCity(city) {
   currentCity = city;
+  const url = new URL(window.location);
+  url.searchParams.set('city', city);
+  history.pushState({city}, '', url);
   renderCityTabs();
   renderEvents(allEvents[currentCity] || []);
 }
+
+// Handle browser back/forward
+window.addEventListener('popstate', async (e) => {
+  const params = new URLSearchParams(window.location.search);
+  const city = params.get('city');
+  if (city && CITIES[city]) {
+    currentCity = city;
+    await loadCity(currentCity);
+    renderCityTabs();
+    renderEvents(allEvents[currentCity] || []);
+  }
+});
 
 function renderCityTabs() {
   const navContainer = document.getElementById('navCities');
