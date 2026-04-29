@@ -69,7 +69,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Fitness, Wellness"
+    "tags": "Tech, Wellness"
   },
   {
     "event_id": "evt-ZlTtsTZYD5MfFO5",
@@ -589,7 +589,7 @@
     "latitude": 1.2975,
     "longitude": 103.85,
     "cover_url": "https://images.lumacdn.com/event-covers/na/d860a873-70c9-4cde-a765-ad654469fb9d.jpg",
-    "guest_count": 111,
+    "guest_count": 112,
     "hosts": "Lionel Sim, Anna Guo, Legal benchmarks, SMU Artificial Intelligence Club",
     "calendar_name": "The AI Capitol",
     "calendar_slug": "theaicapitol",
@@ -1104,30 +1104,6 @@
     "tags": "Food & Drink"
   },
   {
-    "event_id": "evt-DkMZ6da76gA7wnL",
-    "name": "\u3010INVITATION \u3011Exhibition Opening\uff1a A Gaze in a World in Motion",
-    "url": "https://lu.ma/d2csgjpe",
-    "start_at": "2026-05-16T07:00:00.000Z",
-    "end_at": "2026-05-16T09:00:00.000Z",
-    "timezone": "Asia/Singapore",
-    "location_type": "offline",
-    "city": "Singapore",
-    "sublocality": "Bukit Merah",
-    "country": "Singapore",
-    "latitude": 1.2719289,
-    "longitude": 103.8362045,
-    "cover_url": "https://images.lumacdn.com/event-covers/zq/b0363bc7-6774-4714-b11b-9bc770171b17.jpg",
-    "guest_count": 5,
-    "hosts": "\u54c1\u827a\u753b\u5ecaPrestige Gallery, Yan",
-    "calendar_name": "Personal",
-    "calendar_slug": null,
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Arts & Culture"
-  },
-  {
     "event_id": "evt-PFXfJhHNAarptAF",
     "name": "Throwback Disney Channel Rave!!",
     "url": "https://lu.ma/lu5mvywn",
@@ -1152,6 +1128,30 @@
     "tags": ""
   },
   {
+    "event_id": "evt-DkMZ6da76gA7wnL",
+    "name": "\u3010INVITATION \u3011Exhibition Opening\uff1a A Gaze in a World in Motion",
+    "url": "https://lu.ma/d2csgjpe",
+    "start_at": "2026-05-16T07:00:00.000Z",
+    "end_at": "2026-05-16T09:00:00.000Z",
+    "timezone": "Asia/Singapore",
+    "location_type": "offline",
+    "city": "Singapore",
+    "sublocality": "Bukit Merah",
+    "country": "Singapore",
+    "latitude": 1.2719289,
+    "longitude": 103.8362045,
+    "cover_url": "https://images.lumacdn.com/event-covers/zq/b0363bc7-6774-4714-b11b-9bc770171b17.jpg",
+    "guest_count": 5,
+    "hosts": "\u54c1\u827a\u753b\u5ecaPrestige Gallery, Yan",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": "Arts & Culture"
+  },
+  {
     "event_id": "evt-VUuyxgrr6Z1Yn0O",
     "name": "Build or Die: Building Companies Early",
     "url": "https://lu.ma/00hm86ph",
@@ -1164,7 +1164,7 @@
     "country": "Singapore",
     "latitude": 1.285,
     "longitude": 103.8475,
-    "cover_url": "https://images.lumacdn.com/gallery-images/85/0e9f905e-b4bf-468e-9dbd-546d26cefc4c.png",
+    "cover_url": "https://images.lumacdn.com/uploads/9a/11ef7083-b949-418b-bb25-713df101b7e2.png",
     "guest_count": 148,
     "hosts": "Jonathan, Thomas Jeng, William Liu, Alyssa Ng-Misialek",
     "calendar_name": "Personal",
@@ -1293,7 +1293,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Food & Drink, Wellness"
+    "tags": "Tech"
   },
   {
     "event_id": "evt-RLcFRsckpmYEZWh",
@@ -2013,7 +2013,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI"
+    "tags": ""
   },
   {
     "event_id": "evt-LpEUQSSCRCybr6B",

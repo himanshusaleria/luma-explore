@@ -37,7 +37,7 @@
     "latitude": 12.909151399999999,
     "longitude": 77.6467201,
     "cover_url": "https://images.lumacdn.com/event-covers/pl/ad27beb3-a286-4af2-bc75-0340255c7ac6.png",
-    "guest_count": 28,
+    "guest_count": 27,
     "hosts": "Harkirat (Rocket) Singh",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -261,7 +261,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI, Tech"
+    "tags": "Tech"
   },
   {
     "event_id": "evt-62elYaM3ks5Dl2Q",
@@ -445,7 +445,7 @@
     "latitude": 12.9125,
     "longitude": 77.6325,
     "cover_url": "https://images.lumacdn.com/event-covers/rd/9cf4b239-69b1-4a88-82a9-5786b43e1d4c.jpg",
-    "guest_count": 121,
+    "guest_count": 122,
     "hosts": "Bitshala Bitspace, madkilla",
     "calendar_name": "Bitshala Bitspace Events and Meetups",
     "calendar_slug": "bitspace",
@@ -477,7 +477,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI, Tech"
+    "tags": ""
   },
   {
     "event_id": "evt-qrqmty89XKPyVXN",
