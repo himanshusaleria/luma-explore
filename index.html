@@ -217,7 +217,7 @@
     font-size: 11px;
     font-weight: 500;
     margin-bottom: 20px;
-    backdrop-filter: blur(8px);
+    /* backdrop-filter removed for scroll performance */
   }
 
   .hero-badge-dot {
@@ -277,6 +277,12 @@
     color: rgba(255,255,255,0.3);
     margin-top: 12px;
   }
+
+  /* ── Content transition ───────────────────────────── */
+  #content {
+    transition: opacity 0.15s ease;
+  }
+  #content.fading { opacity: 0; }
 
   /* ── Main Layout ─────────────────────────────────── */
   .main {
@@ -375,7 +381,6 @@
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.1s;
     position: relative;
   }
 
@@ -391,7 +396,7 @@
     z-index: 1;
   }
 
-  .event-row:hover { opacity: 0.7; }
+  .event-row:hover { opacity: 0.75; }
   .event-row:last-child { border-bottom: none; }
 
   .event-details {
@@ -466,7 +471,7 @@
   }
   .guest-count svg { width: 12px; height: 12px; color: #bbb; }
 
-  .event-cover-wrap { flex-shrink: 0; position: relative; }
+  .event-cover-wrap { flex-shrink: 0; position: relative; width: 160px; height: 100px; }
   .event-cover {
     width: 160px; height: 100px; border-radius: 10px;
     object-fit: cover; background: #f0f0f0; display: block;
@@ -476,7 +481,7 @@
     padding: 3px 8px; border-radius: 4px;
     background: rgba(255,255,255,0.92); font-size: 10px; font-weight: 600;
     color: #555; text-decoration: none; opacity: 0; transition: opacity 0.15s;
-    backdrop-filter: blur(4px);
+    /* backdrop-filter removed for scroll performance */
   }
   .event-row:hover .event-cover-link { opacity: 1; }
 
@@ -748,7 +753,7 @@ function renderEvents(events) {
       const time = e.start_at ? formatTime(e.start_at, e.timezone) : 'TBD';
       const lumaUrl = e.url || '#';
       const coverImg = e.cover_url
-        ? `<img class="event-cover" src="${e.cover_url}" alt="" loading="lazy">`
+        ? `<img class="event-cover" src="${e.cover_url}" alt="" loading="lazy" width="160" height="100" decoding="async">`
         : `<div class="event-cover"></div>`;
 
       let hostHtml = '';
@@ -854,7 +859,14 @@ function switchCity(city) {
   history.pushState({city}, '', url);
   updateMetaForCity(city);
   renderCityTabs();
-  renderEvents(allEvents[currentCity] || []);
+
+  // Fade out, swap content, fade in
+  const content = document.getElementById('content');
+  content.classList.add('fading');
+  setTimeout(() => {
+    renderEvents(allEvents[currentCity] || []);
+    content.classList.remove('fading');
+  }, 150);
 }
 
 // Handle browser back/forward
@@ -872,6 +884,15 @@ window.addEventListener('popstate', async (e) => {
 function renderCityTabs() {
   const navContainer = document.getElementById('navCities');
   const mobileContainer = document.getElementById('mobileCityBar');
+
+  // Only update active state, don't rebuild DOM if tabs already exist
+  if (navContainer.children.length === Object.keys(CITIES).length) {
+    document.querySelectorAll('.city-tab').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.city === currentCity);
+    });
+    return;
+  }
+
   const tabsHtml = Object.entries(CITIES).map(([key, val]) => {
     const active = key === currentCity ? 'active' : '';
     return `<button class="city-tab ${active}" data-city="${key}">${val.label}</button>`;
@@ -882,6 +903,7 @@ function renderCityTabs() {
 
   document.querySelectorAll('.city-tab').forEach(btn => {
     btn.addEventListener('click', async () => {
+      if (btn.dataset.city === currentCity) return; // already selected
       currentCity = btn.dataset.city;
       track('city_switch', { city: CITIES[currentCity].label });
       await loadCity(currentCity);
