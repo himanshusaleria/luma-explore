@@ -753,7 +753,10 @@ function renderEvents(events) {
       const time = e.start_at ? formatTime(e.start_at, e.timezone) : 'TBD';
       const lumaUrl = e.url || '#';
       const coverImg = e.cover_url
-        ? `<img class="event-cover" src="${e.cover_url}" alt="" loading="lazy" width="160" height="100" decoding="async">`
+        ? `<img class="event-cover" alt="" loading="lazy" width="160" height="100" decoding="async"
+            sizes="(max-width: 640px) 100px, 160px"
+            srcset="${cdnImg(e.cover_url, 100, 68)} 100w, ${cdnImg(e.cover_url, 160, 100)} 160w, ${cdnImg(e.cover_url, 320, 200)} 320w"
+            src="${cdnImg(e.cover_url, 160, 100)}">`
         : `<div class="event-cover"></div>`;
 
       let hostHtml = '';
@@ -816,6 +819,19 @@ function escHtml(s) {
   const d = document.createElement('div');
   d.textContent = s;
   return d.innerHTML;
+}
+
+function cdnImg(url, w, h) {
+  // Transform lumacdn URLs through Cloudflare image CDN for optimized delivery
+  // e.g. https://images.lumacdn.com/event-covers/dd/abc.jpg
+  //   -> https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=160,height=100/event-covers/dd/abc.jpg
+  if (!url) return '';
+  const prefix = 'https://images.lumacdn.com/';
+  if (url.startsWith(prefix)) {
+    const path = url.slice(prefix.length);
+    return `${prefix}cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,quality=75,width=${w},height=${h}/${path}`;
+  }
+  return url;
 }
 
 function updateMetaForCity(city) {
