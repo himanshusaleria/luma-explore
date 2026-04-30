@@ -548,5 +548,50 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-04-29T22:58:39.027539+00:00"
+  },
+  "cal-hkMCuGGmKKqyI2V": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:52.903135+00:00"
+  },
+  "cal-wZw1YzI9i6i3LCy": {
+    "name": "AI Council",
+    "slug": "aicouncil",
+    "added": "2026-04-30T03:21:52.903173+00:00"
+  },
+  "cal-8vX4xl06u6TTaew": {
+    "name": "Braintrust",
+    "slug": "braintrustdata",
+    "added": "2026-04-30T03:21:52.903241+00:00"
+  },
+  "cal-s4lCbXLjW4DTCQx": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:52.903262+00:00"
+  },
+  "cal-owNJLLzVM9t0uiW": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:52.903270+00:00"
+  },
+  "cal-FS3CuvdBxi4pzHl": {
+    "name": "Gradient",
+    "slug": "gradient-events",
+    "added": "2026-04-30T03:21:52.903280+00:00"
+  },
+  "cal-cD6hMAgggar1g4b": {
+    "name": "Databricks Community",
+    "slug": "databricks",
+    "added": "2026-04-30T03:21:52.903293+00:00"
+  },
+  "cal-0YKqdTK7apWmXPg": {
+    "name": "Category Ventures",
+    "slug": "category-ventures-events",
+    "added": "2026-04-30T03:21:52.903298+00:00"
+  },
+  "cal-Jvksy0gFBfXrzcc": {
+    "name": "Theory Ventures",
+    "slug": "theoryvc",
+    "added": "2026-04-30T03:21:52.903308+00:00"
   }
 }
