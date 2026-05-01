@@ -243,5 +243,15 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-04-30T21:02:59.629719+00:00"
+  },
+  "cal-DkvNG1sOmH8Frca": {
+    "name": "Tech Leadership Circle",
+    "slug": "techleadershipcircle",
+    "added": "2026-05-01T03:31:36.825772+00:00"
+  },
+  "cal-QCQbg4FodJDriFO": {
+    "name": "European Defense Tech Hub",
+    "slug": "eurodefensetech",
+    "added": "2026-05-01T03:31:36.825792+00:00"
   }
 }
