@@ -658,5 +658,15 @@
     "name": "90/30 Club",
     "slug": "9030club",
     "added": "2026-05-01T22:52:15.534508+00:00"
+  },
+  "cal-AhjeOVmwTWXWRhx": {
+    "name": "CMU T&E",
+    "slug": "cmu-te",
+    "added": "2026-05-02T02:48:11.014720+00:00"
+  },
+  "cal-AkanIoTGW7FDKfv": {
+    "name": "CMU Swartz Center for Entrepreneurship Events",
+    "slug": "cmu-swartz-center",
+    "added": "2026-05-02T02:48:11.014795+00:00"
   }
 }
