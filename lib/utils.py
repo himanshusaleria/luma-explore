@@ -32,6 +32,11 @@ CITIES = {
         "place_id": "discplace-VWeZ1zUvnawYHMj",
         "bounds": {"north": 42.5, "south": 42.2, "east": -70.9, "west": -71.3},
     },
+    "pune": {
+        "place_id": None,  # No discover page — coordinate-only city
+        "bounds": {"north": 18.65, "south": 18.40, "east": 74.0, "west": 73.7},
+        "scan_from": ["bengaluru", "mumbai", "new-delhi"],  # Scan these cities' calendars too
+    },
 }
 
 
