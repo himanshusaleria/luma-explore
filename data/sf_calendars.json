@@ -723,5 +723,60 @@
     "name": "SF Tech Poker",
     "slug": "sfpoker",
     "added": "2026-05-04T17:42:38.107600+00:00"
+  },
+  "cal-AJpfQVFYtwnIIBy": {
+    "name": "Corgi",
+    "slug": "usecorgi",
+    "added": "2026-05-04T19:42:37.264426+00:00"
+  },
+  "cal-cMVr4fliuzUTew9": {
+    "name": "Convex.dev",
+    "slug": "convex",
+    "added": "2026-05-04T19:42:37.264447+00:00"
+  },
+  "cal-UWI3sHKwdEMUFmd": {
+    "name": "Parallel Web Systems",
+    "slug": "parallelwebsystems",
+    "added": "2026-05-04T19:42:37.264453+00:00"
+  },
+  "cal-tCuQIXqHtwFEl0l": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T19:42:37.264456+00:00"
+  },
+  "cal-6z3L0pAiEtqyMks": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T19:42:37.264475+00:00"
+  },
+  "cal-oFivGClIg4NAqiq": {
+    "name": "Tanagram Community Events",
+    "slug": "tanagram",
+    "added": "2026-05-04T19:42:37.264482+00:00"
+  },
+  "cal-yPiyQdHMRMqL3P1": {
+    "name": "e-America Events \ud83c\uddfa\ud83c\uddf8",
+    "slug": "eAmerica",
+    "added": "2026-05-04T19:42:37.264489+00:00"
+  },
+  "cal-kyQnL8WDywfcnS6": {
+    "name": "Startup Intros",
+    "slug": "startupintros",
+    "added": "2026-05-04T19:42:37.264502+00:00"
+  },
+  "cal-6d25iw8gg49jxaG": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T19:42:37.264537+00:00"
+  },
+  "cal-GhyTRUXdkIbTxQj": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T19:42:37.264580+00:00"
+  },
+  "cal-YUaNRUWCrhWlYwE": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T19:42:37.264584+00:00"
   }
 }
