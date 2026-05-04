@@ -50,21 +50,44 @@ def get_events_for_city(city: str) -> dict:
             return {"city": city, "total": 0, "error": "not found"}
         city_config = {"place_id": place_id, "bounds": None}
 
-    place_id = city_config["place_id"]
+    place_id = city_config.get("place_id")
     bounds = city_config.get("bounds")
+    scan_from = city_config.get("scan_from", [])
 
-    # Source 1: Featured events
+    # For coordinate-only cities (no place_id), load calendars from related cities
+    if not place_id and scan_from:
+        print(f"[{city}] Coordinate-only city — loading calendars from {', '.join(scan_from)}")
+        import json, os
+        cal_path = f"{OUTPUT_DIR}/{city}_calendars.json"
+        cals = {}
+        if os.path.exists(cal_path):
+            with open(cal_path) as f:
+                cals = json.load(f)
+        for related in scan_from:
+            related_path = f"{OUTPUT_DIR}/{related}_calendars.json"
+            if os.path.exists(related_path):
+                with open(related_path) as f:
+                    related_cals = json.load(f)
+                for k, v in related_cals.items():
+                    if k not in cals:
+                        cals[k] = v
+        with open(cal_path, "w") as f:
+            json.dump(cals, f, indent=2)
+        print(f"[{city}] Calendar pool: {len(cals)} calendars from {len(scan_from)} related cities")
+
+    # Source 1: Featured events (skip for coordinate-only cities)
     featured_entries = []
-    print(f"[{city}] Fetching featured events...")
-    try:
-        featured_entries = featured.fetch(place_id, bounds, city)
-        print(f"[{city}] Featured: {len(featured_entries)}")
-    except Exception as e:
-        print(f"[{city}] Featured failed: {e}")
+    if place_id:
+        print(f"[{city}] Fetching featured events...")
+        try:
+            featured_entries = featured.fetch(place_id, bounds, city)
+            print(f"[{city}] Featured: {len(featured_entries)}")
+        except Exception as e:
+            print(f"[{city}] Featured failed: {e}")
 
-    # Source 2: Map pins
+    # Source 2: Map pins (skip for coordinate-only cities)
     map_entries = []
-    if bounds:
+    if place_id and bounds:
         try:
             map_entries = map_pins.fetch(place_id, bounds, city)
             print(f"[{city}] Map pins: {len(map_entries)}")
