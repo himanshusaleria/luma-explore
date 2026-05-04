@@ -263,5 +263,25 @@
     "name": "NUS Enterprise",
     "slug": "nus-enterprise-a5x",
     "added": "2026-05-04T17:42:25.265968+00:00"
+  },
+  "cal-4Oh0KyoEA8OBXtG": {
+    "name": "Zo Computer",
+    "slug": "zocomputer",
+    "added": "2026-05-04T22:57:59.175711+00:00"
+  },
+  "cal-cMVr4fliuzUTew9": {
+    "name": "Convex.dev",
+    "slug": "convex",
+    "added": "2026-05-04T22:57:59.175723+00:00"
+  },
+  "cal-ouvsbv3Gj9kvRGD": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T22:57:59.175739+00:00"
+  },
+  "cal-e5mvjF86anukzOt": {
+    "name": "ClawCon",
+    "slug": "clawcon",
+    "added": "2026-05-04T22:57:59.175766+00:00"
   }
 }
