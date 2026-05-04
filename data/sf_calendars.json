@@ -713,5 +713,15 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-03T16:53:08.243436+00:00"
+  },
+  "cal-gXdl6C3jfqcBpFT": {
+    "name": "Gamma",
+    "slug": "meetgamma",
+    "added": "2026-05-04T17:42:38.107577+00:00"
+  },
+  "cal-P6rMCCqC4Etvwgc": {
+    "name": "SF Tech Poker",
+    "slug": "sfpoker",
+    "added": "2026-05-04T17:42:38.107600+00:00"
   }
 }

@@ -93,5 +93,15 @@
     "name": "Claude Community Events",
     "slug": "claudecommunity",
     "added": "2026-05-04T14:04:00.655299+00:00"
+  },
+  "cal-E74MDlDKBaeAwXK": {
+    "name": "The AI Collective",
+    "slug": "genai-collective",
+    "added": "2026-05-04T17:42:17.095090+00:00"
+  },
+  "cal-mMUHyPSII6Zpi1W": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T17:42:17.095108+00:00"
   }
 }
