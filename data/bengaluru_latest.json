@@ -309,7 +309,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Food & Drink, Tech"
+    "tags": "Tech"
   },
   {
     "event_id": "evt-v2MHF1oH9NZvSQX",
@@ -405,7 +405,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture, Crypto"
+    "tags": "Crypto"
   },
   {
     "event_id": "evt-DoKWZbqrkK1HUVy",
@@ -422,30 +422,6 @@
     "longitude": 77.394319,
     "cover_url": "https://images.unsplash.com/photo-1550305080-4e029753abcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjQyMjF8MHwxfHNlYXJjaHwxM3x8bmV0d29ya2luZ3xlbnwwfHx8fDE3NzU1NzUyMjR8Mg&ixlib=rb-4.1.0&q=80&w=1080",
     "guest_count": 0,
-    "hosts": "Ashish Gakrey ",
-    "calendar_name": "Ashish Gakrey - HR Shapers",
-    "calendar_slug": null,
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball",
-    "tags": ""
-  },
-  {
-    "event_id": "evt-R3FOZL3rsYAAiAB",
-    "name": "Hong Sau Resort l Awards Night May 2026 Bangalore Overnight HR Shapers Summit & HR Leadership Awards I",
-    "url": "https://lu.ma/3bqihb9i",
-    "start_at": "2026-05-10T03:30:00.000Z",
-    "end_at": "2026-05-10T18:00:00.000Z",
-    "timezone": "Asia/Kolkata",
-    "location_type": "offline",
-    "city": "Thavarekere",
-    "sublocality": null,
-    "country": "India",
-    "latitude": 12.969488300000002,
-    "longitude": 77.394319,
-    "cover_url": "https://images.unsplash.com/photo-1653682902362-308526d14ef5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjQyMjF8MHwxfHNlYXJjaHwxM3x8YXdhcmRzfGVufDB8fHx8MTc3NTY0MjEyN3wy&ixlib=rb-4.1.0&q=80&w=1080",
-    "guest_count": 71,
     "hosts": "Ashish Gakrey ",
     "calendar_name": "Ashish Gakrey - HR Shapers",
     "calendar_slug": null,
@@ -473,6 +449,30 @@
     "hosts": "The AI Collective, Abhishek Kumar, Samridhi Jain, Rajat Kharbanda, Amina Sultana",
     "calendar_name": "The AI Collective",
     "calendar_slug": "genai-collective",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": ""
+  },
+  {
+    "event_id": "evt-R3FOZL3rsYAAiAB",
+    "name": "Hong Sau Resort l Awards Night May 2026 Bangalore Overnight HR Shapers Summit & HR Leadership Awards I",
+    "url": "https://lu.ma/3bqihb9i",
+    "start_at": "2026-05-10T03:30:00.000Z",
+    "end_at": "2026-05-10T18:00:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Thavarekere",
+    "sublocality": null,
+    "country": "India",
+    "latitude": 12.969488300000002,
+    "longitude": 77.394319,
+    "cover_url": "https://images.unsplash.com/photo-1653682902362-308526d14ef5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjQyMjF8MHwxfHNlYXJjaHwxM3x8YXdhcmRzfGVufDB8fHx8MTc3NTY0MjEyN3wy&ixlib=rb-4.1.0&q=80&w=1080",
+    "guest_count": 71,
+    "hosts": "Ashish Gakrey ",
+    "calendar_name": "Ashish Gakrey - HR Shapers",
+    "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
@@ -576,30 +576,6 @@
     "tags": ""
   },
   {
-    "event_id": "evt-N9nOTMAAkZN0wF3",
-    "name": "Founders & Investors Xplore by CEDAT",
-    "url": "https://lu.ma/oxx8n5ee",
-    "start_at": "2026-05-16T08:30:00.000Z",
-    "end_at": "2026-05-16T12:30:00.000Z",
-    "timezone": "Asia/Kolkata",
-    "location_type": "offline",
-    "city": "Bengaluru",
-    "sublocality": "4th Block",
-    "country": "India",
-    "latitude": 12.989661,
-    "longitude": 77.57443359999999,
-    "cover_url": "https://images.lumacdn.com/uploads/qq/c696c253-ca24-4573-b792-26f730cd0840.png",
-    "guest_count": 0,
-    "hosts": "Akash Akku",
-    "calendar_name": "CEDAT NEXUS",
-    "calendar_slug": "CEDAT",
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Tech"
-  },
-  {
     "event_id": "evt-bQOLlVhQKcgkD42",
     "name": "HealthTech Founder Roundtable: Elevation Capital x THC (w/ The AI Collective)",
     "url": "https://lu.ma/HealthcareRT",
@@ -622,6 +598,30 @@
     "waitlist_active": false,
     "source": "snowball",
     "tags": ""
+  },
+  {
+    "event_id": "evt-N9nOTMAAkZN0wF3",
+    "name": "Founders & Investors Xplore by CEDAT",
+    "url": "https://lu.ma/oxx8n5ee",
+    "start_at": "2026-05-16T08:30:00.000Z",
+    "end_at": "2026-05-16T12:30:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Bengaluru",
+    "sublocality": "4th Block",
+    "country": "India",
+    "latitude": 12.989661,
+    "longitude": 77.57443359999999,
+    "cover_url": "https://images.lumacdn.com/uploads/qq/c696c253-ca24-4573-b792-26f730cd0840.png",
+    "guest_count": 0,
+    "hosts": "Akash Akku",
+    "calendar_name": "CEDAT NEXUS",
+    "calendar_slug": "CEDAT",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": "Tech"
   },
   {
     "event_id": "evt-qh24dznqrXVkFAi",
@@ -885,7 +885,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": "Fitness, Tech"
   },
   {
     "event_id": "evt-18rayOdWJn40EnV",
@@ -1141,7 +1141,7 @@
     "latitude": 12.977929,
     "longitude": 77.595155,
     "cover_url": "https://images.lumacdn.com/event-covers/zn/c6edf6b3-850a-434d-a90b-ff8d44c6c13c.png",
-    "guest_count": 62,
+    "guest_count": 63,
     "hosts": "Caroline Gomes, Christine Farrier Rosemin, Anukriti Singh, Chirag Srivastava",
     "calendar_name": "TechWalk",
     "calendar_slug": "techwalk",
@@ -1197,7 +1197,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Food & Drink"
+    "tags": "Food & Drink, Tech"
   },
   {
     "event_id": "evt-h73zpAh3upIm02Q",

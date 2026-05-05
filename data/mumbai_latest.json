@@ -141,7 +141,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture"
+    "tags": ""
   },
   {
     "event_id": "evt-OnOCdVqZ5RhFMzS",
@@ -349,7 +349,7 @@
     "latitude": 18.9581934,
     "longitude": 72.8320729,
     "cover_url": "https://images.lumacdn.com/event-covers/cv/284c4fdb-ab37-4cb2-9981-12311c5d62f0.png",
-    "guest_count": 667,
+    "guest_count": 668,
     "hosts": "Mykola x Web3Privacy now, PG_CDG | Web3Privacy Now",
     "calendar_name": "Web3Privacy Now Events",
     "calendar_slug": "web3privacy",

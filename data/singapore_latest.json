@@ -13,7 +13,7 @@
     "latitude": 1.292393,
     "longitude": 103.77572599999999,
     "cover_url": "https://images.lumacdn.com/event-covers/zx/73389813-4e16-4fbc-bc89-3757494c0efb.png",
-    "guest_count": 176,
+    "guest_count": 175,
     "hosts": "BLOCK71 SEC, BLOCK71 Singapore, Tr\u1ea7n L\u00ea B\u1ea3o Linh",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -189,7 +189,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture, Food & Drink"
+    "tags": ""
   },
   {
     "event_id": "evt-ekdbcmNCmbdIv9C",
@@ -405,7 +405,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI, Arts & Culture"
+    "tags": ""
   },
   {
     "event_id": "evt-2jDEzA9zH6mlVm1",
@@ -685,7 +685,7 @@
     "latitude": 1.3111165999999999,
     "longitude": 103.86143679999999,
     "cover_url": "https://images.lumacdn.com/event-covers/zw/ca46f3f2-ee71-4455-857b-b6cafc7060e9.png",
-    "guest_count": 105,
+    "guest_count": 106,
     "hosts": "Rica, Michael Sagna",
     "calendar_name": "Futures Friends: Singapore",
     "calendar_slug": "FuturesFriendsSingapore",
@@ -1029,7 +1029,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Food & Drink, Tech"
+    "tags": ""
   },
   {
     "event_id": "evt-4Yk88tTBexZ5obM",
@@ -1080,30 +1080,6 @@
     "tags": "Tech"
   },
   {
-    "event_id": "evt-UB5ILTchi2KDvni",
-    "name": "AI Agents Observability + Memory Layer for Agentic Workflow Visibility + Real-Time Dashboards",
-    "url": "https://lu.ma/gf7cf3tp",
-    "start_at": "2026-05-14T10:00:00.000Z",
-    "end_at": "2026-05-14T13:00:00.000Z",
-    "timezone": "Asia/Singapore",
-    "location_type": "offline",
-    "city": "Singapore",
-    "sublocality": "Central Area",
-    "country": "Singapore",
-    "latitude": 1.285,
-    "longitude": 103.8475,
-    "cover_url": "https://images.lumacdn.com/event-covers/pg/ca5c2eb7-4bd2-4474-aaef-fcfd2371296e.jpg",
-    "guest_count": 16,
-    "hosts": "",
-    "calendar_name": "Technology + Agentic AI + Databases",
-    "calendar_slug": null,
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball",
-    "tags": "AI"
-  },
-  {
     "event_id": "evt-T26xpNOSHIV8Mio",
     "name": "Daytona AI Builders w/ Zo Computer - Singapore, May 2026",
     "url": "https://lu.ma/r0jxt5da",
@@ -1120,6 +1096,30 @@
     "guest_count": 166,
     "hosts": "Daytona, Agrim Singh, Sherry Jiang, Adlin Zainal, Zo Computer team",
     "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": "AI"
+  },
+  {
+    "event_id": "evt-UB5ILTchi2KDvni",
+    "name": "AI Agents Observability + Memory Layer for Agentic Workflow Visibility + Real-Time Dashboards",
+    "url": "https://lu.ma/gf7cf3tp",
+    "start_at": "2026-05-14T10:00:00.000Z",
+    "end_at": "2026-05-14T13:00:00.000Z",
+    "timezone": "Asia/Singapore",
+    "location_type": "offline",
+    "city": "Singapore",
+    "sublocality": "Central Area",
+    "country": "Singapore",
+    "latitude": 1.285,
+    "longitude": 103.8475,
+    "cover_url": "https://images.lumacdn.com/event-covers/pg/ca5c2eb7-4bd2-4474-aaef-fcfd2371296e.jpg",
+    "guest_count": 16,
+    "hosts": "",
+    "calendar_name": "Technology + Agentic AI + Databases",
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
@@ -1189,7 +1189,7 @@
     "latitude": 1.3160025,
     "longitude": 103.8932571,
     "cover_url": "https://images.lumacdn.com/uploads/oj/6c5a280c-7d9d-457c-bd0d-1a2ec3a5b923.png",
-    "guest_count": 47,
+    "guest_count": 46,
     "hosts": "Michael Cheng, Yitch, Shen Ting Ang, Sam Hon, Stella",
     "calendar_name": "Tech Leadership Circle",
     "calendar_slug": "techleadershipcircle",
@@ -1293,7 +1293,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": ""
   },
   {
     "event_id": "evt-IrKfMmJsJ1tSgQG",
@@ -1405,7 +1405,7 @@
     "latitude": 1.2719289,
     "longitude": 103.8362045,
     "cover_url": "https://images.lumacdn.com/event-covers/zq/b0363bc7-6774-4714-b11b-9bc770171b17.jpg",
-    "guest_count": 23,
+    "guest_count": 24,
     "hosts": "\u54c1\u827a\u753b\u5ecaPrestige Gallery, Yan",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -1645,13 +1645,13 @@
     "latitude": 1.28,
     "longitude": 103.8475,
     "cover_url": "https://images.lumacdn.com/event-covers/5k/fbcdd02a-45f5-42e7-af21-978275dea44f.jpg",
-    "guest_count": 99,
+    "guest_count": 101,
     "hosts": "e-America \ud83c\uddfa\ud83c\uddf8, Mamba Partners, Finnley Lee, Alyssa Ng-Misialek",
     "calendar_name": "e-America Events \ud83c\uddfa\ud83c\uddf8",
     "calendar_slug": "eAmerica",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false,
+    "waitlist_active": true,
     "source": "featured",
     "tags": ""
   },
@@ -1773,7 +1773,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture, Tech"
+    "tags": ""
   },
   {
     "event_id": "evt-G7ZjNyRxe39i5Yr",
@@ -2037,7 +2037,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": ""
   },
   {
     "event_id": "evt-DkD88S0WD8O5IOp",
@@ -2061,7 +2061,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture"
+    "tags": ""
   },
   {
     "event_id": "evt-vULx7qIfgwORXqm",
@@ -2205,7 +2205,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture"
+    "tags": ""
   },
   {
     "event_id": "evt-I9Z6kGcYsq6DHgb",
@@ -2277,7 +2277,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": ""
   },
   {
     "event_id": "evt-FAoseIFdmOGD4gB",
@@ -2301,7 +2301,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI, Fitness, Wellness"
+    "tags": "AI, Wellness"
   },
   {
     "event_id": "evt-iYrY7M62E8SWVpA",
@@ -2325,7 +2325,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": ""
   },
   {
     "event_id": "evt-VHTZFrjFtb4Cg0X",
@@ -2349,7 +2349,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "AI, Wellness"
+    "tags": "AI"
   },
   {
     "event_id": "evt-KqqSmKKLBCPRuJG",
@@ -2397,7 +2397,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech, Wellness"
+    "tags": ""
   },
   {
     "event_id": "evt-g7VFrVpw5Ivv3hD",
@@ -2541,7 +2541,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Arts & Culture"
+    "tags": ""
   },
   {
     "event_id": "evt-RQOjQlV9LUYcH7s",
@@ -2808,30 +2808,6 @@
     "tags": "AI"
   },
   {
-    "event_id": "evt-2RWLbjAChgSZCKk",
-    "name": "-",
-    "url": "https://lu.ma/efw0oqri",
-    "start_at": "2028-01-02T14:00:00.000Z",
-    "end_at": "2028-01-03T14:00:00.000Z",
-    "timezone": "Asia/Singapore",
-    "location_type": "offline",
-    "city": "Singapore",
-    "sublocality": "Downtown Core",
-    "country": "Singapore",
-    "latitude": 1.29,
-    "longitude": 103.8575,
-    "cover_url": "https://images.lumacdn.com/event-covers/6p/18bcc1a8-e46c-4d11-92eb-77a23461c276.png",
-    "guest_count": 0,
-    "hosts": "AINight",
-    "calendar_name": "Technology + Agentic AI + Databases",
-    "calendar_slug": null,
-    "event_type": "independent",
-    "visibility": "public",
-    "waitlist_active": false,
-    "source": "snowball",
-    "tags": ""
-  },
-  {
     "event_id": "evt-w3a8an0W752QNfs",
     "name": "Visit the MBPSports Padel/Pickeball/Tennis Court Space (Marina Square or Suntec City) & 10% Discount",
     "url": "https://lu.ma/finwcwj3",
@@ -2854,6 +2830,30 @@
     "waitlist_active": false,
     "source": "snowball",
     "tags": "AI, Fitness"
+  },
+  {
+    "event_id": "evt-2RWLbjAChgSZCKk",
+    "name": "-",
+    "url": "https://lu.ma/efw0oqri",
+    "start_at": "2028-01-02T14:00:00.000Z",
+    "end_at": "2028-01-03T14:00:00.000Z",
+    "timezone": "Asia/Singapore",
+    "location_type": "offline",
+    "city": "Singapore",
+    "sublocality": "Downtown Core",
+    "country": "Singapore",
+    "latitude": 1.29,
+    "longitude": 103.8575,
+    "cover_url": "https://images.lumacdn.com/event-covers/6p/18bcc1a8-e46c-4d11-92eb-77a23461c276.png",
+    "guest_count": 0,
+    "hosts": "AINight",
+    "calendar_name": "Technology + Agentic AI + Databases",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": ""
   },
   {
     "event_id": "evt-LpEUQSSCRCybr6B",
