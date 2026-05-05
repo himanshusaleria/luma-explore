@@ -808,5 +808,25 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-05T17:28:12.815798+00:00"
+  },
+  "cal-UrG10qx9wsywd8Z": {
+    "name": "Meta-Layer Guild",
+    "slug": "meta-layer",
+    "added": "2026-05-05T19:22:51.568959+00:00"
+  },
+  "cal-HwuomrTAI5Ip5SB": {
+    "name": "Microsoft Foundry Live",
+    "slug": "msftfoundrylive",
+    "added": "2026-05-05T19:22:51.568984+00:00"
+  },
+  "cal-SkbTTJZnxSQ6tJc": {
+    "name": "Microsoft Startups",
+    "slug": "microsoft_startups",
+    "added": "2026-05-05T19:22:51.569055+00:00"
+  },
+  "cal-H6ckRrMA86HOab9": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-05T19:22:51.569098+00:00"
   }
 }
