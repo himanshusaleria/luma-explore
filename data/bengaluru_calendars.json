@@ -318,5 +318,15 @@
     "name": "Starknet Foundation",
     "slug": "StarknetFndn",
     "added": "2026-05-06T17:42:15.131167+00:00"
+  },
+  "cal-PCTbemcMtu6Xnk4": {
+    "name": "Lossfunk Event Calendar",
+    "slug": "lossfunk",
+    "added": "2026-05-06T21:12:25.315045+00:00"
+  },
+  "cal-2qXCD5Gv27yeQ7b": {
+    "name": "Bangalore GTM Group",
+    "slug": "blrgtm",
+    "added": "2026-05-06T21:12:25.315062+00:00"
   }
 }

@@ -223,5 +223,20 @@
     "name": "CET - Boston Climate Week",
     "slug": null,
     "added": "2026-05-05T15:56:30.099913+00:00"
+  },
+  "cal-GM1YyQ76ACuSPyH": {
+    "name": "Boston Marketing & Creative Meetup",
+    "slug": "bmcm",
+    "added": "2026-05-06T21:12:19.776918+00:00"
+  },
+  "cal-KD6zElfmdsCBspB": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T21:12:19.776939+00:00"
+  },
+  "cal-KK3JJjJ39Jwt9kI": {
+    "name": "Harvard Alumni in Tech",
+    "slug": "harvardintech",
+    "added": "2026-05-06T21:12:19.776945+00:00"
   }
 }
