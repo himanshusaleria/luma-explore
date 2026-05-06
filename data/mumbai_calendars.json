@@ -83,5 +83,15 @@
     "name": "VideoDB",
     "slug": "videodb",
     "added": "2026-05-01T19:14:31.594115+00:00"
+  },
+  "cal-0veeth2j0P1GW5e": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T02:56:24.783232+00:00"
+  },
+  "cal-E74MDlDKBaeAwXK": {
+    "name": "The AI Collective",
+    "slug": "genai-collective",
+    "added": "2026-05-06T02:56:24.783246+00:00"
   }
 }
