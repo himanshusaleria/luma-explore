@@ -578,5 +578,25 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-06T17:42:05.188080+00:00"
+  },
+  "cal-PCTbemcMtu6Xnk4": {
+    "name": "Lossfunk Event Calendar",
+    "slug": "lossfunk",
+    "added": "2026-05-06T21:12:25.315045+00:00"
+  },
+  "cal-2qXCD5Gv27yeQ7b": {
+    "name": "Bangalore GTM Group",
+    "slug": "blrgtm",
+    "added": "2026-05-06T21:12:25.315062+00:00"
+  },
+  "cal-Lhye6kq0xEU336B": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T21:12:18.998158+00:00"
+  },
+  "cal-BZcj7LqI9zC3JyN": {
+    "name": "Global AI Community",
+    "slug": "global-ai-community",
+    "added": "2026-05-06T21:12:18.998179+00:00"
   }
 }
