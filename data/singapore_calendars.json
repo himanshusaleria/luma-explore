@@ -308,5 +308,30 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-08T17:19:32.571605+00:00"
+  },
+  "cal-lIlIVnGFtsk0EWy": {
+    "name": "Liquid Convo",
+    "slug": "liquidconvo",
+    "added": "2026-05-08T19:20:20.859663+00:00"
+  },
+  "cal-6iIeDGNQ7vK8cfx": {
+    "name": "Lorong AI",
+    "slug": "lorong-ai",
+    "added": "2026-05-08T19:20:20.859685+00:00"
+  },
+  "cal-NT82WvAvNa7Onav": {
+    "name": "OpenAI APAC Startups",
+    "slug": null,
+    "added": "2026-05-08T19:20:20.859692+00:00"
+  },
+  "cal-gUEzpLZMEtxsYqy": {
+    "name": "Clawbsters",
+    "slug": null,
+    "added": "2026-05-08T19:20:20.859695+00:00"
+  },
+  "cal-CA3EfJUyKaIE7MI": {
+    "name": "SoCrates",
+    "slug": "socrates",
+    "added": "2026-05-08T19:20:20.859705+00:00"
   }
 }
