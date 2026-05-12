@@ -1243,5 +1243,30 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-11T22:56:07.463519+00:00"
+  },
+  "cal-aDgLv3TfLCnsluY": {
+    "name": "Telnyx",
+    "slug": "telnyx",
+    "added": "2026-05-12T03:25:35.244903+00:00"
+  },
+  "cal-0QYhzcbQ3EMHQte": {
+    "name": "UFB",
+    "slug": "ufb",
+    "added": "2026-05-12T03:25:35.244922+00:00"
+  },
+  "cal-hpIcdwBuL8vfdba": {
+    "name": "cognee",
+    "slug": "cognee",
+    "added": "2026-05-12T03:25:35.244928+00:00"
+  },
+  "cal-tub6kla7iESXM8q": {
+    "name": "Neo4j",
+    "slug": "neo4j",
+    "added": "2026-05-12T03:25:35.245004+00:00"
+  },
+  "cal-2mLDnq80EKWoGy8": {
+    "name": "Tavily Events Calendar",
+    "slug": "eventstavily",
+    "added": "2026-05-12T03:25:35.245107+00:00"
   }
 }
