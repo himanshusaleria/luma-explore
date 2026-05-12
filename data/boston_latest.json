@@ -13,7 +13,7 @@
     "latitude": 42.3590265,
     "longitude": -71.0947699,
     "cover_url": "https://images.lumacdn.com/uploads/2k/1c6cee7c-7691-4247-ad77-241b986ff868.png",
-    "guest_count": 186,
+    "guest_count": 194,
     "hosts": "Teresa Jiang, LeAnn Tai",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -67,7 +67,7 @@
     "calendar_slug": "bmcm",
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false,
+    "waitlist_active": true,
     "source": "featured",
     "tags": ""
   },
