@@ -1373,5 +1373,10 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-13T10:29:46.290376+00:00"
+  },
+  "cal-MJ28KU4lOJNFNHk": {
+    "name": "NVIDIA",
+    "slug": "nvidia-events",
+    "added": "2026-05-13T18:02:52.933396+00:00"
   }
 }
