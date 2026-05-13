@@ -1378,5 +1378,20 @@
     "name": "NVIDIA",
     "slug": "nvidia-events",
     "added": "2026-05-13T18:02:52.933396+00:00"
+  },
+  "cal-UjVhpPOJVcvBJL7": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-13T21:26:35.206339+00:00"
+  },
+  "cal-DLxwYFBQH1LAo0O": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-13T21:26:35.206372+00:00"
+  },
+  "cal-nfEO4mJbKRdlG3i": {
+    "name": "Verisense Network Calendar",
+    "slug": null,
+    "added": "2026-05-13T21:26:35.206519+00:00"
   }
 }
