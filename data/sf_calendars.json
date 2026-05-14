@@ -1398,5 +1398,15 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-13T23:06:09.386963+00:00"
+  },
+  "cal-6Tci63IXSGPhZTU": {
+    "name": "Machine Cinema",
+    "slug": "machinecinema",
+    "added": "2026-05-14T17:51:49.074413+00:00"
+  },
+  "cal-aNZZ1rwnV1SXb2R": {
+    "name": "Emari",
+    "slug": "emari",
+    "added": "2026-05-14T17:51:49.074524+00:00"
   }
 }
