@@ -85,7 +85,7 @@
     "latitude": 28.5325,
     "longitude": 77.3625,
     "cover_url": "https://images.lumacdn.com/uploads/2e/963a03b6-90b0-4823-bb62-7e6555d286bc.png",
-    "guest_count": 30,
+    "guest_count": 52,
     "hosts": "Harkirat (Rocket) Singh",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -212,8 +212,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Fitness"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-r1WUaqalmsg4wQA",
