@@ -168,5 +168,15 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-14T03:32:35.639632+00:00"
+  },
+  "cal-1tlrqmoS2LvTbqV": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-15T17:28:45.226318+00:00"
+  },
+  "cal-sLRQJwogROB6ZmW": {
+    "name": "\ud83c\udf0d Make AI Global Calendar",
+    "slug": "ai-automations-make-global-calendar",
+    "added": "2026-05-15T17:28:45.226333+00:00"
   }
 }
