@@ -1418,5 +1418,30 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-14T19:47:38.614114+00:00"
+  },
+  "cal-yvXdS4MCqkvP4cc": {
+    "name": "Special Projects",
+    "slug": "special",
+    "added": "2026-05-15T03:36:12.460483+00:00"
+  },
+  "cal-hYDNgfKWQOhVQCN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-15T03:36:12.460496+00:00"
+  },
+  "cal-Iq1yNLpd5M5WOKu": {
+    "name": "Elsewher3 \u2601\ufe0f",
+    "slug": null,
+    "added": "2026-05-15T03:36:12.460510+00:00"
+  },
+  "cal-Y6pdxYhx9E8Arc8": {
+    "name": "Tailscale Events",
+    "slug": null,
+    "added": "2026-05-15T03:36:12.460524+00:00"
+  },
+  "cal-6lduPGwXFWXByFg": {
+    "name": "Voker",
+    "slug": "voker",
+    "added": "2026-05-15T03:36:12.460527+00:00"
   }
 }
