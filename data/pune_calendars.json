@@ -768,5 +768,20 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-15T03:35:54.162384+00:00"
+  },
+  "cal-IItGvO9rw4QPHQ4": {
+    "name": "Libra AI",
+    "slug": "libra",
+    "added": "2026-05-15T10:25:05.591719+00:00"
+  },
+  "cal-qc8Rzk9tGqPFDJb": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-15T10:25:05.591748+00:00"
+  },
+  "cal-AwOIOtBDJy5dcC7": {
+    "name": "The AI Builders",
+    "slug": "the_ai_builders",
+    "added": "2026-05-15T10:25:05.591754+00:00"
   }
 }
