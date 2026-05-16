@@ -1,4 +1,29 @@
 {
+  "cal-AVon4two3fApp0g": {
+    "name": "Hyderabad",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-cEXlOWqjD6Dh3YR": {
+    "name": "Hyderabad DAO",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-goNymmVrQUv0KlG": {
+    "name": "Big Blockers Hyderabad",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-V1a1OAEROLcbC8e": {
+    "name": "Hyderabad Book Club",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-qWFXiBUvlPBxkBr": {
+    "name": "Shanti Sarovar",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
   "cal-KBmRDXTwxvEuRTY": {
     "name": "Personal",
     "slug": null,
@@ -454,21 +479,6 @@
     "slug": "flap",
     "added": "2026-05-16T09:41:41.991977+00:00"
   },
-  "cal-UfohynPnxHuTHOp": {
-    "name": "Personal",
-    "slug": null,
-    "added": "2026-05-16T20:50:28.021202+00:00"
-  },
-  "cal-nQrnAtdqiOEEYcT": {
-    "name": "Personal",
-    "slug": null,
-    "added": "2026-05-16T22:47:03.775192+00:00"
-  },
-  "cal-upubTF0mhrcQmsA": {
-    "name": "AI House",
-    "slug": "ai_house",
-    "added": "2026-05-16T22:47:03.775211+00:00"
-  },
   "cal-TGRR1z2dD6rXSHT": {
     "name": "Clay Cup",
     "slug": "",
@@ -486,6 +496,311 @@
   },
   "cal-bRQpqnhW6p7Gt0p": {
     "name": "Base Around the World",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-9MWXJkkOKj4X7aE": {
+    "name": "Frelo",
+    "slug": null,
+    "added": "2026-04-27T11:36:53.257902+00:00"
+  },
+  "cal-Lql8E8GQGc2CgsE": {
+    "name": "Uhtend - discover events in Mumbai with a subscription.",
+    "slug": "uhtend",
+    "added": "2026-04-27T11:36:53.263634+00:00"
+  },
+  "cal-VwMefISXDCRgr7D": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:36:53.263642+00:00"
+  },
+  "cal-v4ZcaEQPRDQ7JQF": {
+    "name": "LSE Generate Events",
+    "slug": "lsegenerate",
+    "added": "2026-04-27T11:36:53.263651+00:00"
+  },
+  "cal-AfwOvaVBru2mdC8": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:36:53.263656+00:00"
+  },
+  "cal-bU1OabCuoVnfL8Q": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:36:53.263662+00:00"
+  },
+  "cal-CUMawGK95imfmW1": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:27.054459+00:00"
+  },
+  "cal-gYynQ0SByBEdOCh": {
+    "name": "MumbaiSocial",
+    "slug": "Mumbaisocial.r",
+    "added": "2026-04-30T03:21:27.054477+00:00"
+  },
+  "cal-x0rak4pUrNDadIv": {
+    "name": "Cursor Mumbai, India",
+    "slug": "mumbai-india",
+    "added": "2026-04-30T03:21:27.054482+00:00"
+  },
+  "cal-WJeK56sraztsiIa": {
+    "name": "Web3Privacy Now Events",
+    "slug": "web3privacy",
+    "added": "2026-04-30T03:21:27.054486+00:00"
+  },
+  "cal-1sJr7zhEZxZ0BDt": {
+    "name": "Run\u0928\u0940\u0924\u093f",
+    "slug": "Runneeti_runclub",
+    "added": "2026-04-30T19:24:16.281171+00:00"
+  },
+  "cal-tDeBeF3b6dc38nv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-01T03:31:28.955640+00:00"
+  },
+  "cal-WWBVSDgI3MRuOdl": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-01T03:31:28.955656+00:00"
+  },
+  "cal-codzJrE8C3ZjgeC": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-01T03:31:28.955661+00:00"
+  },
+  "cal-0veeth2j0P1GW5e": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T02:56:24.783232+00:00"
+  },
+  "cal-K42wHF3BP4WMaq4": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-07T23:01:30.564557+00:00"
+  },
+  "cal-1NhXtdDP52rjGM0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-08T02:58:35.360890+00:00"
+  },
+  "cal-nvoLwGxEuGOD5YL": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-09T02:54:24.665669+00:00"
+  },
+  "cal-WDEu7kTKFSvcbaV": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-09T02:54:24.665688+00:00"
+  },
+  "cal-AkTtj8ouJ2DPjEB": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-10T19:06:05.888677+00:00"
+  },
+  "cal-TGqTNpY4iyl7XYe": {
+    "name": "Postman Developer Events",
+    "slug": "postman-dev-events",
+    "added": "2026-05-12T03:25:11.346029+00:00"
+  },
+  "cal-MtnW8EgM2mitxef": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-12T10:32:42.370501+00:00"
+  },
+  "cal-h3hPCJeInf2eYJ1": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-14T17:51:28.321326+00:00"
+  },
+  "cal-Jgi6h4SxtMZ1CaE": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-15T03:35:54.162384+00:00"
+  },
+  "cal-pq2xfMHpcVBeYCt": {
+    "name": "AI Mumbai",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-EyCX7CJ0bK4pKqj": {
+    "name": "Trading & Investing Expo",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-RFwG7DVB52a6vze": {
+    "name": "Devfest Mumbai",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-gF8fFyHokJ5QFrQ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:37:03.427778+00:00"
+  },
+  "cal-dVfTh3TCtvByry0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:37:03.429258+00:00"
+  },
+  "cal-dAfpBp23qUH099j": {
+    "name": "IDC Offline Community Connect",
+    "slug": null,
+    "added": "2026-04-27T11:37:03.429291+00:00"
+  },
+  "cal-Shmqhx7PbGNA4k5": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-27T11:37:03.429316+00:00"
+  },
+  "cal-01LdaCFOseF7b1n": {
+    "name": "Nature Morte",
+    "slug": null,
+    "added": "2026-04-27T11:37:03.429347+00:00"
+  },
+  "cal-lQlG8IOf7rjPveo": {
+    "name": "Tencent",
+    "slug": "Tencent",
+    "added": "2026-04-27T11:37:03.429362+00:00"
+  },
+  "cal-1fGLFF92ioItgAd": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-29T02:58:10.159183+00:00"
+  },
+  "cal-oCF2Thf8Szq9INi": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:26.678269+00:00"
+  },
+  "cal-v30DofZRmJStlAb": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:26.678286+00:00"
+  },
+  "cal-mxMWj36Wsubz4v0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:26.678290+00:00"
+  },
+  "cal-rO2Nlgwv8OFeoBp": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T03:21:26.678293+00:00"
+  },
+  "cal-fN3eHPTYMDK73Yh": {
+    "name": "Legion Events Calendar",
+    "slug": "near-legion",
+    "added": "2026-04-30T03:21:26.678296+00:00"
+  },
+  "cal-C14Xa8krNe6zmZR": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T19:24:16.068662+00:00"
+  },
+  "cal-FySoEa4ThHvDfkM": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T19:24:16.068675+00:00"
+  },
+  "cal-QTOvJDoWDfzwKD7": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-04-30T21:02:51.029480+00:00"
+  },
+  "cal-iaSpZnVGYMSTPhB": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-03T16:52:47.214251+00:00"
+  },
+  "cal-Eovkm3EmM6au3q4": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-03T19:01:32.474754+00:00"
+  },
+  "cal-mMUHyPSII6Zpi1W": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-04T17:42:17.095108+00:00"
+  },
+  "cal-S3pdMJmDQDY9aT4": {
+    "name": "Logos",
+    "slug": "logosevents",
+    "added": "2026-05-05T15:56:26.236856+00:00"
+  },
+  "cal-n8lEa50Kn9Q9KKs": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-05T21:04:37.609635+00:00"
+  },
+  "cal-KeXgeXNkZAKKl3l": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T02:56:22.434445+00:00"
+  },
+  "cal-hHeouP3igh1yaw4": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T17:42:05.188080+00:00"
+  },
+  "cal-Lhye6kq0xEU336B": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-06T21:12:18.998158+00:00"
+  },
+  "cal-BZcj7LqI9zC3JyN": {
+    "name": "Global AI Community",
+    "slug": "global-ai-community",
+    "added": "2026-05-06T21:12:18.998179+00:00"
+  },
+  "cal-qLhZndjDb4kdmVM": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-08T17:19:29.908744+00:00"
+  },
+  "cal-sONrJFs16XaA8a0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-09T19:04:21.256999+00:00"
+  },
+  "cal-rdK1qUxEy30UBkp": {
+    "name": "Subcultural Music",
+    "slug": "subculturalmusic",
+    "added": "2026-05-09T19:04:21.257023+00:00"
+  },
+  "cal-II5ZeTtxLLFmPWQ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-09T20:45:18.906778+00:00"
+  },
+  "cal-cCPPO04io4vqtzW": {
+    "name": "Gyatt Running",
+    "slug": "Runwithgyatt",
+    "added": "2026-05-12T20:05:01.813804+00:00"
+  },
+  "cal-j0b7VB14ltBV96e": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-14T03:32:35.639632+00:00"
+  },
+  "cal-1tlrqmoS2LvTbqV": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-15T17:28:45.226318+00:00"
+  },
+  "cal-wygoxHqlSEMJCdX": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-16T09:41:36.189275+00:00"
+  },
+  "cal-8ftqIqJjFYjFVGD": {
+    "name": "Delhi Climate Innovation Week",
+    "slug": "",
+    "added": "2026-05-16T16:15:48.837439+00:00"
+  },
+  "cal-2pLzjWjAVLeSfQw": {
+    "name": "Nasscom DeepTech",
     "slug": "",
     "added": "2026-05-16T16:15:48.837439+00:00"
   }
