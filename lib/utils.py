@@ -33,9 +33,14 @@ CITIES = {
         "bounds": {"north": 42.5, "south": 42.2, "east": -70.9, "west": -71.3},
     },
     "pune": {
-        "place_id": None,  # No discover page — coordinate-only city
+        "place_id": None,
         "bounds": {"north": 18.65, "south": 18.40, "east": 74.0, "west": 73.7},
-        "scan_from": ["bengaluru", "mumbai", "new-delhi"],  # Scan these cities' calendars too
+        "scan_from": ["bengaluru", "mumbai", "new-delhi"],
+    },
+    "hyderabad": {
+        "place_id": None,
+        "bounds": {"north": 17.55, "south": 17.30, "east": 78.60, "west": 78.30},
+        "scan_from": ["bengaluru", "mumbai", "new-delhi"],
     },
 }
 
