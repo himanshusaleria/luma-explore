@@ -58,8 +58,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { overflow-x: hidden; }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -67,6 +71,10 @@
     color: #1a1a1a;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   /* ── Top Nav ─────────────────────────────────────── */
@@ -81,6 +89,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+    overflow: hidden;
   }
 
   .nav-left {
@@ -186,10 +196,11 @@
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-    padding: 56px 40px;
+    padding: 56px 24px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
   }
 
   .hero::before {
@@ -290,6 +301,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 24px 24px 80px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .section-header {
@@ -314,6 +327,76 @@
   .event-count-label {
     font-size: 12px;
     color: #999;
+  }
+
+  /* ── View Toggle ─────────────────────────────────── */
+  .view-toggle {
+    display: flex;
+    gap: 2px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 3px;
+  }
+
+  .view-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .view-btn.active {
+    background: #fff;
+    color: #1a1a1a;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  /* ── Map ──────────────────────────────────────────── */
+  .map-container { margin-top: 12px; overflow: hidden; width: 100%; }
+  #map { z-index: 1; width: 100% !important; }
+  .leaflet-div-icon { background: none !important; border: none !important; }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12) !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+  .leaflet-popup-content { margin: 0 !important; width: 260px !important; }
+  .leaflet-popup-tip { display: none; }
+
+  .map-popup-img { width: 100%; height: 120px; object-fit: cover; display: block; }
+  .map-popup-body { padding: 12px; }
+  .map-popup-time { font-size: 11px; color: #888; font-weight: 500; margin-bottom: 4px; }
+  .map-popup-name { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; line-height: 1.3; }
+  .map-popup-host { font-size: 12px; color: #888; margin-bottom: 8px; }
+  .map-popup-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; margin-bottom: 8px; }
+  .map-popup-tag.hidden { background: #ede9fe; color: #7c3aed; }
+  .map-popup-tag.featured { background: #f0f0f0; color: #888; }
+  .map-popup-link {
+    display: inline-block; padding: 6px 12px; background: #1a1a1a; color: #fff;
+    border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none;
+  }
+  .map-popup-link:hover { background: #333; }
+
+  @media (max-width: 640px) {
+    #map { height: 250px !important; border-radius: 8px !important; }
+    .map-container { margin-top: 8px; }
+    .leaflet-popup-content { width: 200px !important; }
+    .map-popup-img { height: 90px; }
+    .map-popup-body { padding: 10px; }
+    .map-popup-name { font-size: 13px; }
   }
 
   /* ── Timeline ─────────────────────────────────────── */
@@ -410,6 +493,7 @@
   .event-name {
     font-size: 15px; font-weight: 700; line-height: 1.35; color: #1a1a1a;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    word-wrap: break-word; overflow-wrap: break-word;
   }
 
   .event-host-line {
@@ -425,7 +509,7 @@
   }
   .event-location-line svg { width: 11px; height: 11px; flex-shrink: 0; color: #bbb; }
 
-  .event-tags { display: flex; align-items: center; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+  .event-tags { display: flex; align-items: center; gap: 6px; margin-top: 4px; flex-wrap: wrap; overflow: hidden; }
   .event-tag { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
   .tag-waitlist { background: #fef3c7; color: #d97706; }
   .tag-online { background: #dcfce7; color: #16a34a; }
@@ -489,41 +573,27 @@
   /* ── Footer ──────────────────────────────────────── */
   .footer {
     text-align: center; padding: 24px; font-size: 11px; color: #bbb; line-height: 1.6;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #eee; word-wrap: break-word; overflow-wrap: break-word;
   }
-  .footer a { color: #999; text-decoration: underline; text-underline-offset: 2px; }
+  .footer a { color: #999; text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
 
-  /* ── Responsive ──────────────────────────────────── */
-  @media (max-width: 768px) {
-    .nav-cities { display: none; }
-    .search-box { width: 160px; }
-
-    /* Show mobile city bar */
-    .mobile-city-bar {
-      display: flex !important;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .mobile-city-bar { display: none !important; }
-  }
-
+  /* ── Mobile City Bar ──────────────────────────────── */
   .mobile-city-bar {
     display: none;
     background: #fff;
-    padding: 10px 16px;
+    padding: 8px 16px;
     border-bottom: 1px solid #ebebeb;
     gap: 6px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
   .mobile-city-bar::-webkit-scrollbar { display: none; }
-
   .mobile-city-bar .city-tab {
-    padding: 5px 14px;
+    padding: 6px 14px;
     border-radius: 100px;
     border: 1px solid #e5e5e5;
     background: #fff;
+    font-size: 13px;
   }
   .mobile-city-bar .city-tab.active {
     background: #1a1a1a;
@@ -531,14 +601,97 @@
     color: #fff;
   }
 
+  /* ── Responsive: Tablet ──────────────────────────── */
+  @media (max-width: 768px) {
+    .nav-cities { display: none; }
+    .nav-divider { display: none; }
+    .mobile-city-bar { display: flex !important; }
+  }
+  @media (min-width: 769px) {
+    .mobile-city-bar { display: none !important; }
+  }
+
+  /* ── Responsive: Mobile ──────────────────────────── */
   @media (max-width: 640px) {
-    .hero { padding: 40px 20px; }
-    .hero-title { font-size: 24px; }
-    .hero-desc { font-size: 13px; }
-    .subscribe-form { flex-direction: column; }
-    .main { padding: 16px 16px 60px; }
-    .event-cover { width: 100px; height: 68px; }
-    .event-cover-link { opacity: 1; }
+    /* Kill horizontal scroll */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* Nav: logo left, search right, hide submit */
+    .top-nav { height: 48px; padding: 0 16px; }
+    .nav-logo { gap: 6px; font-size: 14px; }
+    .nav-logo-icon { width: 26px; height: 26px; font-size: 12px; }
+    .nav-right { gap: 8px; }
+    .search-box {
+      width: 120px; font-size: 13px;
+      padding: 7px 8px 7px 30px;
+      background-position: 8px center;
+    }
+    .btn-submit { display: none; }
+
+    /* Hero: compact, no overflow */
+    .hero {
+      padding: 28px 20px;
+      overflow: hidden;
+    }
+    .hero-content { max-width: 100%; }
+    .hero-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
+    .hero-title { font-size: 22px; line-height: 1.25; margin-bottom: 8px; }
+    .hero-title br { display: none; }
+    .hero-desc { font-size: 13px; line-height: 1.5; margin-bottom: 16px; max-width: 100%; }
+    .subscribe-btn { font-size: 13px; padding: 10px 24px; width: 100%; }
+    .subscribe-note { font-size: 10px; margin-top: 8px; }
+
+    /* Main */
+    .main { padding: 12px 16px 32px; max-width: 100%; }
+    .section-header { margin-bottom: 4px; }
+    .section-title { font-size: 16px; }
+
+    /* Stats */
+    .stats-bar { padding: 8px 0; gap: 12px; }
+    .stat-number { font-size: 16px; }
+    .stat-item { font-size: 11px; }
+    .stat-divider { height: 16px; }
+
+    /* Map */
+    #map { height: 220px !important; border-radius: 10px !important; }
+    .map-container { margin-top: 8px; margin-bottom: 4px; }
+
+    /* Timeline: remove for mobile, simpler layout */
+    .timeline { padding-left: 0; }
+    .timeline::before { display: none; }
+    .date-group-title::before { display: none; }
+    .event-row::before { display: none; }
+    .date-group-title { font-size: 13px; font-weight: 700; padding: 12px 0 6px; }
+
+    /* Event cards */
+    .event-row { gap: 12px; padding: 12px 0; }
+    .event-cover-wrap { width: 56px; height: 56px; }
+    .event-cover { width: 56px !important; height: 56px !important; border-radius: 8px; }
+    .event-name { font-size: 14px; }
+    .event-time { font-size: 12px; }
+    .event-host-line { font-size: 11px; }
+    .event-location-line { font-size: 11px; }
+    .event-tags { gap: 4px; margin-top: 3px; }
+    .event-tag { font-size: 10px; padding: 2px 6px; }
+    .guest-count { font-size: 10px; }
+    .guest-count svg { width: 10px; height: 10px; }
+    .event-cover-link { display: none; }
+
+    /* Map popups */
+    .leaflet-popup-content { width: 220px !important; }
+    .map-popup-img { height: 90px; }
+    .map-popup-body { padding: 10px; }
+    .map-popup-name { font-size: 13px; }
+
+    /* About/FAQ */
+    section[style*="max-width:900px"] { padding: 0 16px 20px !important; }
+    section[style*="max-width:900px"] h2 { font-size: 15px !important; }
+    section[style*="max-width:900px"] h3 { font-size: 13px !important; }
+    section[style*="max-width:900px"] p,
+    section[style*="max-width:900px"] li { font-size: 12px !important; }
+
+    /* Footer */
+    .footer { padding: 20px 16px; font-size: 10px; }
   }
 </style>
 </head>
@@ -556,7 +709,7 @@
   </div>
   <div class="nav-right">
     <input type="text" class="search-box" id="search" placeholder="Search events...">
-    <a class="btn-submit" href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener" onclick="track('cta_submit_event')">Submit Event</a>
+    <a class="btn-submit" href="#" onclick="event.preventDefault(); track('cta_submit_event'); emailLink('List%20my%20event','Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!')">Submit Event</a>
   </div>
 </div>
 
@@ -587,13 +740,16 @@
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
   </div>
+  <div id="mapContainer" class="map-container">
+    <div id="map" style="width:100%; height:500px; border-radius:12px;"></div>
+  </div>
   <div id="content">
     <div style="text-align:center;padding:60px 0;color:#999;">Loading events...</div>
   </div>
 </div>
 
 <!-- About Section -->
-<section style="max-width:900px;margin:0 auto;padding:0 24px 40px;">
+<section style="max-width:900px;margin:0 auto;padding:0 24px 40px;overflow:hidden;width:100%;word-wrap:break-word;">
   <h2 style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:8px;">Find All Events on Luma — Not Just the Featured Ones</h2>
   <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">Luma's discover page only shows featured events. But there are hundreds more — tech events, AI events, startup events, crypto events, and community events that never make it to the front page. Luma Event Explorer finds all events across <strong>Bangalore</strong>, <strong>San Francisco</strong>, <strong>Singapore</strong>, <strong>Mumbai</strong>, <strong>New Delhi</strong>, <strong>Boston</strong>, and <strong>Pune</strong> by scanning organizer calendars and community calendars.</p>
 
@@ -608,15 +764,16 @@
   </ul>
 
   <h3 style="font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:6px;">Events by City</h3>
-  <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:16px;">
-    <strong>Events in Bangalore</strong> — tech events in Bangalore, Bangalore IT events, startup meetups, and AI workshops in Bengaluru. |
-    <strong>SF Events</strong> — events in SFO, San Francisco area events, tech networking events, and startup events in the Bay Area. |
-    <strong>Singapore Events</strong> — tech events, AI meetups, and community events in Singapore. |
-    <strong>Events in Mumbai</strong> — tech events, startup events, and community calendars in Mumbai. |
-    <strong>Events in Delhi</strong> — tech events, AI events, and startup gatherings in New Delhi. |
-    <strong>Events Boston</strong> — Boston MA events, tech conventions, and community events. |
-    <strong>Events in Pune</strong> — tech events, hackathons, and startup meetups in Pune.
-  </p>
+  <ul style="font-size:13px;color:#666;line-height:1.8;padding-left:20px;margin-bottom:16px;word-wrap:break-word;">
+    <li><strong>Events in Bangalore</strong> — tech events, IT events, startup meetups, AI workshops</li>
+    <li><strong>SF Events</strong> — events in SFO, tech networking, startup events in the Bay Area</li>
+    <li><strong>Singapore Events</strong> — tech events, AI meetups, community events</li>
+    <li><strong>Events in Mumbai</strong> — tech events, startup events, community calendars</li>
+    <li><strong>Events in Delhi</strong> — tech events, AI events, startup gatherings</li>
+    <li><strong>Events Boston</strong> — Boston MA events, tech conventions, community events</li>
+    <li><strong>Events in Pune</strong> — tech events, hackathons, startup meetups</li>
+    <li><strong>Events in Hyderabad</strong> — tech events, Web3 events, community meetups</li>
+  </ul>
 
   <h2 style="font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:12px;">Frequently Asked Questions</h2>
   <h3 style="font-size:13px;font-weight:600;color:#1a1a1a;margin-bottom:4px;">What are hidden events on Luma?</h3>
@@ -633,7 +790,7 @@
 <footer class="footer">
   This is an unofficial tool to help you discover more events. Not affiliated with or endorsed by Luma.<br>
   All events are hosted on <a href="https://luma.com" target="_blank" rel="noopener">luma.com</a>. Click any event to view details and RSVP.<br><br>
-  Want your event listed here? <a href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=List%20my%20event&body=Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!" target="_blank" rel="noopener">Email us</a> with your Luma event link.
+  Want your event listed here? <a href="#" onclick="event.preventDefault(); emailLink('List%20my%20event','Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!')">Email us</a> with your Luma event link.
 </footer>
 
 <script>
@@ -660,14 +817,25 @@ function track(eventName, params = {}) {
   }
 }
 
-// ── Email subscription via Gmail ──
+// ── Email helpers ──
+function emailLink(subject, body) {
+  if (window.innerWidth <= 768) {
+    window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
+  } else {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`, '_blank');
+  }
+}
+
 function openSubscribe() {
   const cityLabel = CITIES[currentCity].label;
   track('cta_get_notified', { city: cityLabel });
   const subject = encodeURIComponent(`Add me to mailing list:${cityLabel}`);
   const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly hidden events digest for ${cityLabel}.\n\nThank you!`);
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`;
-  window.open(gmailUrl, '_blank');
+  if (window.innerWidth <= 768) {
+    window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
+  } else {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`, '_blank');
+  }
 }
 
 // ── Data loading ──
@@ -770,8 +938,8 @@ function renderEvents(events) {
       const lumaUrl = e.url || '#';
       const coverImg = e.cover_url
         ? `<img class="event-cover" alt="" loading="lazy" width="160" height="100" decoding="async"
-            sizes="(max-width: 640px) 100px, 160px"
-            srcset="${cdnImg(e.cover_url, 100, 68)} 100w, ${cdnImg(e.cover_url, 160, 100)} 160w, ${cdnImg(e.cover_url, 320, 200)} 320w"
+            sizes="(max-width: 640px) 56px, 160px"
+            srcset="${cdnImg(e.cover_url, 56, 56)} 56w, ${cdnImg(e.cover_url, 112, 112)} 112w, ${cdnImg(e.cover_url, 160, 100)} 160w, ${cdnImg(e.cover_url, 320, 200)} 320w"
             src="${cdnImg(e.cover_url, 160, 100)}">`
         : `<div class="event-cover"></div>`;
 
@@ -909,6 +1077,7 @@ function switchCity(city) {
   setTimeout(() => {
     renderEvents(allEvents[currentCity] || []);
     content.classList.remove('fading');
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
   }, 150);
 }
 
@@ -955,10 +1124,114 @@ function renderCityTabs() {
   });
 }
 
+// ── Map View ──
+let mapInstance = null;
+let mapMarkers = [];
+let currentView = 'both';
+let hiddenIcon = null;
+let featuredIcon = null;
+
+function initMap() {
+  if (mapInstance) return;
+  // Icons are created per-event with cover thumbnails (see makeMarkerIcon)
+  const isMobile = window.innerWidth <= 640;
+  mapInstance = L.map('map', {
+    zoomControl: true,
+    scrollWheelZoom: !isMobile,
+    dragging: !isMobile,
+    tap: !isMobile
+  });
+  // On mobile, enable dragging only after user taps the map
+  if (isMobile) {
+    mapInstance.once('focus', () => { mapInstance.dragging.enable(); mapInstance.scrollWheelZoom.enable(); });
+  }
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 19,
+    subdomains: 'abcd'
+  }).addTo(mapInstance);
+}
+
+function makeMarkerIcon(event) {
+  const isHidden = event.source && event.source !== 'featured';
+  const borderColor = isHidden ? '#7c3aed' : '#1a1a1a';
+  const mobile = window.innerWidth <= 640;
+  const sz = mobile ? 28 : 36;
+  const outer = mobile ? 32 : 40;
+  const radius = mobile ? 6 : 7;
+  const outerRadius = mobile ? 7 : 9;
+  const imgSrc = event.cover_url ? cdnImg(event.cover_url, sz, sz) : '';
+  const imgHtml = imgSrc
+    ? `<img src="${imgSrc}" style="width:${sz}px;height:${sz}px;border-radius:${radius}px;object-fit:cover;display:block;" loading="lazy">`
+    : `<div style="width:${sz}px;height:${sz}px;border-radius:${radius}px;background:#e5e5e5;display:flex;align-items:center;justify-content:center;font-size:12px;">📍</div>`;
+  return L.divIcon({
+    className: '',
+    html: `<div style="width:${outer}px;height:${outer}px;border-radius:${outerRadius}px;border:2px solid ${borderColor};background:${borderColor};box-shadow:0 2px 8px rgba(0,0,0,0.25);overflow:hidden;display:flex;align-items:center;justify-content:center;">${imgHtml}</div>`,
+    iconSize: [outer, outer],
+    iconAnchor: [outer/2, outer/2],
+    popupAnchor: [0, -(outer/2 + 4)]
+  });
+}
+
+function renderMap(events) {
+  if (!mapInstance) initMap();
+  mapMarkers.forEach(m => mapInstance.removeLayer(m));
+  mapMarkers = [];
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  const filtered = events.filter(e => {
+    if (e.start_at) { const ed = new Date(e.start_at); ed.setHours(0,0,0,0); if (ed < today) return false; }
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return (e.name||'').toLowerCase().includes(q) || (e.hosts||'').toLowerCase().includes(q)
+      || (e.sublocality||'').toLowerCase().includes(q) || (e.tags||'').toLowerCase().includes(q);
+  });
+
+  const mappable = filtered.filter(e => e.latitude && e.longitude);
+  document.getElementById('eventCount').textContent = `${mappable.length} event${mappable.length!==1?'s':''} on map`;
+
+  if (!mappable.length) { mapInstance.setView([20, 78], 4); return; }
+
+  const bounds = L.latLngBounds();
+  for (const e of mappable) {
+    const isHidden = e.source && e.source !== 'featured';
+    const icon = makeMarkerIcon(e);
+    const marker = L.marker([e.latitude, e.longitude], { icon }).addTo(mapInstance);
+
+    const time = e.start_at ? formatTime(e.start_at, e.timezone) : 'TBD';
+    const date = e.start_at ? new Date(e.start_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
+    const imgHtml = e.cover_url ? `<img class="map-popup-img" src="${cdnImg(e.cover_url, 260, 120)}" alt="">` : '';
+    const tagClass = isHidden ? 'hidden' : 'featured';
+    const tagLabel = isHidden ? 'Hidden' : 'Featured';
+    const hostName = e.hosts ? e.hosts.split(',')[0].trim() : '';
+
+    marker.bindPopup(`
+      <div>
+        ${imgHtml}
+        <div class="map-popup-body">
+          <div class="map-popup-time">${date} · ${time}</div>
+          <div class="map-popup-name">${escHtml(e.name)}</div>
+          ${hostName ? `<div class="map-popup-host">By ${escHtml(hostName)}</div>` : ''}
+          <span class="map-popup-tag ${tagClass}">${tagLabel}</span>
+          <br>
+          <a class="map-popup-link" href="${e.url}" target="_blank" rel="noopener" onclick="track('map_event_click', {event_name: '${escHtml(e.name).replace(/'/g, "\\'")}', city: '${CITIES[currentCity].label}'})">View on Luma</a>
+        </div>
+      </div>
+    `, { maxWidth: 280, closeButton: true });
+
+    bounds.extend([e.latitude, e.longitude]);
+    mapMarkers.push(marker);
+  }
+  mapInstance.fitBounds(bounds, { padding: [30, 30], maxZoom: 14 });
+}
+
+// Map and list are both always visible
+
 let searchDebounce;
 document.getElementById('search').addEventListener('input', (e) => {
   searchQuery = e.target.value;
   renderEvents(allEvents[currentCity] || []);
+  if (mapInstance) renderMap(allEvents[currentCity] || []);
   clearTimeout(searchDebounce);
   if (searchQuery.length >= 3) {
     searchDebounce = setTimeout(() => {
@@ -972,6 +1245,9 @@ document.getElementById('search').addEventListener('input', (e) => {
   updateMetaForCity(currentCity);
   renderCityTabs();
   renderEvents(allEvents[currentCity] || []);
+  // Default to map view
+  initMap();
+  setTimeout(() => { mapInstance.invalidateSize(); renderMap(allEvents[currentCity] || []); }, 100);
 
   // Track page load with event counts
   const totalEvents = Object.values(allEvents).reduce((sum, arr) => sum + arr.length, 0);
