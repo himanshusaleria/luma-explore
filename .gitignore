@@ -5,3 +5,4 @@ data/*_events_*.csv
 .DS_Store
 __pycache__/
 social_posts.md
+seo_research.md
