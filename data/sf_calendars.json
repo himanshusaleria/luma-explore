@@ -1608,5 +1608,25 @@
     "name": "Intelligent Machine Guild",
     "slug": "intelligentmachineguild",
     "added": "2026-05-19T15:26:49.785581+00:00"
+  },
+  "cal-T63NXeG9XjaraNp": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-19T18:07:29.544127+00:00"
+  },
+  "cal-Z1oy6L9MeCayf9j": {
+    "name": "PromptQL Events",
+    "slug": "promptql",
+    "added": "2026-05-19T18:07:29.544146+00:00"
+  },
+  "cal-8kHjPsvCPQtYtUp": {
+    "name": "Weights & Biases",
+    "slug": "wandb",
+    "added": "2026-05-19T18:07:29.544161+00:00"
+  },
+  "cal-wkpfA4oJJNWiEVz": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-19T18:07:29.544267+00:00"
   }
 }
