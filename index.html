@@ -929,6 +929,7 @@ function closeEmailModal(dismissed) {
 
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyWi7CkRwUORh8nJzQUffiksbJAOow3uTIYjvqYgsKUrE630XLpPzgFHZkwyPTlbmBG/exec';
 
+
 async function handleEmailSubmit(e) {
   e.preventDefault();
   const email = document.getElementById('emailInput').value.trim();
@@ -958,6 +959,7 @@ async function handleEmailSubmit(e) {
     closeEmailModal();
     renderEvents(allEvents[currentCity] || []);
     if (mapInstance) renderMap(allEvents[currentCity] || []);
+
     const bottomCtaEl = document.getElementById('bottomCta');
     if (bottomCtaEl) bottomCtaEl.classList.add('hidden');
   } catch (err) {
