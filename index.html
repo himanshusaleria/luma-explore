@@ -128,32 +128,32 @@
     background: #e5e5e5;
   }
 
-  /* City tabs in nav */
-  .nav-cities {
+  /* City selector dropdown */
+  .city-selector {
     display: flex;
     align-items: center;
-    gap: 2px;
   }
 
-  .city-tab {
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: none;
-    background: transparent;
-    color: #888;
+  .city-select {
+    padding: 6px 28px 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background: #f9f9f9;
+    color: #1a1a1a;
     font-size: 13px;
     font-family: inherit;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.1s;
-    white-space: nowrap;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    transition: border-color 0.15s;
   }
-  .city-tab:hover { background: #f5f5f5; color: #1a1a1a; }
-  .city-tab.active {
-    background: #f0f0f0;
-    color: #1a1a1a;
-    font-weight: 600;
-  }
+  .city-select:hover { border-color: #ccc; }
+  .city-select:focus { border-color: #999; }
 
   .nav-right {
     display: flex;
@@ -328,6 +328,64 @@
     font-size: 12px;
     color: #999;
   }
+
+  /* ── Email Modal ──────────────────────────────────── */
+  .email-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .email-modal-overlay.open { display: flex; }
+  .email-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+  .email-modal h2 { font-size: 20px; font-weight: 800; color: #1a1a1a; margin-bottom: 6px; }
+  .email-modal p { font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.5; }
+  .email-modal input[type="email"] {
+    width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 10px;
+    font-size: 14px; font-family: inherit; outline: none; margin-bottom: 12px;
+  }
+  .email-modal input[type="email"]:focus { border-color: #1a1a1a; }
+  .email-modal .modal-submit {
+    width: 100%; padding: 12px; background: #1a1a1a; color: #fff; border: none;
+    border-radius: 10px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;
+  }
+  .email-modal .modal-submit:hover { background: #333; }
+  .email-modal .modal-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+  .email-modal .modal-close {
+    display: block; width: 100%; padding: 10px; background: none; border: none;
+    color: #999; font-size: 13px; font-family: inherit; cursor: pointer; margin-top: 8px;
+  }
+  .email-modal .modal-error { color: #ef4444; font-size: 12px; margin-bottom: 8px; display: none; }
+  .email-modal .modal-success { color: #16a34a; font-size: 13px; font-weight: 500; }
+
+  /* ── Gate Banner ─────────────────────────────────── */
+  .gate-banner {
+    text-align: center;
+    padding: 32px 20px;
+    background: linear-gradient(180deg, transparent 0%, #f0f0f0 100%);
+    border-radius: 12px;
+    margin-top: -40px;
+    padding-top: 60px;
+    position: relative;
+  }
+  .gate-banner h3 { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+  .gate-banner p { font-size: 13px; color: #666; margin-bottom: 16px; }
+  .gate-banner button {
+    padding: 10px 24px; background: #1a1a1a; color: #fff; border: none;
+    border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer;
+  }
+  .gate-banner button:hover { background: #333; }
 
   /* ── View Toggle ─────────────────────────────────── */
   .view-toggle {
@@ -577,38 +635,12 @@
   }
   .footer a { color: #999; text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
 
-  /* ── Mobile City Bar ──────────────────────────────── */
-  .mobile-city-bar {
-    display: none;
-    background: #fff;
-    padding: 8px 16px;
-    border-bottom: 1px solid #ebebeb;
-    gap: 6px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .mobile-city-bar::-webkit-scrollbar { display: none; }
-  .mobile-city-bar .city-tab {
-    padding: 6px 14px;
-    border-radius: 100px;
-    border: 1px solid #e5e5e5;
-    background: #fff;
-    font-size: 13px;
-  }
-  .mobile-city-bar .city-tab.active {
-    background: #1a1a1a;
-    border-color: #1a1a1a;
-    color: #fff;
-  }
+  .mobile-bottom-cta { display: none; }
+  .mobile-bottom-cta.hidden { display: none !important; }
 
   /* ── Responsive: Tablet ──────────────────────────── */
   @media (max-width: 768px) {
-    .nav-cities { display: none; }
     .nav-divider { display: none; }
-    .mobile-city-bar { display: flex !important; }
-  }
-  @media (min-width: 769px) {
-    .mobile-city-bar { display: none !important; }
   }
 
   /* ── Responsive: Mobile ──────────────────────────── */
@@ -628,18 +660,51 @@
     }
     .btn-submit { display: none; }
 
-    /* Hero: compact, no overflow */
-    .hero {
-      padding: 28px 20px;
+    /* Hero: hidden on mobile, moved after events list */
+    .hero { display: none; }
+    .hero.mobile-moved {
+      display: block;
+      padding: 24px 16px;
       overflow: hidden;
     }
-    .hero-content { max-width: 100%; }
-    .hero-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
-    .hero-title { font-size: 22px; line-height: 1.25; margin-bottom: 8px; }
-    .hero-title br { display: none; }
-    .hero-desc { font-size: 13px; line-height: 1.5; margin-bottom: 16px; max-width: 100%; }
-    .subscribe-btn { font-size: 13px; padding: 10px 24px; width: 100%; }
-    .subscribe-note { font-size: 10px; margin-top: 8px; }
+    .hero.mobile-moved .hero-content { max-width: 100%; }
+    .hero.mobile-moved .hero-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 12px; }
+    .hero.mobile-moved .hero-title { font-size: 20px; line-height: 1.25; margin-bottom: 8px; }
+    .hero.mobile-moved .hero-title br { display: none; }
+    .hero.mobile-moved .hero-desc { font-size: 12px; line-height: 1.5; margin-bottom: 16px; max-width: 100%; }
+    .hero.mobile-moved .subscribe-btn { font-size: 13px; padding: 10px 24px; width: 100%; }
+    .hero.mobile-moved .subscribe-note { font-size: 10px; margin-top: 8px; }
+
+    /* Fixed bottom CTA */
+    .mobile-bottom-cta {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: #0f172a;
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+    }
+    .mobile-bottom-cta button {
+      background: #fff;
+      color: #0f172a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Add bottom padding so content isn't hidden behind fixed CTA */
+    .footer { padding-bottom: 70px !important; }
 
     /* Main */
     .main { padding: 12px 16px 32px; max-width: 100%; }
@@ -653,7 +718,7 @@
     .stat-divider { height: 16px; }
 
     /* Map */
-    #map { height: 220px !important; border-radius: 10px !important; }
+    #map { height: 50vh !important; border-radius: 10px !important; }
     .map-container { margin-top: 8px; margin-bottom: 4px; }
 
     /* Timeline: remove for mobile, simpler layout */
@@ -705,16 +770,12 @@
       <span>Event Explorer</span>
     </a>
     <div class="nav-divider"></div>
-    <div class="nav-cities" id="navCities"></div>
+    <div class="city-selector" id="citySelector"></div>
   </div>
   <div class="nav-right">
-    <input type="text" class="search-box" id="search" placeholder="Search events...">
     <a class="btn-submit" href="#" onclick="event.preventDefault(); track('cta_submit_event'); emailLink('List%20my%20event','Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!')">Submit Event</a>
   </div>
 </div>
-
-<!-- Mobile City Bar (visible on small screens) -->
-<div class="mobile-city-bar" id="mobileCityBar"></div>
 
 <!-- Hero -->
 <div class="hero">
@@ -728,7 +789,7 @@
       Luma shows you a handful of featured events. We uncover the rest — the hidden meetups, invite-only dinners, and niche gatherings you'd never find on your own.
     </p>
     <div class="subscribe-form" id="subscribeForm">
-      <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Get hidden events in your inbox</button>
+      <button type="button" class="subscribe-btn" id="subscribeBtn" onclick="openSubscribe()">Unlock all hidden events</button>
     </div>
     <div class="subscribe-note">We'll send you a weekly digest of newly discovered events. No spam, unsubscribe anytime.</div>
   </div>
@@ -786,6 +847,25 @@
   <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;">No. This is an independent tool to help you find events. All events are hosted on luma.com and link directly to their Luma pages.</p>
 </section>
 
+<!-- Email Modal -->
+<div class="email-modal-overlay" id="emailModal">
+  <div class="email-modal">
+    <h2>See all hidden events</h2>
+    <p>Enter your email to unlock every event in your city — including the ones Luma doesn't show you.</p>
+    <div class="modal-error" id="modalError">Something went wrong. Please try again.</div>
+    <form id="emailForm" onsubmit="handleEmailSubmit(event)">
+      <input type="email" id="emailInput" placeholder="your@email.com" required>
+      <button type="submit" class="modal-submit" id="modalSubmitBtn">Unlock all events</button>
+    </form>
+    <button class="modal-close" onclick="closeEmailModal(true)">Maybe later</button>
+  </div>
+</div>
+
+<!-- Fixed bottom CTA (mobile only) -->
+<div class="mobile-bottom-cta" id="bottomCta">
+  <button onclick="openSubscribe()">Unlock all hidden events</button>
+</div>
+
 <!-- Footer -->
 <footer class="footer">
   This is an unofficial tool to help you discover more events. Not affiliated with or endorsed by Luma.<br>
@@ -805,11 +885,18 @@ const CITIES = {
   hyderabad: { label: 'Hyderabad', file: 'data/hyderabad_latest.json' },
 };
 
+const COUNTRIES = [
+  { label: 'India', flag: '🇮🇳', cities: ['bengaluru', 'mumbai', 'new-delhi', 'pune', 'hyderabad'] },
+  { label: 'US', flag: '🇺🇸', cities: ['sf', 'boston'] },
+  { label: 'Singapore', flag: '🇸🇬', cities: ['singapore'] },
+];
+
 let allEvents = {};
 const urlParams = new URLSearchParams(window.location.search);
 const cityFromUrl = urlParams.get('city');
 let currentCity = (cityFromUrl && CITIES[cityFromUrl]) ? cityFromUrl : 'bengaluru';
-let searchQuery = '';
+let searchQuery = ''; // kept for filter compatibility
+let emailCaptured = !!localStorage.getItem('userEmail');
 
 // ── Analytics ──
 function track(eventName, params = {}) {
@@ -820,22 +907,68 @@ function track(eventName, params = {}) {
 
 // ── Email helpers ──
 function emailLink(subject, body) {
-  if (window.innerWidth <= 768) {
-    window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
-  } else {
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`, '_blank');
-  }
+  const to = 'himanshusaleria@gmail.com';
+  // Gmail compose URL works everywhere — on mobile it opens Gmail app if installed
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+  window.open(gmailUrl, '_blank');
 }
 
 function openSubscribe() {
-  const cityLabel = CITIES[currentCity].label;
-  track('cta_get_notified', { city: cityLabel });
-  const subject = encodeURIComponent(`Add me to mailing list:${cityLabel}`);
-  const body = encodeURIComponent(`Hi,\n\nPlease add me to the weekly hidden events digest for ${cityLabel}.\n\nThank you!`);
-  if (window.innerWidth <= 768) {
-    window.location.href = `mailto:himanshusaleria@gmail.com?subject=${subject}&body=${body}`;
-  } else {
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=himanshusaleria@gmail.com&su=${subject}&body=${body}`, '_blank');
+  if (emailCaptured) return;
+  document.getElementById('emailModal').classList.add('open');
+  document.getElementById('emailInput').focus();
+  track('gate_modal_opened', { city: CITIES[currentCity].label });
+}
+
+function closeEmailModal(dismissed) {
+  document.getElementById('emailModal').classList.remove('open');
+  if (dismissed) {
+    track('gate_dismissed', { city: CITIES[currentCity].label });
+  }
+}
+
+async function handleEmailSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('emailInput').value.trim();
+  if (!email) return;
+
+  const btn = document.getElementById('modalSubmitBtn');
+  const errorEl = document.getElementById('modalError');
+  btn.disabled = true;
+  btn.textContent = 'Subscribing...';
+  errorEl.style.display = 'none';
+
+  try {
+    // Post to Substack with city as UTM source
+    const cityLabel = CITIES[currentCity].label;
+    const substackUrl = `https://hiddenevents.substack.com/api/v1/free?utm_source=event-explorer&utm_medium=gate&utm_campaign=${encodeURIComponent(cityLabel)}`;
+    await fetch(substackUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, first_url: window.location.href, first_referrer: document.referrer }),
+      mode: 'no-cors'
+    });
+
+    // Save locally
+    localStorage.setItem('userEmail', email);
+    emailCaptured = true;
+
+    // Track
+    track('email_captured', { email, city: CITIES[currentCity].label });
+
+    // Close modal + re-render
+    closeEmailModal();
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+
+    // Update bottom CTA — hide after subscription
+    const bottomCtaEl = document.getElementById('bottomCta');
+    if (bottomCtaEl) bottomCtaEl.classList.add('hidden');
+  } catch (err) {
+    errorEl.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Unlock all events';
   }
 }
 
@@ -904,11 +1037,17 @@ function renderEvents(events) {
       || (e.tags||'').toLowerCase().includes(q);
   });
 
+  const totalCount = filtered.length;
   const hiddenCount = filtered.filter(e => e.source && e.source !== 'featured').length;
-  const featuredCount = filtered.length - hiddenCount;
+  const isGated = !emailCaptured && filtered.length > 5;
+  const displayEvents = isGated ? filtered.slice(0, 5) : filtered;
 
-  document.getElementById('eventCount').textContent = `${filtered.length} event${filtered.length!==1?'s':''}`;
+  document.getElementById('eventCount').textContent = `${totalCount} event${totalCount!==1?'s':''}`;
   document.getElementById('cityLabel').textContent = ` in ${CITIES[currentCity].label}`;
+
+  if (isGated) {
+    track('gate_shown', { city: CITIES[currentCity].label, total: totalCount });
+  }
 
   if (!filtered.length) {
     content.innerHTML = '<div style="text-align:center;padding:60px 0;color:#999;">No events found</div>';
@@ -917,12 +1056,12 @@ function renderEvents(events) {
 
   // Stats bar
   let html = `<div class="stats-bar">
-    <div class="stat-item"><span class="stat-number">${filtered.length}</span> total events</div>
+    <div class="stat-item"><span class="stat-number">${totalCount}</span> total events</div>
     <div class="stat-divider"></div>
     <div class="stat-item stat-hidden"><span class="stat-number">${hiddenCount}</span> hidden events uncovered</div>
   </div>`;
 
-  const groups = groupByDate(filtered);
+  const groups = groupByDate(displayEvents);
   html += '<div class="timeline">';
 
   for (const [, group] of groups) {
@@ -996,8 +1135,17 @@ function renderEvents(events) {
     html += '</div>';
   }
   html += '</div>'; // close timeline
+
+  if (isGated) {
+    html += `<div class="gate-banner">
+      <h3>See all ${totalCount} events</h3>
+      <p>You're viewing the first 5. Subscribe to unlock all ${totalCount} events including ${hiddenCount} hidden ones.</p>
+      <button onclick="openSubscribe()">Unlock all events</button>
+    </div>`;
+  }
+
   content.innerHTML = html;
-  injectEventJsonLd(filtered);
+  injectEventJsonLd(displayEvents);
 }
 
 function escHtml(s) {
@@ -1096,33 +1244,28 @@ window.addEventListener('popstate', async (e) => {
 });
 
 function renderCityTabs() {
-  const navContainer = document.getElementById('navCities');
-  const mobileContainer = document.getElementById('mobileCityBar');
+  const container = document.getElementById('citySelector');
 
-  // Only update active state, don't rebuild DOM if tabs already exist
-  if (navContainer.children.length === Object.keys(CITIES).length) {
-    document.querySelectorAll('.city-tab').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.city === currentCity);
-    });
-    return;
+  // Build select with country optgroups
+  let options = '';
+  for (const country of COUNTRIES) {
+    options += `<optgroup label="${country.flag} ${country.label}">`;
+    for (const cityKey of country.cities) {
+      const city = CITIES[cityKey];
+      if (!city) continue;
+      const selected = cityKey === currentCity ? 'selected' : '';
+      options += `<option value="${cityKey}" ${selected}>${city.label}</option>`;
+    }
+    options += '</optgroup>';
   }
 
-  const tabsHtml = Object.entries(CITIES).map(([key, val]) => {
-    const active = key === currentCity ? 'active' : '';
-    return `<button class="city-tab ${active}" data-city="${key}">${val.label}</button>`;
-  }).join('');
+  container.innerHTML = `<select class="city-select" id="citySelect">${options}</select>`;
 
-  navContainer.innerHTML = tabsHtml;
-  mobileContainer.innerHTML = tabsHtml;
-
-  document.querySelectorAll('.city-tab').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      if (btn.dataset.city === currentCity) return; // already selected
-      currentCity = btn.dataset.city;
-      track('city_switch', { city: CITIES[currentCity].label });
-      await loadCity(currentCity);
-      switchCity(currentCity);
-    });
+  document.getElementById('citySelect').addEventListener('change', async (e) => {
+    currentCity = e.target.value;
+    track('city_switch', { city: CITIES[currentCity].label });
+    await loadCity(currentCity);
+    switchCity(currentCity);
   });
 }
 
@@ -1229,19 +1372,6 @@ function renderMap(events) {
 
 // Map and list are both always visible
 
-let searchDebounce;
-document.getElementById('search').addEventListener('input', (e) => {
-  searchQuery = e.target.value;
-  renderEvents(allEvents[currentCity] || []);
-  if (mapInstance) renderMap(allEvents[currentCity] || []);
-  clearTimeout(searchDebounce);
-  if (searchQuery.length >= 3) {
-    searchDebounce = setTimeout(() => {
-      track('search', { query: searchQuery, city: CITIES[currentCity].label });
-    }, 800);
-  }
-});
-
 (async () => {
   await Promise.all(Object.keys(CITIES).map(loadCity));
   updateMetaForCity(currentCity);
@@ -1251,10 +1381,49 @@ document.getElementById('search').addEventListener('input', (e) => {
   initMap();
   setTimeout(() => { mapInstance.invalidateSize(); renderMap(allEvents[currentCity] || []); }, 100);
 
+  // On mobile, move hero after the main content
+  if (window.innerWidth <= 640) {
+    const hero = document.querySelector('.hero');
+    const main = document.querySelector('.main');
+    if (hero && main) {
+      main.after(hero);
+      hero.classList.add('mobile-moved');
+    }
+  }
+
   // Track page load with event counts
   const totalEvents = Object.values(allEvents).reduce((sum, arr) => sum + arr.length, 0);
   const totalHidden = Object.values(allEvents).reduce((sum, arr) => sum + arr.filter(e => e.source && e.source !== 'featured').length, 0);
   track('page_load', { total_events: totalEvents, hidden_events: totalHidden, default_city: CITIES[currentCity].label });
+
+  // Track scroll depth (50% and 100% of event list)
+  const scrollTracked = { half: false, full: false };
+  window.addEventListener('scroll', () => {
+    const content = document.getElementById('content');
+    if (!content) return;
+    const rect = content.getBoundingClientRect();
+    const scrolled = -rect.top / (rect.height - window.innerHeight);
+    if (!scrollTracked.half && scrolled >= 0.5) {
+      scrollTracked.half = true;
+      track('scroll_depth', { depth: '50%', city: CITIES[currentCity].label });
+    }
+    if (!scrollTracked.full && scrolled >= 0.95) {
+      scrollTracked.full = true;
+      track('scroll_depth', { depth: '100%', city: CITIES[currentCity].label });
+    }
+  }, { passive: true });
+
+  // Track map viewed (when map enters viewport)
+  const mapEl = document.getElementById('map');
+  if (mapEl && 'IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        track('map_viewed', { city: CITIES[currentCity].label });
+        obs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    obs.observe(mapEl);
+  }
 })();
 </script>
 
