@@ -68,8 +68,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Fitness"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-IY7hXndn3sLAbH4",
@@ -192,6 +192,30 @@
     "tags": ""
   },
   {
+    "event_id": "evt-aLKXisBaXPrWHaT",
+    "name": "Bitcoin Pizza Day with Bitshala (Delhi) + BTCPay Server",
+    "url": "https://lu.ma/scgvwqe2",
+    "start_at": "2026-05-23T09:30:00.000Z",
+    "end_at": "2026-05-23T12:30:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "New Delhi",
+    "sublocality": "Block M",
+    "country": "India",
+    "latitude": 28.5325,
+    "longitude": 77.245,
+    "cover_url": "https://images.lumacdn.com/uploads/cp/a84b669c-2614-44c6-bf27-e54bcd03cac4.png",
+    "guest_count": 99,
+    "hosts": "Bitshala, Abhijay jain, Saurabh S",
+    "calendar_name": "Bitshala",
+    "calendar_slug": "bitshala",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
+    "tags": ""
+  },
+  {
     "event_id": "evt-xfyFi0UmVX7vX2x",
     "name": "URC Shanti Van Run",
     "url": "https://lu.ma/d4fh39f9",
@@ -212,8 +236,32 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Fitness"
+    "source": "featured",
+    "tags": ""
+  },
+  {
+    "event_id": "evt-yUMHBwfcpqHl7K8",
+    "name": "MetaMask Community Builder Night, India Edition",
+    "url": "https://lu.ma/cbndelhi",
+    "start_at": "2026-05-24T04:30:00.000Z",
+    "end_at": "2026-05-24T06:30:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "New Delhi",
+    "sublocality": "Saiyad Ul Ajaib Extension",
+    "country": "India",
+    "latitude": 28.5175,
+    "longitude": 77.2,
+    "cover_url": "https://images.lumacdn.com/uploads/gd/fe2026e4-c371-4455-bcee-3b0adbb2e421.jpg",
+    "guest_count": 0,
+    "hosts": "Francesco Andreoli \ud83e\udd8a, Amarachi Johnson, Aniket Sahu, Builder Base, Pihu gupta",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-PbZSOiBGCzszQdZ",

@@ -1628,5 +1628,10 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-19T18:07:29.544267+00:00"
+  },
+  "cal-vLNEjjY9JH1XPSA": {
+    "name": "RevenueCat Events",
+    "slug": "revenuecat",
+    "added": "2026-05-19T23:03:44.308017+00:00"
   }
 }

@@ -476,8 +476,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Food & Drink"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-4pz816A26WzEvzO",
@@ -565,7 +565,7 @@
     "latitude": 18.9581934,
     "longitude": 72.8320729,
     "cover_url": "https://images.lumacdn.com/event-covers/cv/284c4fdb-ab37-4cb2-9981-12311c5d62f0.png",
-    "guest_count": 790,
+    "guest_count": 791,
     "hosts": "Mykola x Web3Privacy now, PG_CDG | Web3Privacy Now",
     "calendar_name": "Web3Privacy Now Events",
     "calendar_slug": "web3privacy",
