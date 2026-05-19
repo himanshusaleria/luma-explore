@@ -927,6 +927,8 @@ function closeEmailModal(dismissed) {
   }
 }
 
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyWi7CkRwUORh8nJzQUffiksbJAOow3uTIYjvqYgsKUrE630XLpPzgFHZkwyPTlbmBG/exec';
+
 async function handleEmailSubmit(e) {
   e.preventDefault();
   const email = document.getElementById('emailInput').value.trim();
@@ -939,29 +941,23 @@ async function handleEmailSubmit(e) {
   errorEl.style.display = 'none';
 
   try {
-    // Post to Substack with city as UTM source
-    const cityLabel = CITIES[currentCity].label;
-    const substackUrl = `https://hiddenevents.substack.com/api/v1/free?utm_source=event-explorer&utm_medium=gate&utm_campaign=${encodeURIComponent(cityLabel)}`;
-    await fetch(substackUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, first_url: window.location.href, first_referrer: document.referrer }),
-      mode: 'no-cors'
+    const params = new URLSearchParams({
+      email,
+      city: CITIES[currentCity].label,
+      referrer: document.referrer || window.location.href
     });
+    const resp = await fetch(`${SHEET_URL}?${params}`);
+    const result = await resp.json();
 
-    // Save locally
+    if (result.status === 'error') throw new Error(result.message);
+
     localStorage.setItem('userEmail', email);
     emailCaptured = true;
-
-    // Track
     track('email_captured', { email, city: CITIES[currentCity].label });
 
-    // Close modal + re-render
     closeEmailModal();
     renderEvents(allEvents[currentCity] || []);
     if (mapInstance) renderMap(allEvents[currentCity] || []);
-
-    // Update bottom CTA — hide after subscription
     const bottomCtaEl = document.getElementById('bottomCta');
     if (bottomCtaEl) bottomCtaEl.classList.add('hidden');
   } catch (err) {
