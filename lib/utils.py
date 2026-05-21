@@ -42,6 +42,11 @@ CITIES = {
         "bounds": {"north": 17.55, "south": 17.30, "east": 78.60, "west": 78.30},
         "scan_from": ["bengaluru", "mumbai", "new-delhi"],
     },
+    "chennai": {
+        "place_id": None,
+        "bounds": {"north": 13.25, "south": 12.85, "east": 80.35, "west": 80.05},
+        "scan_from": ["bengaluru", "mumbai", "new-delhi"],
+    },
 }
 
 
