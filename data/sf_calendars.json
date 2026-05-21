@@ -1693,5 +1693,20 @@
     "name": "Orbis86 Events",
     "slug": "orbis86",
     "added": "2026-05-21T11:27:58.418669+00:00"
+  },
+  "cal-ffZMpSc1tJiBS9b": {
+    "name": "Frontier Syndicate",
+    "slug": "frontiersyndicate",
+    "added": "2026-05-21T18:00:32.021325+00:00"
+  },
+  "cal-AYY2ZUaaeAD3eDh": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-21T18:00:32.021480+00:00"
+  },
+  "cal-MwI5UgEfgtQ6fLr": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-21T18:00:32.021535+00:00"
   }
 }
