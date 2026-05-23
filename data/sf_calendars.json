@@ -1733,5 +1733,30 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-22T19:48:00.788636+00:00"
+  },
+  "cal-KI9FVvGbV9LMK3g": {
+    "name": "Langfuse",
+    "slug": "langfuse",
+    "added": "2026-05-23T19:12:30.076676+00:00"
+  },
+  "cal-mHR9TWZYECQYxOO": {
+    "name": "PyLadies San Francisco",
+    "slug": "pyladiessf",
+    "added": "2026-05-23T19:12:30.076696+00:00"
+  },
+  "cal-hEGuQRI1LRoVW1b": {
+    "name": "SCIDR",
+    "slug": null,
+    "added": "2026-05-23T19:12:30.076715+00:00"
+  },
+  "cal-HyBW7GgMeeyom3c": {
+    "name": "Campfire Events",
+    "slug": "campfire-events",
+    "added": "2026-05-23T19:12:30.076720+00:00"
+  },
+  "cal-gmMOid1Rsqc3Hih": {
+    "name": "ClickHouse Events",
+    "slug": "clickhouse-events",
+    "added": "2026-05-23T19:12:30.076978+00:00"
   }
 }
