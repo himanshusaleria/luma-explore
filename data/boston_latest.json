@@ -48,6 +48,30 @@
     "tags": ""
   },
   {
+    "event_id": "evt-2jhjwfs3OTUfh9h",
+    "name": "Belay & Boulder at Central Rock Watertown",
+    "url": "https://lu.ma/h3m6qftw",
+    "start_at": "2026-05-26T22:30:00.000Z",
+    "end_at": "2026-05-27T00:30:00.000Z",
+    "timezone": "America/New_York",
+    "location_type": "offline",
+    "city": "Watertown",
+    "sublocality": null,
+    "country": "United States",
+    "latitude": 42.369601499999995,
+    "longitude": -71.1985997,
+    "cover_url": "https://images.lumacdn.com/event-covers/rj/15c037ea-ed8b-4c15-9ff2-97bdfa827fb7.png",
+    "guest_count": 3,
+    "hosts": "Andrew Cann",
+    "calendar_name": "Fractal Boston",
+    "calendar_slug": "fractalboston",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": "Fitness"
+  },
+  {
     "event_id": "evt-5sr4X72lARYBuB1",
     "name": "Plus-One Party\u2122: Boston [admits 2]",
     "url": "https://lu.ma/auyurryw",
@@ -181,13 +205,13 @@
     "latitude": 42.3795683,
     "longitude": -71.09538,
     "cover_url": "https://images.lumacdn.com/uploads/26/f5dfe5ce-14aa-40a5-8251-8a83cd9100ca.png",
-    "guest_count": 249,
+    "guest_count": 250,
     "hosts": "Lauren Damon",
     "calendar_name": "Personal",
     "calendar_slug": null,
     "event_type": "independent",
     "visibility": "public",
-    "waitlist_active": false,
+    "waitlist_active": true,
     "source": "featured",
     "tags": ""
   },
@@ -332,8 +356,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Arts & Culture"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-opilOj9aRujc6vV",
@@ -645,7 +669,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": ""
+    "tags": "Tech"
   },
   {
     "event_id": "evt-S5JBlVYMFIGEkgx",
@@ -709,7 +733,7 @@
     "latitude": 42.3491962,
     "longitude": -71.0969996,
     "cover_url": "https://images.lumacdn.com/event-covers/jy/41caa9f4-1de1-4935-8d88-acf2ff3c3516.png",
-    "guest_count": 159,
+    "guest_count": 166,
     "hosts": "Durkin, Alana Mazzei, Sahithi Muthyala, Samir Durvasula",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -1165,7 +1189,7 @@
     "latitude": 42.335,
     "longitude": -71.0575,
     "cover_url": "https://images.lumacdn.com/event-covers/7p/ca89de21-5fca-4f18-bb7c-a4680a1ee564.png",
-    "guest_count": 298,
+    "guest_count": 299,
     "hosts": "Laravel",
     "calendar_name": "Accel",
     "calendar_slug": null,
