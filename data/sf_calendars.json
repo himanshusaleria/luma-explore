@@ -1758,5 +1758,25 @@
     "name": "ClickHouse Events",
     "slug": "clickhouse-events",
     "added": "2026-05-23T19:12:30.076978+00:00"
+  },
+  "cal-wjuS2J0jtsu95Ci": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-24T20:57:24.976519+00:00"
+  },
+  "cal-aXdtH9ebHo9YaLg": {
+    "name": "Cerebras",
+    "slug": "cerebras",
+    "added": "2026-05-24T20:57:24.976537+00:00"
+  },
+  "cal-RvOUbuCkgxzowHT": {
+    "name": "Climate Action Club",
+    "slug": "climateactionclub",
+    "added": "2026-05-24T20:57:24.976548+00:00"
+  },
+  "cal-CBcHn3iVslaEvBG": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-24T20:57:24.976552+00:00"
   }
 }
