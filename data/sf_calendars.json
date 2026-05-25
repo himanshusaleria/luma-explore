@@ -1823,5 +1823,20 @@
     "name": "Vapi",
     "slug": "vapi_events",
     "added": "2026-05-25T19:42:01.205943+00:00"
+  },
+  "cal-D5yWBPY7IroUiUX": {
+    "name": "Effective Altruism San Francisco",
+    "slug": null,
+    "added": "2026-05-25T21:09:28.677117+00:00"
+  },
+  "cal-MpA9GMz5jRaKeJn": {
+    "name": "Angel Launch",
+    "slug": "angellaunchevents",
+    "added": "2026-05-25T21:09:28.677227+00:00"
+  },
+  "cal-ZrpzHDUZ6lBwpG8": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T21:09:28.677253+00:00"
   }
 }
