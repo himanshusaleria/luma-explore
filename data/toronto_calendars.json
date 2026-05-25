@@ -1,0 +1,1292 @@
+{
+  "cal-DdUEFsYsDVh7osG": {
+    "name": "Toronto Tech Week",
+    "slug": "torontotechweek",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-TL3yHAMNkWrWPWR": {
+    "name": "Toronto Founder & Investors Parties",
+    "slug": "toronto-founders",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-Kv0VqBatGATRoCV": {
+    "name": "Toronto Tech Thursday",
+    "slug": "TorontoTechThursday",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-kQgInZ45AvMHX9d": {
+    "name": "Toronto Generative AI Meetup",
+    "slug": "Gen-AI-Toronto",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-E74MDlDKBaeAwXK": {
+    "name": "The AI Collective",
+    "slug": "aic-toronto",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-NFIKWffXs4kAUi3": {
+    "name": "TechTO",
+    "slug": "TechTO-Events",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-nULLF9c2h4vQuww": {
+    "name": "Daybreak Studio",
+    "slug": "daybreakstudio",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-kcWhMbIs2X0Y2Xb": {
+    "name": "Andrew Yeung's Tech Events",
+    "slug": "torontotechsocial",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-WDlH78TipeYcNPf": {
+    "name": "Toronto Climate Week",
+    "slug": "tocw",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-XwXTSSCSO69ZnSY": {
+    "name": "The Toronto Society",
+    "slug": "toronto-society",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-swRmEBk6XZRBVfO": {
+    "name": "Toronto Social Mixer",
+    "slug": "TorontoSocialMixer",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-tsI6URYGBQNhNjv": {
+    "name": "Hip Haus Toronto Networking Events",
+    "slug": "toronto-networking",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-3aH7Cvqdyre9u3j": {
+    "name": "Founders Running Club",
+    "slug": "foundersrc",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-8IVhcHeuQD2pFr7": {
+    "name": "New (Technocreative Toronto)",
+    "slug": "newsystems",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-KsnipsdrE289gsj": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460122+00:00"
+  },
+  "cal-3rHuUgbEtCDA1ra": {
+    "name": "BetaKit",
+    "slug": "betakit",
+    "added": "2026-05-25T15:31:53.460158+00:00"
+  },
+  "cal-DlI8x7tBT9OvQGN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460162+00:00"
+  },
+  "cal-qk6fcLRHXuefJ9E": {
+    "name": "Clarity Content",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460167+00:00"
+  },
+  "cal-03Oy7sYPjdCKcja": {
+    "name": "Rootly",
+    "slug": "rootlyhq",
+    "added": "2026-05-25T15:31:53.460178+00:00"
+  },
+  "cal-szSdvwFdmd9hDV3": {
+    "name": "Devtools Toronto",
+    "slug": "devtoolsTO",
+    "added": "2026-05-25T15:31:53.460182+00:00"
+  },
+  "cal-cCpbjF0dBBJet0l": {
+    "name": "airess",
+    "slug": "airess",
+    "added": "2026-05-25T15:31:53.460190+00:00"
+  },
+  "cal-ieaUJUnDFE9Bd4j": {
+    "name": "again again",
+    "slug": "againagain",
+    "added": "2026-05-25T15:31:53.460194+00:00"
+  },
+  "cal-TyfvxXz6G8ggyEy": {
+    "name": "Build Future",
+    "slug": "buildfuture",
+    "added": "2026-05-25T15:31:53.460199+00:00"
+  },
+  "cal-Q8p5wzShcIdd2YN": {
+    "name": "InstaLILY AI",
+    "slug": "instalily.ai",
+    "added": "2026-05-25T15:31:53.460202+00:00"
+  },
+  "cal-8nB8IN4xWZLHphA": {
+    "name": "TechWalk",
+    "slug": "techwalk",
+    "added": "2026-05-25T15:31:53.460204+00:00"
+  },
+  "cal-bWFJV792Px2Q1PO": {
+    "name": "CTRL+SHIFT",
+    "slug": "ctrlshift",
+    "added": "2026-05-25T15:31:53.460209+00:00"
+  },
+  "cal-orsFDHAi4IaCNwJ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460212+00:00"
+  },
+  "cal-p7cC5XhmHBgJcO3": {
+    "name": "The Icebreaker",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460214+00:00"
+  },
+  "cal-BGF2SBNWsJtm00p": {
+    "name": "Mantle",
+    "slug": "withmantle",
+    "added": "2026-05-25T15:31:53.460221+00:00"
+  },
+  "cal-e3ROSz0J9FqBNEk": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460224+00:00"
+  },
+  "cal-S9qoHspeXp3132H": {
+    "name": "Notion Toronto",
+    "slug": "notiontoronto",
+    "added": "2026-05-25T15:31:53.460227+00:00"
+  },
+  "cal-iMZkIifP5XA9MC7": {
+    "name": "University of Toronto Entrepreneurship",
+    "slug": "ute",
+    "added": "2026-05-25T15:31:53.460233+00:00"
+  },
+  "cal-ZPCFxI1BBVfhy6n": {
+    "name": "Shopify Engineering",
+    "slug": "shopifyengineering",
+    "added": "2026-05-25T15:31:53.460236+00:00"
+  },
+  "cal-RUCjH0lAlc3xw1e": {
+    "name": "Brightspark Ventures",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460238+00:00"
+  },
+  "cal-F9SLV9bPq7KTxcF": {
+    "name": "Schulich Startups",
+    "slug": "schulichstartups",
+    "added": "2026-05-25T15:31:53.460243+00:00"
+  },
+  "cal-QLo8VLK9DR1Av1H": {
+    "name": "Intuit Open Source Meetup",
+    "slug": "intuit-open-source-meetup",
+    "added": "2026-05-25T15:31:53.460247+00:00"
+  },
+  "cal-ujftjfKCKpmrJZo": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460250+00:00"
+  },
+  "cal-h9BySbb69GxUa2L": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460252+00:00"
+  },
+  "cal-AIQJgsjMuWFK8Xb": {
+    "name": "Fintech Cadence",
+    "slug": "fintechcadence",
+    "added": "2026-05-25T15:31:53.460255+00:00"
+  },
+  "cal-5ffGB6AOxzSbcYi": {
+    "name": "Nappr Events Calendar",
+    "slug": "nappr",
+    "added": "2026-05-25T15:31:53.460259+00:00"
+  },
+  "cal-F6oBcVcX1v0OFIj": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460262+00:00"
+  },
+  "cal-VHXO5I3jiEiqiI6": {
+    "name": "Internet Backyard",
+    "slug": "internet-backyard",
+    "added": "2026-05-25T15:31:53.460265+00:00"
+  },
+  "cal-Kl3Rp17RAiMPSC5": {
+    "name": "Trajectory Labs",
+    "slug": "trajectory-labs",
+    "added": "2026-05-25T15:31:53.460268+00:00"
+  },
+  "cal-pPafrYflCWuOZjF": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460275+00:00"
+  },
+  "cal-KUFO2yscrfWr7RV": {
+    "name": "Build Canada",
+    "slug": "build_canada",
+    "added": "2026-05-25T15:31:53.460277+00:00"
+  },
+  "cal-UQwU45ufZriGrTZ": {
+    "name": "Optimity Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460282+00:00"
+  },
+  "cal-9mowhGNvXXu2mVE": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460284+00:00"
+  },
+  "cal-wHjjlb4ltnEu7mG": {
+    "name": "Cursor Toronto, Canada",
+    "slug": "toronto-canada",
+    "added": "2026-05-25T15:31:53.460287+00:00"
+  },
+  "cal-iyv0TYi2wHPhkKA": {
+    "name": "Michelle's Community Events",
+    "slug": "michelle-events",
+    "added": "2026-05-25T15:31:53.460295+00:00"
+  },
+  "cal-OSfcKx2bS7q0O9C": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460298+00:00"
+  },
+  "cal-XWI5c6gkq4vFYbO": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460300+00:00"
+  },
+  "cal-ZexOqSLj56Czvcg": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460303+00:00"
+  },
+  "cal-xYk6TzGj0CFtbJH": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460305+00:00"
+  },
+  "cal-zCrBUW0uwNHVMEN": {
+    "name": "The New Hire Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460308+00:00"
+  },
+  "cal-Nn7kFKejGqpoErt": {
+    "name": "[111] Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460311+00:00"
+  },
+  "cal-Oef44udgIkaHmB1": {
+    "name": "DesignX Community",
+    "slug": "designx",
+    "added": "2026-05-25T15:31:53.460317+00:00"
+  },
+  "cal-nP2fAFSQEPcElgx": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460320+00:00"
+  },
+  "cal-z4Y4d9XJkRTLK0p": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460323+00:00"
+  },
+  "cal-jWS1TFQIEUI1dHl": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460326+00:00"
+  },
+  "cal-pOL7IIih7M6dyIR": {
+    "name": "Pluto Toronto",
+    "slug": "plutotoronto",
+    "added": "2026-05-25T15:31:53.460328+00:00"
+  },
+  "cal-EiZiPVDVInLXaCL": {
+    "name": "Phoenix",
+    "slug": "phoenix-health",
+    "added": "2026-05-25T15:31:53.460332+00:00"
+  },
+  "cal-9BifSKRlxyzdyQU": {
+    "name": "Chatbase",
+    "slug": "chatbase",
+    "added": "2026-05-25T15:31:53.460335+00:00"
+  },
+  "cal-LFtjwTGRduzGP1W": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460338+00:00"
+  },
+  "cal-aXdtH9ebHo9YaLg": {
+    "name": "Cerebras",
+    "slug": "cerebras",
+    "added": "2026-05-25T15:31:53.460341+00:00"
+  },
+  "cal-R1rB2uxiVzWE7bs": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460343+00:00"
+  },
+  "cal-B48ygBvY047yWy0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460346+00:00"
+  },
+  "cal-AbMyOGWaSOMoolJ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460350+00:00"
+  },
+  "cal-JyxiKgDYFePUjAL": {
+    "name": "MaRS Discovery District",
+    "slug": "marsdd",
+    "added": "2026-05-25T15:31:53.460353+00:00"
+  },
+  "cal-NsV279Yr3UGEXkd": {
+    "name": "Generation Digital - AI Consultancy - Events",
+    "slug": "generationdigital",
+    "added": "2026-05-25T15:31:53.460357+00:00"
+  },
+  "cal-qlgTKZ36e1s9iTA": {
+    "name": "Superteam Canada",
+    "slug": "superteamca",
+    "added": "2026-05-25T15:31:53.460360+00:00"
+  },
+  "cal-Ta3QkB13cfkxsKA": {
+    "name": "Pender Ventures",
+    "slug": "penderventures",
+    "added": "2026-05-25T15:31:53.460363+00:00"
+  },
+  "cal-K9Dp3Kw92GNEkIm": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460366+00:00"
+  },
+  "cal-BFu6iC0uvc2O3bl": {
+    "name": "RETHINK Retail Events",
+    "slug": "RETHINKretail",
+    "added": "2026-05-25T15:31:53.460369+00:00"
+  },
+  "cal-DxAW53U6J0kXSfZ": {
+    "name": "Cache",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460375+00:00"
+  },
+  "cal-f6dOTtSEu3rExDp": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460378+00:00"
+  },
+  "cal-IGksWXLbTd31Wr8": {
+    "name": "Convictional Inc.",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460380+00:00"
+  },
+  "cal-2TaRT2iaf7We3g6": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460383+00:00"
+  },
+  "cal-obeQeyej36Z9lnR": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460386+00:00"
+  },
+  "cal-hDj5fCVBZHGSi8k": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460388+00:00"
+  },
+  "cal-yxfD1H73DOftlWu": {
+    "name": "Tailscale Community Events",
+    "slug": "tailscalecommunity",
+    "added": "2026-05-25T15:31:53.460394+00:00"
+  },
+  "cal-zw8GlgNRUAz50Cd": {
+    "name": "Toronto Tech Week",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460397+00:00"
+  },
+  "cal-BzTuxNgX9Fh8Px8": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460399+00:00"
+  },
+  "cal-qUOl8QMXkQs6b0I": {
+    "name": "Startup Dinner Club",
+    "slug": "startupdinnerclub",
+    "added": "2026-05-25T15:31:53.460404+00:00"
+  },
+  "cal-cDU3BSGai3AQNlZ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460407+00:00"
+  },
+  "cal-MJ28KU4lOJNFNHk": {
+    "name": "NVIDIA",
+    "slug": "nvidia-events",
+    "added": "2026-05-25T15:31:53.460410+00:00"
+  },
+  "cal-2pXX0dt38LEHxoj": {
+    "name": "Scalpels & Spreadsheets",
+    "slug": "SNSevents",
+    "added": "2026-05-25T15:31:53.460412+00:00"
+  },
+  "cal-NUA5sSoyz4n0NFs": {
+    "name": "Founders Running Club - Toronto",
+    "slug": "frctoronto",
+    "added": "2026-05-25T15:31:53.460417+00:00"
+  },
+  "cal-477542Dd5545Pup": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460420+00:00"
+  },
+  "cal-q6u5riUm3snfMzw": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460422+00:00"
+  },
+  "cal-sGueEoyhdK3Dh1G": {
+    "name": "African Impact Initiative.",
+    "slug": "aii",
+    "added": "2026-05-25T15:31:53.460430+00:00"
+  },
+  "cal-JyA3kdZaVyNkBJ8": {
+    "name": "APIs and IPAs",
+    "slug": "apis-and-ipas-toronto",
+    "added": "2026-05-25T15:31:53.460432+00:00"
+  },
+  "cal-F7xrLzSvkFZMyqN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460437+00:00"
+  },
+  "cal-2wdAHH1BpwSgINq": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460440+00:00"
+  },
+  "cal-rglDCJporFifPIS": {
+    "name": "Trampoline Hall",
+    "slug": "trampolinehall",
+    "added": "2026-05-25T15:31:53.460443+00:00"
+  },
+  "cal-AY1xKmirwFNIkio": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460448+00:00"
+  },
+  "cal-wdKH8M35TIw05rh": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460452+00:00"
+  },
+  "cal-y0dX0Fgdba9IOXG": {
+    "name": "Centre for Social Innovation",
+    "slug": "CentreforSocialInnovation",
+    "added": "2026-05-25T15:31:53.460463+00:00"
+  },
+  "cal-1pRTGySEVAimpzB": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460466+00:00"
+  },
+  "cal-2FPUkXBRNHx7GA6": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460469+00:00"
+  },
+  "cal-btSO6Zskesj6WzI": {
+    "name": "The Hunt",
+    "slug": "jointhehunt",
+    "added": "2026-05-25T15:31:53.460471+00:00"
+  },
+  "cal-E5OFPzAM20GAmXh": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460474+00:00"
+  },
+  "cal-D0PHdAoRzwHdSjC": {
+    "name": "Upcoming Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460477+00:00"
+  },
+  "cal-9Z4Bg85bwLEvDK1": {
+    "name": "Smile",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460480+00:00"
+  },
+  "cal-QTGuzuzIkGxHoI6": {
+    "name": "RevFest Events Inc.",
+    "slug": "RevFest",
+    "added": "2026-05-25T15:31:53.460482+00:00"
+  },
+  "cal-4i7uGzXyA0CHMG7": {
+    "name": "KNIGHTCAP Toronto",
+    "slug": "knightcaptoronto",
+    "added": "2026-05-25T15:31:53.460486+00:00"
+  },
+  "cal-7LX9EERqXao8TMA": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460489+00:00"
+  },
+  "cal-Rjt4NWwdAhxozh9": {
+    "name": "Orchestra Marketing",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460492+00:00"
+  },
+  "cal-ySOxxUsXT84noKS": {
+    "name": "Global Startups TTW Calendar",
+    "slug": "globalstartups",
+    "added": "2026-05-25T15:31:53.460496+00:00"
+  },
+  "cal-YYdDRt8Uzai9Nk7": {
+    "name": "NovaForge Event Series",
+    "slug": "novaforgeai",
+    "added": "2026-05-25T15:31:53.460500+00:00"
+  },
+  "cal-QWrEvjboUMQX2dL": {
+    "name": "Women'sHealthyEnvironmentsNetwork_TOCW2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460503+00:00"
+  },
+  "cal-a2wrMo83EWkDlRN": {
+    "name": "REV\u014c Burnout Retreats",
+    "slug": "burnoutretreats",
+    "added": "2026-05-25T15:31:53.460506+00:00"
+  },
+  "cal-OaeZ5XwqBy3wgfn": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460509+00:00"
+  },
+  "cal-Qu7EnHG3w80Wv1P": {
+    "name": "Toronto Tech Week",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460512+00:00"
+  },
+  "cal-R9CxB0FfCHfHVPb": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460516+00:00"
+  },
+  "cal-HUrHlCB7v7c8CzW": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460519+00:00"
+  },
+  "cal-FZO0dh9nZ0c3bdU": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460523+00:00"
+  },
+  "cal-xYyYOvQm4WlLXlE": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460526+00:00"
+  },
+  "cal-b7eDRYeF2zEVBVl": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460529+00:00"
+  },
+  "cal-gFrxRFiFEUWu5RT": {
+    "name": "The Climateverse",
+    "slug": "the-climateverse",
+    "added": "2026-05-25T15:31:53.460532+00:00"
+  },
+  "cal-mIdaGJ9BRLqegVO": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460535+00:00"
+  },
+  "cal-ri61EkjNzo7lM08": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460538+00:00"
+  },
+  "cal-31X6MzmisJWpUbv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460541+00:00"
+  },
+  "cal-LuqPMRnPYAEE682": {
+    "name": "CollectiveMatter_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460545+00:00"
+  },
+  "cal-7VhQpPi9uq0eDdh": {
+    "name": "INNOTEX_TOCW 2026",
+    "slug": "slowfashionrunway",
+    "added": "2026-05-25T15:31:53.460548+00:00"
+  },
+  "cal-bmK0sIfOssQ4SPg": {
+    "name": "The Human Puzzle Calendar",
+    "slug": "thehumanpuzzle",
+    "added": "2026-05-25T15:31:53.460551+00:00"
+  },
+  "cal-HHLuh0Tyjgjh7NJ": {
+    "name": "NP Digital",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460554+00:00"
+  },
+  "cal-gBSOAbBc6lwHvdl": {
+    "name": "Toronto Tech Week 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460558+00:00"
+  },
+  "cal-SQ9hAlApM3ZARTH": {
+    "name": "CSGA 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460561+00:00"
+  },
+  "cal-WYBe1iZRoeJlBQx": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460564+00:00"
+  },
+  "cal-zFaWTSnMVVL07De": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460568+00:00"
+  },
+  "cal-4QCKqWDQb6j61Jn": {
+    "name": "Velocity Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460571+00:00"
+  },
+  "cal-BcGKwUNOET1reWv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460573+00:00"
+  },
+  "cal-wDMOv4gM3XfbWUG": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460576+00:00"
+  },
+  "cal-4nqP3AfYfylBBR7": {
+    "name": "UMMAH1",
+    "slug": "UMMAH1",
+    "added": "2026-05-25T15:31:53.460579+00:00"
+  },
+  "cal-Zs7b76cOqniDFBb": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460583+00:00"
+  },
+  "cal-NsroSQ4zBbpTT7t": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460586+00:00"
+  },
+  "cal-kgPKymvGEC0aEsg": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460589+00:00"
+  },
+  "cal-5mJCxcYLEBAruYk": {
+    "name": "CS In Focus",
+    "slug": "csinfocus",
+    "added": "2026-05-25T15:31:53.460593+00:00"
+  },
+  "cal-kinHkfzYwFf7Tvn": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460596+00:00"
+  },
+  "cal-RUmz8OqMrk5RiCI": {
+    "name": "AI Business Club",
+    "slug": "vanaisummit",
+    "added": "2026-05-25T15:31:53.460599+00:00"
+  },
+  "cal-wUC1oQCr0EjtFnv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460601+00:00"
+  },
+  "cal-6wTctt15VCknUAT": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460604+00:00"
+  },
+  "cal-fkg2WMOpPh3EzBM": {
+    "name": "Grateful Den",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460608+00:00"
+  },
+  "cal-RErspD84GHCbthz": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460611+00:00"
+  },
+  "cal-q3b6cLtXrXS7JSv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460614+00:00"
+  },
+  "cal-qGJ81QbNusn5nJc": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460617+00:00"
+  },
+  "cal-FG0XDoUQCPDN1t3": {
+    "name": "UKAIPROJECTS_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460620+00:00"
+  },
+  "cal-wKcQsyQJwjqsDZm": {
+    "name": "Jacqui Farley",
+    "slug": "jacquifarley",
+    "added": "2026-05-25T15:31:53.460623+00:00"
+  },
+  "cal-Deslreo2rIMBHkD": {
+    "name": "TREALT",
+    "slug": "TREALT",
+    "added": "2026-05-25T15:31:53.460626+00:00"
+  },
+  "cal-YMKylR8eaR17mNl": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460629+00:00"
+  },
+  "cal-GGR6FQHpeB33RB2": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460635+00:00"
+  },
+  "cal-1dJPwfpTiS8RVCa": {
+    "name": "THREADING CHANGE_TOCW 2026",
+    "slug": "threadingchangetocw26",
+    "added": "2026-05-25T15:31:53.460638+00:00"
+  },
+  "cal-FGHayLJ6ZAmkYJi": {
+    "name": "MakersLounge",
+    "slug": "makerslounge",
+    "added": "2026-05-25T15:31:53.460644+00:00"
+  },
+  "cal-Z2AUZoen8inTGxw": {
+    "name": "Horizon Angels",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460647+00:00"
+  },
+  "cal-858O8NoVxiYAv4y": {
+    "name": "CLFTORONTO_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460650+00:00"
+  },
+  "cal-MxT2fU9QRrvq9im": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460653+00:00"
+  },
+  "cal-hvpkBE7psCD3Li9": {
+    "name": "Shake Up The Establishment_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460657+00:00"
+  },
+  "cal-KQJOYt8FsZkXrPE": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460660+00:00"
+  },
+  "cal-HY6mpdYJbR93ulA": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460663+00:00"
+  },
+  "cal-nS3EZc1h6N8y9jZ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460666+00:00"
+  },
+  "cal-m8IXulaIMfBoEj1": {
+    "name": "WiSED_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460669+00:00"
+  },
+  "cal-TPxLtFSGwtjTQet": {
+    "name": "AEC Stack",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460672+00:00"
+  },
+  "cal-pqgGKTuWTK5Nf8X": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460675+00:00"
+  },
+  "cal-7CUBqPCD2xJHikY": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460678+00:00"
+  },
+  "cal-ouP7pO283xoEjOV": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460682+00:00"
+  },
+  "cal-ZlUftkkIgHEY47c": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460686+00:00"
+  },
+  "cal-WwyIVNFAnCBnsG6": {
+    "name": "PitchTank",
+    "slug": "pitchtank.ca",
+    "added": "2026-05-25T15:31:53.460690+00:00"
+  },
+  "cal-PFxhEHf0tgCDBGl": {
+    "name": "ACVC",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460693+00:00"
+  },
+  "cal-Qnp6ADGpjHiwhUe": {
+    "name": "Avir",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460696+00:00"
+  },
+  "cal-ABBzsytYbpSqbOp": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460699+00:00"
+  },
+  "cal-0xN4LHnOLwvrRv3": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460702+00:00"
+  },
+  "cal-UEMwDF2D8iKc0EG": {
+    "name": "Iris Lens",
+    "slug": "irislens",
+    "added": "2026-05-25T15:31:53.460717+00:00"
+  },
+  "cal-aym1zDl8rMmz4X2": {
+    "name": "Global Climate Finance Accelerator",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460720+00:00"
+  },
+  "cal-ga0xPbjK7478hOY": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460723+00:00"
+  },
+  "cal-xWZicKgREF0HL2k": {
+    "name": "PRAKTIKAI",
+    "slug": "PRAKTIKAI",
+    "added": "2026-05-25T15:31:53.460726+00:00"
+  },
+  "cal-vWV8dKeztpZS0X0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460730+00:00"
+  },
+  "cal-IbRE8jexl2Ai9Bv": {
+    "name": "Self Learners",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460733+00:00"
+  },
+  "cal-jghw3Ybnk6FM2V5": {
+    "name": "Build Up Toronto",
+    "slug": "buildup",
+    "added": "2026-05-25T15:31:53.460737+00:00"
+  },
+  "cal-IKssfBajGJbXYxM": {
+    "name": "Startup Sweats",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460740+00:00"
+  },
+  "cal-iSBuz7ItXKrd8Nd": {
+    "name": "Toronto Open Data",
+    "slug": "open-data-to",
+    "added": "2026-05-25T15:31:53.460743+00:00"
+  },
+  "cal-j5Zzrkc37m2q7Z3": {
+    "name": "Uplift Collective",
+    "slug": "upliftcollective",
+    "added": "2026-05-25T15:31:53.460746+00:00"
+  },
+  "cal-T6RDYb64yP5NPCY": {
+    "name": "Employment Hero",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460751+00:00"
+  },
+  "cal-CGGEhEybU0cQY56": {
+    "name": "QSLA",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460754+00:00"
+  },
+  "cal-VdHa9CmshpwUqLR": {
+    "name": "Zestyplan",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460758+00:00"
+  },
+  "cal-RL4KsT8CwR47enL": {
+    "name": "TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460761+00:00"
+  },
+  "cal-wfM2htRYUmC9y1f": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460767+00:00"
+  },
+  "cal-gsXpFYvyXTx1EAO": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460770+00:00"
+  },
+  "cal-yE0noVsqTXFwHNC": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460773+00:00"
+  },
+  "cal-CK2OubKB2gGYYUC": {
+    "name": "Fulfil",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460776+00:00"
+  },
+  "cal-vwDPy2FCb0v5pC3": {
+    "name": "CLIMATEDESIGNERSTORONTO_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460779+00:00"
+  },
+  "cal-GhsgYoOhbTq3scQ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460782+00:00"
+  },
+  "cal-kVkqhURJrxPTieV": {
+    "name": "Polarity Calandar",
+    "slug": "polarityco",
+    "added": "2026-05-25T15:31:53.460786+00:00"
+  },
+  "cal-Y1wibkr0gB46Ztc": {
+    "name": "DariaShiv_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460790+00:00"
+  },
+  "cal-LEE92RNPY5xQcXN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460795+00:00"
+  },
+  "cal-QhjXaF5Iyyagkar": {
+    "name": "The Shortlist NY",
+    "slug": "shortlist",
+    "added": "2026-05-25T15:31:53.460798+00:00"
+  },
+  "cal-YsDx6j0wxJO2ks7": {
+    "name": "VClub",
+    "slug": "vclub",
+    "added": "2026-05-25T15:31:53.460801+00:00"
+  },
+  "cal-Jg8d57JIyVCAOtB": {
+    "name": "FSCCanada_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460804+00:00"
+  },
+  "cal-DxDvIxUFGUHxdL6": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460808+00:00"
+  },
+  "cal-wxa5pwwFk9rdzJK": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460812+00:00"
+  },
+  "cal-PwCt5O3krt6osPs": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460815+00:00"
+  },
+  "cal-9nQ6Cdo3aSF1Scj": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460822+00:00"
+  },
+  "cal-WwlJws3GqS6HCFW": {
+    "name": "CADC Stablecoin Events",
+    "slug": "cadc",
+    "added": "2026-05-25T15:31:53.460824+00:00"
+  },
+  "cal-4g8MKXGW8nmoHby": {
+    "name": "BlueDot Impact",
+    "slug": "bluedotevents",
+    "added": "2026-05-25T15:31:53.460827+00:00"
+  },
+  "cal-jtkZjFKw9YJ8LGg": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460830+00:00"
+  },
+  "cal-IZlHEWT0r28J7Fw": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460833+00:00"
+  },
+  "cal-3sq7t28eDBYsUSt": {
+    "name": "Inovia Capital",
+    "slug": "inovia-capital",
+    "added": "2026-05-25T15:31:53.460836+00:00"
+  },
+  "cal-p3ZVue9aGH2FMbL": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460841+00:00"
+  },
+  "cal-vdOiDsUfkUtXxPD": {
+    "name": "Travel Trends Podcast",
+    "slug": "TravelTrendsPodcast",
+    "added": "2026-05-25T15:31:53.460845+00:00"
+  },
+  "cal-wbYFYQEb20gV2jO": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460848+00:00"
+  },
+  "cal-5HgNTrlhrrMhWtD": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460852+00:00"
+  },
+  "cal-IoOGWImYlUN4Lxd": {
+    "name": "Ecom Network",
+    "slug": "ecomnetwork",
+    "added": "2026-05-25T15:31:53.460855+00:00"
+  },
+  "cal-cIxe227BtwiH71l": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460858+00:00"
+  },
+  "cal-KWKPDVAdgv98Hiw": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460862+00:00"
+  },
+  "cal-vplHtAFdNTLcTTG": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460866+00:00"
+  },
+  "cal-73eElCemd3kHWh8": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460871+00:00"
+  },
+  "cal-7R8U464eeiNpIke": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460874+00:00"
+  },
+  "cal-dvmGuvCQXd80dmU": {
+    "name": "MaRS IAF",
+    "slug": "marsiaf",
+    "added": "2026-05-25T15:31:53.460876+00:00"
+  },
+  "cal-us6UfxGBeV3KyzC": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460879+00:00"
+  },
+  "cal-0EE789DyMqDJgXd": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460882+00:00"
+  },
+  "cal-MWWmZodhYxt9xYC": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460885+00:00"
+  },
+  "cal-ByO095fSH1XaAKA": {
+    "name": "Founder Sports Toronto",
+    "slug": "founder-sports",
+    "added": "2026-05-25T15:31:53.460888+00:00"
+  },
+  "cal-4Wh2uAGx4d50E7b": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460891+00:00"
+  },
+  "cal-f5AEpoTo72r5e3V": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460894+00:00"
+  },
+  "cal-nk5Ge9V7hzvLDJG": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460897+00:00"
+  },
+  "cal-Pzt6zGD9ADvy0J5": {
+    "name": "Genesis Labs",
+    "slug": "genesis-ai-lab",
+    "added": "2026-05-25T15:31:53.460900+00:00"
+  },
+  "cal-dcuyLo5ryytbrxR": {
+    "name": "MindStudio AI Events",
+    "slug": "mindstudiocommunity",
+    "added": "2026-05-25T15:31:53.460903+00:00"
+  },
+  "cal-YKftjOg76iWXsFK": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460906+00:00"
+  },
+  "cal-IN5Tj4RMnAvJrNc": {
+    "name": "Web3TO",
+    "slug": "web3tocal",
+    "added": "2026-05-25T15:31:53.460909+00:00"
+  },
+  "cal-SbCHaOYXyeQHVgB": {
+    "name": "Forum Events ",
+    "slug": "forum-ventures-events",
+    "added": "2026-05-25T15:31:53.460913+00:00"
+  },
+  "cal-tAhT8xsdgAapRKb": {
+    "name": "Innovate You",
+    "slug": "amyinnovateyou",
+    "added": "2026-05-25T15:31:53.460916+00:00"
+  },
+  "cal-2WmtKOEm4dVxFw8": {
+    "name": "CleanAI Initiative",
+    "slug": "cleanai.initiative",
+    "added": "2026-05-25T15:31:53.460920+00:00"
+  },
+  "cal-w2k8VUVqLHmRwyk": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460924+00:00"
+  },
+  "cal-yhEoShMWL68PIGw": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460926+00:00"
+  },
+  "cal-zbPnZAHgRf4pJdn": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460930+00:00"
+  },
+  "cal-3KfvMCYBBR13eAm": {
+    "name": "Leading Change_TOCW 2026",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460933+00:00"
+  },
+  "cal-sXZqyUPDSK3VEZL": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460938+00:00"
+  },
+  "cal-FORYbHFwdla13rT": {
+    "name": "JC+CO",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460941+00:00"
+  },
+  "cal-OCfFpty2kvE6LLB": {
+    "name": "MCP Server Builder Series",
+    "slug": "mcp-server",
+    "added": "2026-05-25T15:31:53.460944+00:00"
+  },
+  "cal-PGNbMqRc46kB1VL": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460950+00:00"
+  },
+  "cal-GeN0HKM4i31rCpQ": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460954+00:00"
+  },
+  "cal-2LViOFCsQQlHvt0": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460956+00:00"
+  },
+  "cal-ICXWolPGE66guSr": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460960+00:00"
+  },
+  "cal-e7zTadMsvxJr3y7": {
+    "name": "Zown",
+    "slug": "zown",
+    "added": "2026-05-25T15:31:53.460963+00:00"
+  },
+  "cal-PpAIZmLS6oAOnce": {
+    "name": "Scouty's Events",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460965+00:00"
+  },
+  "cal-SlN1pEk3293gd32": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460969+00:00"
+  },
+  "cal-twJ1rF9FWThUtAX": {
+    "name": "ChaiTech",
+    "slug": "Chaitech",
+    "added": "2026-05-25T15:31:53.460973+00:00"
+  },
+  "cal-jAurnsQg4heVDPe": {
+    "name": "Toronto Tech Basketball Run",
+    "slug": "techball",
+    "added": "2026-05-25T15:31:53.460976+00:00"
+  },
+  "cal-YK5qpLaG4S1YLuN": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460979+00:00"
+  },
+  "cal-i3OTm8KKFSlGlSy": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460981+00:00"
+  },
+  "cal-NbH0lyuyeXFZzFF": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460986+00:00"
+  },
+  "cal-htXZNxo8Eu2GjLa": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460989+00:00"
+  },
+  "cal-mPsZqdCSjMC6Yv3": {
+    "name": "InclusifAI",
+    "slug": "inclusifai",
+    "added": "2026-05-25T15:31:53.460993+00:00"
+  },
+  "cal-BUJDPxnR3Y7bpxz": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.460998+00:00"
+  },
+  "cal-rjAUl9NDLWyXR98": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.461001+00:00"
+  },
+  "cal-tGH4WXyMh3KLlo5": {
+    "name": "WVG Events",
+    "slug": "waterlooventuregroup",
+    "added": "2026-05-25T15:31:53.461006+00:00"
+  },
+  "cal-seMGslCkHgaxnUt": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.461009+00:00"
+  },
+  "cal-zDorUIrPclxHokA": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.461012+00:00"
+  },
+  "cal-f23kO4P5XazRD73": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-25T15:31:53.461015+00:00"
+  }
+}
