@@ -1808,5 +1808,15 @@
     "name": "San Francisco UXD",
     "slug": "SFUXD",
     "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-22QU6PBklKmVaZ7": {
+    "name": "The San Francisco Freedom Club",
+    "slug": "sffc",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-Jf6ZEQ2dAySil4j": {
+    "name": "SF Bay Area EA",
+    "slug": "sfbayea",
+    "added": "2026-05-25T00:00:00+00:00"
   }
 }
