@@ -254,7 +254,7 @@
     "longitude": 72.875,
     "cover_url": "https://images.lumacdn.com/uploads/1k/f4f91083-a928-4134-8221-4ab8f668c89d.png",
     "guest_count": 0,
-    "hosts": "Yogesh Singh, Gabriel Chua, Vaibhav Srivastav, Tyler Bertao",
+    "hosts": "Yogesh Singh, Gabriel Chua, Vaibhav Srivastav",
     "calendar_name": "Personal",
     "calendar_slug": null,
     "event_type": "independent",
@@ -373,7 +373,7 @@
     "latitude": 19.127910900000003,
     "longitude": 72.8469784,
     "cover_url": "https://images.lumacdn.com/uploads/in/9f316f56-ae86-4071-ba1b-73363d78c35b.jpg",
-    "guest_count": 292,
+    "guest_count": 293,
     "hosts": "JS Community, Shri Shah, Sahil Kadam, Ramjee Mishra, Raaj Patkar, Anusri Karmokar, Krishiv Solanki, Jagdip Pathare, Kumari Megha Pandey",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -405,7 +405,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech"
+    "tags": "AI"
   },
   {
     "event_id": "evt-yWsHOuPRCFCRDvi",
@@ -469,7 +469,7 @@
     "latitude": 18.9581934,
     "longitude": 72.8320729,
     "cover_url": "https://images.lumacdn.com/event-covers/cv/284c4fdb-ab37-4cb2-9981-12311c5d62f0.png",
-    "guest_count": 835,
+    "guest_count": 836,
     "hosts": "Mykola x Web3Privacy now, PG_CDG | Web3Privacy Now",
     "calendar_name": "Web3Privacy Now Events",
     "calendar_slug": "web3privacy",
