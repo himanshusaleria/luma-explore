@@ -278,5 +278,20 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-24T17:03:15.966910+00:00"
+  },
+  "cal-4nxQ8qsilj6xMN0": {
+    "name": "IndAI Nexus",
+    "slug": "indai-nexus",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-SMmCeKIUfcxD79z": {
+    "name": "AI Startup Hub",
+    "slug": "AI_Startup_Hub",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-0iduYwy1dWaEEqJ": {
+    "name": "NG Delhi",
+    "slug": "ngdelhi",
+    "added": "2026-05-25T00:00:00+00:00"
   }
 }

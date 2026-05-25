@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luma Event Explorer — All Tech Events, AI Events & Startup Events in Bangalore, SF, Singapore, Mumbai, Delhi, Boston</title>
-<meta name="description" content="Find all events on Luma including hidden ones. Browse tech events in Bangalore, SF events, Singapore events, AI events, startup events, crypto events, community events across 7 cities. Events in Mumbai, Delhi, Boston, Pune.">
-<meta name="keywords" content="luma, luma event, luma com, events in bangalore, tech events in bangalore, bangalore it events, sf events, events in sfo, san francisco area events, singapore events, events in mumbai, events in delhi, events boston, tech events, ai events, startup events, crypto events, community events, tech networking events, event dinners, event networking, all events, hidden events, featured events, find events, community calendars, public events, event lu">
+<title>Luma Event Explorer — All Tech Events, AI Events & Startup Events in Bangalore, SF, Singapore, Toronto, Vancouver, Mumbai, Delhi, Boston</title>
+<meta name="description" content="Find all events on Luma including hidden ones. Browse tech events, AI events, startup events, crypto events, social events, and community events across 12 cities. Events in Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, Boston, Pune, Hyderabad, Chennai.">
+<meta name="keywords" content="luma, luma event, luma com, events in bangalore, tech events in bangalore, bangalore it events, sf events, events in sfo, san francisco area events, singapore events, events in mumbai, events in delhi, events boston, events in toronto, toronto tech week, toronto events this weekend, events in vancouver, vancouver events this weekend, events in montreal, montreal festivals, montreal events this weekend, tech events, ai events, startup events, crypto events, community events, social events, networking events, festivals, shows, live music, comedy shows, tech networking events, event dinners, event networking, all events, hidden events, featured events, find events, community calendars, public events, event lu">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://himanshusaleria.github.io/luma-explore/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
-<meta property="og:description" content="Stop missing hidden meetups, founder dinners, and niche gatherings. We surface Luma events that don't appear on the featured page across Bangalore, SF, Singapore, Mumbai, Delhi, and Boston.">
+<meta property="og:description" content="Stop missing hidden meetups, founder dinners, and niche gatherings. We surface Luma events that don't appear on the featured page across 12 cities including Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.">
 <meta property="og:url" content="https://himanshusaleria.github.io/luma-explore/">
 <meta property="og:site_name" content="Luma Event Explorer">
 <meta property="og:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
@@ -20,7 +20,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
-<meta name="twitter:description" content="We surface Luma events that don't appear on the featured page. Browse hidden meetups, hackathons, and founder dinners across 6 cities.">
+<meta name="twitter:description" content="We surface Luma events that don't appear on the featured page. Browse hidden meetups, hackathons, and founder dinners across 12 cities in India, US, Canada, and Singapore.">
 <meta name="twitter:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZKK4LPJB7"></script>
@@ -37,7 +37,7 @@
   "@type": "WebApplication",
   "name": "Luma Event Explorer",
   "url": "https://himanshusaleria.github.io/luma-explore/",
-  "description": "Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Mumbai, Delhi, and Boston.",
+  "description": "Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.",
   "applicationCategory": "EventApplication",
   "operatingSystem": "Web",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -49,7 +49,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What are hidden events on Luma?", "acceptedAnswer": { "@type": "Answer", "text": "Hidden events are public events on lu.ma that don't appear on Luma's featured discover page. They exist in organizer and community calendars but Luma's algorithm doesn't surface them. We find all events including tech events, AI events, startup events, crypto events, and event dinners." }},
-    { "@type": "Question", "name": "Which cities do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "We cover events in Bangalore (Bengaluru), San Francisco (SF/SFO), Singapore, Mumbai, New Delhi, Boston (MA), and Pune. We find tech events, AI events, startup events, crypto events, and community events in each city." }},
+    { "@type": "Question", "name": "Which cities do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "We cover events in 12 cities across 4 countries: Bangalore, Mumbai, New Delhi, Pune, Hyderabad, and Chennai in India; San Francisco and Boston in the US; Toronto, Vancouver, and Montreal in Canada; and Singapore. We find tech events, AI events, startup events, crypto events, social events, and community events in each city." }},
     { "@type": "Question", "name": "How do I find events near me?", "acceptedAnswer": { "@type": "Answer", "text": "Select your city from the navigation bar to see all events — both featured and hidden. Use the search box to filter by event type like tech, AI, startup, crypto, or networking. Every event links directly to Luma for RSVP." }},
     { "@type": "Question", "name": "Is this affiliated with Luma?", "acceptedAnswer": { "@type": "Answer", "text": "No. This is an independent tool. All events are hosted on luma.com and link directly to their Luma pages." }}
   ]
@@ -884,11 +884,15 @@ const CITIES = {
   pune: { label: 'Pune', file: 'data/pune_latest.json' },
   hyderabad: { label: 'Hyderabad', file: 'data/hyderabad_latest.json' },
   chennai: { label: 'Chennai', file: 'data/chennai_latest.json' },
+  toronto: { label: 'Toronto', file: 'data/toronto_latest.json' },
+  vancouver: { label: 'Vancouver', file: 'data/vancouver_latest.json' },
+  montreal: { label: 'Montreal', file: 'data/montreal_latest.json' },
 };
 
 const COUNTRIES = [
   { label: 'India', flag: '🇮🇳', cities: ['bengaluru', 'mumbai', 'new-delhi', 'pune', 'hyderabad', 'chennai'] },
   { label: 'US', flag: '🇺🇸', cities: ['sf', 'boston'] },
+  { label: 'Canada', flag: '🇨🇦', cities: ['toronto', 'vancouver', 'montreal'] },
   { label: 'Singapore', flag: '🇸🇬', cities: ['singapore'] },
 ];
 
@@ -1176,6 +1180,9 @@ const CITY_SEO = {
   pune: { title: 'Events in Pune — Tech Events, Hackathons, Startup Events Pune | Luma Event Explorer', desc: 'Find all events in Pune on Luma. Hackathon Pune, tech events Pune, startup events in Pune, tech summit Pune, technical events in Pune, tech meetups, and networking events. Includes hidden events not on the featured page.' },
   hyderabad: { title: 'Events in Hyderabad — Hackathons, Tech Events, Startup Events Hyderabad | Luma Event Explorer', desc: 'Find all events in Hyderabad on Luma. Hackathon Hyderabad, tech events Hyderabad, startup events Hyderabad, technical events in Hyderabad, AI events, and upcoming hackathons in Hyderabad. Includes hidden events not on the featured page.' },
   chennai: { title: 'Events in Chennai — Hackathons, Tech Events, Chennai Meetups | Luma Event Explorer', desc: 'Find all events in Chennai on Luma. Chennai events today, hackathon Chennai, tech events in Chennai, Chennai meetups, startup events Chennai, and networking events in Chennai. Includes hidden events not on the featured page.' },
+  toronto: { title: 'Events in Toronto — Toronto Tech Week, Festivals, Shows & Meetups | Luma Event Explorer', desc: 'Find all events in Toronto on Luma. Events in Toronto today, Toronto Tech Week, Toronto events this weekend, festivals in Toronto, shows in Toronto, live music Toronto, comedy shows, startup events, AI meetups, and networking events. Includes hidden events not on the featured page.' },
+  vancouver: { title: 'Events in Vancouver — Tech Events, Festivals, Shows & Meetups | Luma Event Explorer', desc: 'Find all events in Vancouver on Luma. Vancouver events this weekend, Vancouver events today, shows in Vancouver, live music Vancouver, Vancouver festivals, comedy shows Vancouver, tech events, AI meetups, startup events, and networking events. Includes hidden events not on the featured page.' },
+  montreal: { title: 'Events in Montreal — Montreal Festivals, Shows, Concerts & Meetups | Luma Event Explorer', desc: 'Find all events in Montreal on Luma. Montreal events this weekend, Montreal events today, Montreal festivals, shows in Montreal, live music Montreal, concerts Montreal, tech events, AI meetups, startup events, and networking events. Includes hidden events not on the featured page.' },
 };
 
 function updateMetaForCity(city) {

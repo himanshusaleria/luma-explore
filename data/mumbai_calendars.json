@@ -208,5 +208,25 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-23T19:12:00.728451+00:00"
+  },
+  "cal-4nxQ8qsilj6xMN0": {
+    "name": "IndAI Nexus",
+    "slug": "indai-nexus",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-SMmCeKIUfcxD79z": {
+    "name": "AI Startup Hub",
+    "slug": "AI_Startup_Hub",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-iapL6lB1jfdUqL1": {
+    "name": "Rootine Wellness Club",
+    "slug": "rootinewellnessclub",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-pTZYI09rzftWdH8": {
+    "name": "mysha community events",
+    "slug": "myshacommunityevents",
+    "added": "2026-05-25T00:00:00+00:00"
   }
 }

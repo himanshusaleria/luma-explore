@@ -47,6 +47,18 @@ CITIES = {
         "bounds": {"north": 13.25, "south": 12.85, "east": 80.35, "west": 80.05},
         "scan_from": ["bengaluru", "mumbai", "new-delhi"],
     },
+    "toronto": {
+        "place_id": "discplace-Cx3JMS6vXKAbhV5",
+        "bounds": {"north": 43.85, "south": 43.55, "east": -79.1, "west": -79.65},
+    },
+    "vancouver": {
+        "place_id": "discplace-4fa7ldlAkBTTivm",
+        "bounds": {"north": 49.4, "south": 49.1, "east": -122.9, "west": -123.3},
+    },
+    "montreal": {
+        "place_id": "discplace-CXKKcJmNkbj6ikW",
+        "bounds": {"north": 45.65, "south": 45.40, "east": -73.45, "west": -73.75},
+    },
 }
 
 

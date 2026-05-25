@@ -1778,5 +1778,35 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-24T20:57:24.976552+00:00"
+  },
+  "cal-JgFCgOUvv3BOR7r": {
+    "name": "David's SF AI Connect",
+    "slug": "svdavid",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-bkO33DlatoB8YHE": {
+    "name": "Tech Power Network",
+    "slug": "sftech",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-Y7jToFv4UwdDlCd": {
+    "name": "SF Founder's Club",
+    "slug": "sf-founders-club",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-uFwUAcHB5BTpzjB": {
+    "name": "Startup Social San Francisco",
+    "slug": "startupsocial",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-OnVWUR7Ez2HT9bV": {
+    "name": "SF Joiners Week",
+    "slug": "SFjoinersweek",
+    "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-st2SRQVEhD8VSvD": {
+    "name": "San Francisco UXD",
+    "slug": "SFUXD",
+    "added": "2026-05-25T00:00:00+00:00"
   }
 }
