@@ -1818,5 +1818,45 @@
     "name": "SF Bay Area EA",
     "slug": "sfbayea",
     "added": "2026-05-25T00:00:00+00:00"
+  },
+  "cal-9jzVoVZclDCewDU": {
+    "name": "Vapi",
+    "slug": "vapi_events",
+    "added": "2026-05-26T14:15:28.668603+00:00"
+  },
+  "cal-6F707U6Qx9ww4p6": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-26T14:15:28.674753+00:00"
+  },
+  "cal-vR4BYLkYrMFQw3T": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-26T14:15:28.674761+00:00"
+  },
+  "cal-Pthq0nb48k8Que3": {
+    "name": "Verification Summit Events",
+    "slug": null,
+    "added": "2026-05-26T14:15:28.674797+00:00"
+  },
+  "cal-WUpOAuId3YmWDse": {
+    "name": "Render",
+    "slug": "render",
+    "added": "2026-05-26T14:15:28.674808+00:00"
+  },
+  "cal-MpA9GMz5jRaKeJn": {
+    "name": "Angel Launch",
+    "slug": "angellaunchevents",
+    "added": "2026-05-26T14:15:28.674893+00:00"
+  },
+  "cal-D5yWBPY7IroUiUX": {
+    "name": "Effective Altruism San Francisco",
+    "slug": null,
+    "added": "2026-05-26T14:15:28.674921+00:00"
+  },
+  "cal-ZrpzHDUZ6lBwpG8": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-26T14:15:28.674944+00:00"
   }
 }

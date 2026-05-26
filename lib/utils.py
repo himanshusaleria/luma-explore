@@ -114,9 +114,10 @@ def flatten_event(entry: dict) -> dict:
 
 
 def save_events(city: str, events: list[dict]) -> list[dict]:
-    """Save events to JSON and CSV."""
+    """Save events to JSON and CSV. Merges with existing events instead of replacing."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    now = datetime.now(timezone.utc)
 
     # JSON (full raw data)
     raw_path = f"{OUTPUT_DIR}/{city}_raw_{timestamp}.json"
@@ -124,33 +125,85 @@ def save_events(city: str, events: list[dict]) -> list[dict]:
         json.dump(events, f, indent=2, default=str)
     print(f"  Raw data: {raw_path}")
 
-    # Flatten
+    # Flatten new events
     flat = [flatten_event(e) for e in events]
 
-    # Sort by start_at
-    flat.sort(key=lambda e: e.get("start_at", ""))
-
-    # CSV (flattened)
-    csv_path = f"{OUTPUT_DIR}/{city}_events_{timestamp}.csv"
-    if flat:
-        with open(csv_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=flat[0].keys())
-            writer.writeheader()
-            writer.writerows(flat)
-    print(f"  CSV: {csv_path} ({len(flat)} events)")
-
-    # Latest copies
+    # Load existing events from latest file and merge
     latest_json = f"{OUTPUT_DIR}/{city}_latest.json"
+    existing = []
+    if os.path.exists(latest_json):
+        try:
+            with open(latest_json) as f:
+                existing = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            existing = []
+
+    # Merge: new events override existing ones (by event_id), keep old ones not in new batch
+    new_ids = {e["event_id"] for e in flat if e.get("event_id")}
+    merged = {e["event_id"]: e for e in existing if e.get("event_id")}
+    for e in flat:
+        if e.get("event_id"):
+            merged[e["event_id"]] = e  # new data wins
+
+    all_events = list(merged.values())
+
+    # Separate past events (ended before today) into archive
+    past = []
+    upcoming = []
+    for e in all_events:
+        end = e.get("end_at") or e.get("start_at", "")
+        if end and end < now.strftime("%Y-%m-%dT00:00:00"):
+            past.append(e)
+        else:
+            upcoming.append(e)
+
+    # Archive past events
+    if past:
+        archive_path = f"{OUTPUT_DIR}/{city}_archive.json"
+        archived = []
+        if os.path.exists(archive_path):
+            try:
+                with open(archive_path) as f:
+                    archived = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                archived = []
+        archived_ids = {e["event_id"] for e in archived if e.get("event_id")}
+        for e in past:
+            if e.get("event_id") and e["event_id"] not in archived_ids:
+                archived.append(e)
+        archived.sort(key=lambda e: e.get("start_at", ""))
+        with open(archive_path, "w") as f:
+            json.dump(archived, f, indent=2, default=str)
+        print(f"  Archived: {len(past)} past events → {archive_path} ({len(archived)} total)")
+
+    # Sort upcoming by start_at
+    upcoming.sort(key=lambda e: e.get("start_at", ""))
+
+    old_count = len(existing)
+    new_count = len(flat)
+    kept_from_old = len(upcoming) - len([e for e in flat if e.get("event_id") and e["event_id"] not in {x["event_id"] for x in existing if x.get("event_id")}])
+    print(f"  Merge: {new_count} new + {old_count} existing → {len(upcoming)} upcoming ({len(past)} archived)")
+
+    # CSV (timestamped)
+    csv_path = f"{OUTPUT_DIR}/{city}_events_{timestamp}.csv"
+    if upcoming:
+        with open(csv_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=upcoming[0].keys())
+            writer.writeheader()
+            writer.writerows(upcoming)
+    print(f"  CSV: {csv_path} ({len(upcoming)} events)")
+
+    # Latest copies (upcoming only)
     latest_csv = f"{OUTPUT_DIR}/{city}_latest.csv"
     with open(latest_json, "w") as f:
-        json.dump(flat, f, indent=2, default=str)
-    if flat:
+        json.dump(upcoming, f, indent=2, default=str)
+    if upcoming:
         with open(latest_csv, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=flat[0].keys())
+            writer = csv.DictWriter(f, fieldnames=upcoming[0].keys())
             writer.writeheader()
-            writer.writerows(flat)
+            writer.writerows(upcoming)
 
-    return flat
+    return upcoming
 
 
 def save_calendars(city: str, events: list[dict]) -> dict:
