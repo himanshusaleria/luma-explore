@@ -805,7 +805,7 @@
     "latitude": 1.2798851,
     "longitude": 103.8514962,
     "cover_url": "https://images.lumacdn.com/uploads/gc/7f4d09b8-6561-4d72-8a62-10a49ab80ac4.png",
-    "guest_count": 16,
+    "guest_count": 17,
     "hosts": "Eunice Cheng, Gwen Tan, Nam Le, Lionel Sim",
     "calendar_name": "AWS Startups (Singapore)",
     "calendar_slug": null,
@@ -884,7 +884,7 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
+    "source": "featured",
     "tags": ""
   },
   {
@@ -1477,7 +1477,7 @@
     "latitude": 1.305,
     "longitude": 103.875,
     "cover_url": "https://images.lumacdn.com/uploads/oc/100dd227-3d0e-4c4c-b8e8-062cbe40e018.png",
-    "guest_count": 29,
+    "guest_count": 30,
     "hosts": "Diego Alpin, Junyi, Si Jing T",
     "calendar_name": "DAYWA Singapore",
     "calendar_slug": "daywasg",
@@ -1557,6 +1557,30 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
+    "tags": ""
+  },
+  {
+    "event_id": "evt-IbapXV5rTwsTzCy",
+    "name": "Convergence Summit in Singapore",
+    "url": "https://lu.ma/35owchm2",
+    "start_at": "2026-06-12T06:30:00.000Z",
+    "end_at": "2026-06-12T12:00:00.000Z",
+    "timezone": "Asia/Singapore",
+    "location_type": "offline",
+    "city": "Singapore",
+    "sublocality": "Tanjong Pagar",
+    "country": "Singapore",
+    "latitude": 1.275,
+    "longitude": 103.845,
+    "cover_url": "https://images.lumacdn.com/uploads/8y/09b36c8e-b03a-4c38-bbea-e2cbb006ac7d.png",
+    "guest_count": 0,
+    "hosts": "Ben Wee, Natalie Ng, Superteam SG, AWS",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
     "tags": ""
   },
   {
@@ -1748,8 +1772,8 @@
     "event_type": "independent",
     "visibility": "public",
     "waitlist_active": false,
-    "source": "snowball",
-    "tags": "Arts & Culture"
+    "source": "featured",
+    "tags": ""
   },
   {
     "event_id": "evt-5KpMVNfOXd6Ot7w",
