@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "evt-7hUyHAYk7UoJfjG",
+    "name": "MTW Satellite Event: Agentic Systems in Lending",
+    "url": "https://lu.ma/tcbl7ris",
+    "start_at": "2026-05-25T12:30:00.000Z",
+    "end_at": "2026-05-25T16:00:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Mumbai",
+    "sublocality": "Saidham Nagar",
+    "country": "India",
+    "latitude": 19.0075,
+    "longitude": 72.8325,
+    "cover_url": "https://images.lumacdn.com/uploads/w0/d6bd378d-12b7-45ac-b0bd-4f5ac4cfd742.jpg",
+    "guest_count": 60,
+    "hosts": "Tech Entrepreneurs Association of Mumbai, Ashish Pawar, Tech Entrepreneurs Association of Mumbai",
+    "calendar_name": "Personal",
+    "calendar_slug": null,
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "snowball",
+    "tags": ""
+  }
+]

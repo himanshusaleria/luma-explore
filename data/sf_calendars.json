@@ -1858,5 +1858,10 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-26T14:15:28.674944+00:00"
+  },
+  "cal-nxESnAvqOJvE7E5": {
+    "name": "CIMC Events",
+    "slug": "cimc",
+    "added": "2026-05-26T14:19:22.197169+00:00"
   }
 }
