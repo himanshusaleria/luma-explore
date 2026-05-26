@@ -1858,5 +1858,20 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-26T15:32:45.277315+00:00"
+  },
+  "cal-kk6lpwOELZ8GlGk": {
+    "name": "Intern Ship",
+    "slug": "intern-ship",
+    "added": "2026-05-26T16:25:06.569935+00:00"
+  },
+  "cal-u3vVIuSFJd7RqNB": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-26T16:25:06.569963+00:00"
+  },
+  "cal-nxESnAvqOJvE7E5": {
+    "name": "CIMC Events",
+    "slug": "cimc",
+    "added": "2026-05-26T16:25:06.570158+00:00"
   }
 }
