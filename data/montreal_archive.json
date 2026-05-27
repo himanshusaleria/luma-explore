@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "evt-FOsTzwOUC8Gc1aK",
+    "name": "S\u00e9ance d'information Acc\u00e9l\u00e9ration | PR\u00c9SENTIEL",
+    "url": "https://lu.ma/llq6ykuf",
+    "start_at": "2026-05-26T13:45:00.000Z",
+    "end_at": "2026-05-26T17:00:00.000Z",
+    "timezone": "America/Toronto",
+    "location_type": "offline",
+    "city": "Montr\u00e9al",
+    "sublocality": "International District",
+    "country": "Canada",
+    "latitude": 45.500622,
+    "longitude": -73.561878,
+    "cover_url": "https://images.lumacdn.com/event-covers/0b/f0c140f1-13e9-4f98-a9ae-f8a393319532.png",
+    "guest_count": 131,
+    "hosts": "Centech",
+    "calendar_name": "Centech",
+    "calendar_slug": "centech",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
+    "tags": ""
+  }
+]
