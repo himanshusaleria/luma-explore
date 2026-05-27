@@ -998,22 +998,33 @@ function formatTime(iso, tz) {
   }
 }
 
-function getDayLabel(date) {
-  const today = new Date(); today.setHours(0,0,0,0);
-  const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate()+1);
-  const ed = new Date(date); ed.setHours(0,0,0,0);
-  const weekday = date.toLocaleDateString('en-US', { weekday: 'long' });
-  if (ed.getTime() === today.getTime()) return { day: 'Today', weekday };
-  if (ed.getTime() === tomorrow.getTime()) return { day: 'Tomorrow', weekday };
-  return { day: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), weekday };
+function getDateInTz(date, tz) {
+  try {
+    const parts = new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+    return parts; // returns YYYY-MM-DD
+  } catch {
+    return date.toLocaleDateString('en-CA'); // fallback to browser timezone, format YYYY-MM-DD
+  }
+}
+
+function getDayLabel(dateStr, tz) {
+  const todayStr = getDateInTz(new Date(), tz);
+  const tomorrowDate = new Date(); tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+  const tomorrowStr = getDateInTz(tomorrowDate, tz);
+  const d = new Date(dateStr + 'T12:00:00'); // noon to avoid DST edge cases
+  const weekday = d.toLocaleDateString('en-US', { weekday: 'long' });
+  if (dateStr === todayStr) return { day: 'Today', weekday };
+  if (dateStr === tomorrowStr) return { day: 'Tomorrow', weekday };
+  return { day: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), weekday };
 }
 
 function groupByDate(events) {
   const groups = new Map();
   for (const e of events) {
     const d = new Date(e.start_at);
-    const key = d.toISOString().split('T')[0];
-    if (!groups.has(key)) groups.set(key, { label: getDayLabel(d), events: [] });
+    const tz = e.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const key = getDateInTz(d, tz);
+    if (!groups.has(key)) groups.set(key, { label: getDayLabel(key, tz), events: [] });
     groups.get(key).events.push(e);
   }
   return groups;
@@ -1021,15 +1032,13 @@ function groupByDate(events) {
 
 function renderEvents(events) {
   const content = document.getElementById('content');
-  // Filter out past events (only show today and future)
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  // Filter out past events (only show today and future in the event's timezone)
   const filtered = events.filter(e => {
-    // Exclude events that have already started before today
     if (e.start_at) {
-      const eventDate = new Date(e.start_at);
-      eventDate.setHours(0, 0, 0, 0);
-      if (eventDate < today) return false;
+      const tz = e.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const eventDateStr = getDateInTz(new Date(e.start_at), tz);
+      const todayStr = getDateInTz(new Date(), tz);
+      if (eventDateStr < todayStr) return false;
     }
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
