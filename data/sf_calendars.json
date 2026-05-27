@@ -1953,5 +1953,15 @@
     "name": "Solana Foundation",
     "slug": null,
     "added": "2026-05-27T17:20:35.600557+00:00"
+  },
+  "cal-hnlTd6xGrWvkWiY": {
+    "name": "Framer",
+    "slug": "framer-events",
+    "added": "2026-05-27T20:20:26.686466+00:00"
+  },
+  "cal-0CCAlamUXKza1fY": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-27T20:20:26.686634+00:00"
   }
 }

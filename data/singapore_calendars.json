@@ -578,5 +578,20 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-26T16:23:50.247277+00:00"
+  },
+  "cal-pqP36nRzBym5qGv": {
+    "name": "Black Mangroves",
+    "slug": "black-mangroves",
+    "added": "2026-05-27T20:19:56.616992+00:00"
+  },
+  "cal-UmQo7ojclemWT0C": {
+    "name": "Figuring Shit Out Speaker Series",
+    "slug": "figuringshitout",
+    "added": "2026-05-27T20:19:56.617012+00:00"
+  },
+  "cal-N2ANHoH9btwAWFx": {
+    "name": "Liminal",
+    "slug": "liminal_build",
+    "added": "2026-05-27T20:19:56.617024+00:00"
   }
 }
