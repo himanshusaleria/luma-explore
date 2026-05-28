@@ -193,6 +193,31 @@
   }
   .btn-submit:hover { background: #333; }
 
+  /* ── Filter Tags ─────────────────────────────────── */
+  .filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .filter-tag {
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .filter-tag:hover { border-color: #999; color: #1a1a1a; }
+  .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -773,6 +798,7 @@
     <div class="city-selector" id="citySelector"></div>
   </div>
   <div class="nav-right">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search events, hosts, tags...">
     <a class="btn-submit" href="#" onclick="event.preventDefault(); track('cta_submit_event'); emailLink('List%20my%20event','Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!')">Submit Event</a>
   </div>
 </div>
@@ -800,6 +826,17 @@
   <div class="section-header">
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
+  </div>
+  <div class="filter-tags" id="filterTags">
+    <button class="filter-tag active" data-filter="">All</button>
+    <button class="filter-tag" data-filter="ai">AI</button>
+    <button class="filter-tag" data-filter="startup">Startup</button>
+    <button class="filter-tag" data-filter="networking">Networking</button>
+    <button class="filter-tag" data-filter="hackathon">Hackathon</button>
+    <button class="filter-tag" data-filter="crypto">Crypto</button>
+    <button class="filter-tag" data-filter="design">Design</button>
+    <button class="filter-tag" data-filter="social">Social</button>
+    <button class="filter-tag" data-filter="wellness">Wellness</button>
   </div>
   <div id="mapContainer" class="map-container">
     <div id="map" style="width:100%; height:500px; border-radius:12px;"></div>
@@ -900,7 +937,8 @@ let allEvents = {};
 const urlParams = new URLSearchParams(window.location.search);
 const cityFromUrl = urlParams.get('city');
 let currentCity = (cityFromUrl && CITIES[cityFromUrl]) ? cityFromUrl : 'bengaluru';
-let searchQuery = ''; // kept for filter compatibility
+let searchQuery = '';
+let activeFilter = '';
 let emailCaptured = !!localStorage.getItem('userEmail');
 
 // ── Analytics ──
@@ -1040,6 +1078,13 @@ function renderEvents(events) {
       const todayStr = getDateInTz(new Date(), tz);
       if (eventDateStr < todayStr) return false;
     }
+    // Filter tag
+    if (activeFilter) {
+      const f = activeFilter.toLowerCase();
+      const searchable = ((e.name||'') + ' ' + (e.tags||'') + ' ' + (e.calendar_name||'') + ' ' + (e.hosts||'')).toLowerCase();
+      if (!searchable.includes(f)) return false;
+    }
+    // Search query
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (e.name||'').toLowerCase().includes(q)
@@ -1406,6 +1451,31 @@ function renderMap(events) {
       hero.classList.add('mobile-moved');
     }
   }
+
+  // Search box
+  const searchBox = document.getElementById('searchBox');
+  let searchTimeout;
+  searchBox.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      searchQuery = e.target.value.trim();
+      if (searchQuery) track('search', { query: searchQuery, city: CITIES[currentCity].label });
+      renderEvents(allEvents[currentCity] || []);
+      if (mapInstance) renderMap(allEvents[currentCity] || []);
+    }, 200);
+  });
+
+  // Filter tags
+  document.getElementById('filterTags').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-tag');
+    if (!btn) return;
+    document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter || '';
+    if (activeFilter) track('filter_tag', { filter: activeFilter, city: CITIES[currentCity].label });
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+  });
 
   // Track page load with event counts
   const totalEvents = Object.values(allEvents).reduce((sum, arr) => sum + arr.length, 0);
