@@ -7,21 +7,21 @@
 <meta name="description" content="Find all events on Luma including hidden ones. Browse tech events, AI events, startup events, crypto events, social events, and community events across 12 cities. Events in Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, Boston, Pune, Hyderabad, Chennai.">
 <meta name="keywords" content="luma, luma event, luma com, events in bangalore, tech events in bangalore, bangalore it events, sf events, events in sfo, san francisco area events, singapore events, events in mumbai, events in delhi, events boston, events in toronto, toronto tech week, toronto events this weekend, events in vancouver, vancouver events this weekend, events in montreal, montreal festivals, montreal events this weekend, tech events, ai events, startup events, crypto events, community events, social events, networking events, festivals, shows, live music, comedy shows, tech networking events, event dinners, event networking, all events, hidden events, featured events, find events, community calendars, public events, event lu">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://himanshusaleria.github.io/luma-explore/">
+<link rel="canonical" href="https://hiddenevents.online/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
 <meta property="og:description" content="Stop missing hidden meetups, founder dinners, and niche gatherings. We surface Luma events that don't appear on the featured page across 12 cities including Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.">
-<meta property="og:url" content="https://himanshusaleria.github.io/luma-explore/">
+<meta property="og:url" content="https://hiddenevents.online/">
 <meta property="og:site_name" content="Luma Event Explorer">
-<meta property="og:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
+<meta property="og:image" content="https://hiddenevents.online/images/og-image.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
 <meta name="twitter:description" content="We surface Luma events that don't appear on the featured page. Browse hidden meetups, hackathons, and founder dinners across 12 cities in India, US, Canada, and Singapore.">
-<meta name="twitter:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
+<meta name="twitter:image" content="https://hiddenevents.online/images/og-image.webp">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZKK4LPJB7"></script>
 <script>
@@ -36,7 +36,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Luma Event Explorer",
-  "url": "https://himanshusaleria.github.io/luma-explore/",
+  "url": "https://hiddenevents.online/",
   "description": "Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.",
   "applicationCategory": "EventApplication",
   "operatingSystem": "Web",
@@ -874,6 +874,15 @@
 </footer>
 
 <script>
+// Clean up malformed URLs (trailing backticks from sharing tools)
+if (window.location.href.includes('`')) {
+  window.history.replaceState(null, '', window.location.href.replace(/`/g, ''));
+}
+// Redirect old /luma-explore/ path to root (preserving query params)
+if (window.location.pathname.startsWith('/luma-explore')) {
+  window.location.replace('/' + window.location.search + window.location.hash);
+}
+
 const CITIES = {
   bengaluru: { label: 'Bengaluru', file: 'data/bengaluru_latest.json' },
   singapore: { label: 'Singapore', file: 'data/singapore_latest.json' },
@@ -1201,7 +1210,7 @@ function updateMetaForCity(city) {
   const desc = document.querySelector('meta[name="description"]');
   if (desc) desc.content = seo.desc || `Find all events in ${label} on Luma. Tech events, AI events, startup events, and community events.`;
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.href = `https://himanshusaleria.github.io/luma-explore/?city=${city}`;
+  if (canonical) canonical.href = `https://hiddenevents.online/?city=${city}`;
   const ogTitle = document.querySelector('meta[property="og:title"]');
   if (ogTitle) ogTitle.content = `All Events in ${label} — Luma Event Explorer`;
   const ogDesc = document.querySelector('meta[property="og:description"]');

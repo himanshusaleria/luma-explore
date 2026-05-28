@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://himanshusaleria.github.io/luma-explore/sitemap.xml
+Sitemap: https://hiddenevents.online/sitemap.xml
