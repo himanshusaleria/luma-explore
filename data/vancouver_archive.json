@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "evt-6wDsntAeeFrUfeH",
+    "name": "Springtime Social Vol.3",
+    "url": "https://lu.ma/2nzm88ui",
+    "start_at": "2026-05-27T00:30:00.000Z",
+    "end_at": "2026-05-27T02:30:00.000Z",
+    "timezone": "America/Vancouver",
+    "location_type": "offline",
+    "city": "Vancouver",
+    "sublocality": "Mount Pleasant",
+    "country": "Canada",
+    "latitude": 49.2672357,
+    "longitude": -123.1033402,
+    "cover_url": "https://images.lumacdn.com/uploads/wk/da83d766-000c-488d-b89b-7e5841854f42.png",
+    "guest_count": 88,
+    "hosts": "Vancouver Design Community",
+    "calendar_name": "Vancouver Design Community",
+    "calendar_slug": "vancouverdesigncommunity",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
+    "tags": ""
+  }
+]
