@@ -387,6 +387,24 @@
   }
   .gate-banner button:hover { background: #333; }
 
+  /* ── Unsupported City Banner ────────────────────── */
+  .unsupported-city-banner {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  .unsupported-city-banner h3 { font-size: 15px; font-weight: 700; color: #92400e; margin-bottom: 6px; }
+  .unsupported-city-banner p { font-size: 13px; color: #78350f; margin-bottom: 12px; line-height: 1.5; }
+  .unsupported-city-banner button {
+    padding: 8px 20px; background: #92400e; color: #fff; border: none;
+    border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer;
+  }
+  .unsupported-city-banner button:hover { background: #78350f; }
+
   /* ── View Toggle ─────────────────────────────────── */
   .view-toggle {
     display: flex;
@@ -797,6 +815,7 @@
 
 <!-- Main Content -->
 <div class="main">
+  <div id="unsupportedCityBanner" style="display:none;"></div>
   <div class="section-header">
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
@@ -899,6 +918,7 @@ const COUNTRIES = [
 let allEvents = {};
 const urlParams = new URLSearchParams(window.location.search);
 const cityFromUrl = urlParams.get('city');
+const unsupportedCity = cityFromUrl && !CITIES[cityFromUrl] ? cityFromUrl : null;
 let currentCity = (cityFromUrl && CITIES[cityFromUrl]) ? cityFromUrl : 'bengaluru';
 let searchQuery = ''; // kept for filter compatibility
 let emailCaptured = !!localStorage.getItem('userEmail');
@@ -1405,6 +1425,19 @@ function renderMap(events) {
       main.after(hero);
       hero.classList.add('mobile-moved');
     }
+  }
+
+  // Show banner for unsupported cities
+  if (unsupportedCity) {
+    const prettyCity = unsupportedCity.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const banner = document.getElementById('unsupportedCityBanner');
+    banner.style.display = 'block';
+    banner.innerHTML = `<div class="unsupported-city-banner">
+      <h3>We don't cover ${prettyCity} yet</h3>
+      <p>We're showing you ${CITIES[currentCity].label} events instead. Want us to add ${prettyCity}? Let us know and we'll notify you when it's live.</p>
+      <button onclick="track('request_city', { city: '${prettyCity}' }); openSubscribe()">Request ${prettyCity}</button>
+    </div>`;
+    track('unsupported_city', { requested: prettyCity, shown: CITIES[currentCity].label });
   }
 
   // Track page load with event counts
