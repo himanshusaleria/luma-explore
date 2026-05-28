@@ -1338,5 +1338,10 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-28T16:00:36.719862+00:00"
+  },
+  "cal-1rEEm4F9IcFaTe1": {
+    "name": "General Magic Calendar",
+    "slug": "general-magic",
+    "added": "2026-05-28T21:55:26.074938+00:00"
   }
 }
