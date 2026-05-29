@@ -1159,28 +1159,23 @@ function getDateRange(filter, tz) {
   return null;
 }
 
-function renderEvents(events) {
-  const content = document.getElementById('content');
-  // Filter out past events (only show today and future in the event's timezone)
-  const filtered = events.filter(e => {
+function filterEvents(events) {
+  return events.filter(e => {
     if (e.start_at) {
       const tz = e.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone;
       const eventDateStr = getDateInTz(new Date(e.start_at), tz);
       const todayStr = getDateInTz(new Date(), tz);
       if (eventDateStr < todayStr) return false;
-      // Date filter
       if (activeDateFilter) {
         const range = getDateRange(activeDateFilter, tz);
         if (range && (eventDateStr < range.start || eventDateStr > range.end)) return false;
       }
     }
-    // Filter tag
     if (activeFilter) {
       const f = activeFilter.toLowerCase();
       const searchable = ((e.name||'') + ' ' + (e.tags||'') + ' ' + (e.calendar_name||'') + ' ' + (e.hosts||'')).toLowerCase();
       if (!searchable.includes(f)) return false;
     }
-    // Search query
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (e.name||'').toLowerCase().includes(q)
@@ -1189,6 +1184,11 @@ function renderEvents(events) {
       || (e.calendar_name||'').toLowerCase().includes(q)
       || (e.tags||'').toLowerCase().includes(q);
   });
+}
+
+function renderEvents(events) {
+  const content = document.getElementById('content');
+  const filtered = filterEvents(events);
 
   const totalCount = filtered.length;
   const hiddenCount = filtered.filter(e => e.source && e.source !== 'featured').length;
@@ -1480,14 +1480,7 @@ function renderMap(events) {
   mapMarkers.forEach(m => mapInstance.removeLayer(m));
   mapMarkers = [];
 
-  const today = new Date(); today.setHours(0,0,0,0);
-  const filtered = events.filter(e => {
-    if (e.start_at) { const ed = new Date(e.start_at); ed.setHours(0,0,0,0); if (ed < today) return false; }
-    if (!searchQuery) return true;
-    const q = searchQuery.toLowerCase();
-    return (e.name||'').toLowerCase().includes(q) || (e.hosts||'').toLowerCase().includes(q)
-      || (e.sublocality||'').toLowerCase().includes(q) || (e.tags||'').toLowerCase().includes(q);
-  });
+  const filtered = filterEvents(events);
 
   const mappable = filtered.filter(e => e.latitude && e.longitude);
   document.getElementById('eventCount').textContent = `${mappable.length} event${mappable.length!==1?'s':''} on map`;
