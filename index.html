@@ -7,21 +7,21 @@
 <meta name="description" content="Find all events on Luma including hidden ones. Browse tech events, AI events, startup events, crypto events, social events, and community events across 12 cities. Events in Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, Boston, Pune, Hyderabad, Chennai.">
 <meta name="keywords" content="luma, luma event, luma com, events in bangalore, tech events in bangalore, bangalore it events, sf events, events in sfo, san francisco area events, singapore events, events in mumbai, events in delhi, events boston, events in toronto, toronto tech week, toronto events this weekend, events in vancouver, vancouver events this weekend, events in montreal, montreal festivals, montreal events this weekend, tech events, ai events, startup events, crypto events, community events, social events, networking events, festivals, shows, live music, comedy shows, tech networking events, event dinners, event networking, all events, hidden events, featured events, find events, community calendars, public events, event lu">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://himanshusaleria.github.io/luma-explore/">
+<link rel="canonical" href="https://hiddenevents.online/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
 <meta property="og:description" content="Stop missing hidden meetups, founder dinners, and niche gatherings. We surface Luma events that don't appear on the featured page across 12 cities including Bangalore, SF, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.">
-<meta property="og:url" content="https://himanshusaleria.github.io/luma-explore/">
+<meta property="og:url" content="https://hiddenevents.online/">
 <meta property="og:site_name" content="Luma Event Explorer">
-<meta property="og:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
+<meta property="og:image" content="https://hiddenevents.online/images/og-image.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Luma Event Explorer — Discover Hidden Events in Your City">
 <meta name="twitter:description" content="We surface Luma events that don't appear on the featured page. Browse hidden meetups, hackathons, and founder dinners across 12 cities in India, US, Canada, and Singapore.">
-<meta name="twitter:image" content="https://himanshusaleria.github.io/luma-explore/images/og-image.webp">
+<meta name="twitter:image" content="https://hiddenevents.online/images/og-image.webp">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZKK4LPJB7"></script>
 <script>
@@ -36,7 +36,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Luma Event Explorer",
-  "url": "https://himanshusaleria.github.io/luma-explore/",
+  "url": "https://hiddenevents.online/",
   "description": "Discover hidden tech events, meetups, and gatherings on Luma that don't appear on the featured page. Browse events in Bangalore, San Francisco, Singapore, Toronto, Vancouver, Montreal, Mumbai, Delhi, and Boston.",
   "applicationCategory": "EventApplication",
   "operatingSystem": "Web",
@@ -192,6 +192,33 @@
     transition: background 0.15s;
   }
   .btn-submit:hover { background: #333; }
+
+  /* ── Filter Tags ─────────────────────────────────── */
+  .filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .filter-tag {
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .filter-tag:hover { border-color: #999; color: #1a1a1a; }
+  .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .filter-row-label { font-size: 11px; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
 
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
@@ -791,6 +818,7 @@
     <div class="city-selector" id="citySelector"></div>
   </div>
   <div class="nav-right">
+    <input type="text" class="search-box" id="searchBox" placeholder="Search events, hosts, tags...">
     <a class="btn-submit" href="#" onclick="event.preventDefault(); track('cta_submit_event'); emailLink('List%20my%20event','Hi%2C%0A%0APlease%20add%20my%20event%20to%20Event%20Explorer.%0A%0AEvent%20link%3A%20%0ACity%3A%20%0A%0AThank%20you!')">Submit Event</a>
   </div>
 </div>
@@ -819,6 +847,29 @@
   <div class="section-header">
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
+  </div>
+  <div class="filter-tags" style="gap:12px;">
+    <div class="filter-row" id="dateFilters">
+      <span class="filter-row-label">When</span>
+      <button class="filter-tag active" data-date="">All dates</button>
+      <button class="filter-tag" data-date="today">Today</button>
+      <button class="filter-tag" data-date="tomorrow">Tomorrow</button>
+      <button class="filter-tag" data-date="this-week">This week</button>
+      <button class="filter-tag" data-date="this-weekend">Weekend</button>
+      <button class="filter-tag" data-date="next-week">Next week</button>
+    </div>
+    <div class="filter-row" id="filterTags">
+      <span class="filter-row-label">Type</span>
+      <button class="filter-tag active" data-filter="">All types</button>
+      <button class="filter-tag" data-filter="ai">AI</button>
+      <button class="filter-tag" data-filter="startup">Startup</button>
+      <button class="filter-tag" data-filter="networking">Networking</button>
+      <button class="filter-tag" data-filter="hackathon">Hackathon</button>
+      <button class="filter-tag" data-filter="crypto">Crypto</button>
+      <button class="filter-tag" data-filter="design">Design</button>
+      <button class="filter-tag" data-filter="social">Social</button>
+      <button class="filter-tag" data-filter="wellness">Wellness</button>
+    </div>
   </div>
   <div id="mapContainer" class="map-container">
     <div id="map" style="width:100%; height:500px; border-radius:12px;"></div>
@@ -893,6 +944,15 @@
 </footer>
 
 <script>
+// Clean up malformed URLs (trailing backticks from sharing tools)
+if (window.location.href.includes('`')) {
+  window.history.replaceState(null, '', window.location.href.replace(/`/g, ''));
+}
+// Redirect old /luma-explore/ path to root (preserving query params)
+if (window.location.pathname.startsWith('/luma-explore')) {
+  window.location.replace('/' + window.location.search + window.location.hash);
+}
+
 const CITIES = {
   bengaluru: { label: 'Bengaluru', file: '/data/bengaluru_latest.json' },
   singapore: { label: 'Singapore', file: '/data/singapore_latest.json' },
@@ -918,10 +978,8 @@ const COUNTRIES = [
 let allEvents = {};
 // Parse city from URL: support /city/ paths and ?city= params (legacy)
 function getCityFromUrl() {
-  // Try path first: /bengaluru/ or /sf/
   const pathCity = window.location.pathname.replace(/^\/|\/$/g, '').split('/')[0];
   if (pathCity && CITIES[pathCity]) return pathCity;
-  // Fallback to query param (legacy)
   const paramCity = new URLSearchParams(window.location.search).get('city');
   if (paramCity && CITIES[paramCity]) return paramCity;
   return null;
@@ -941,7 +999,9 @@ if (legacyCity && CITIES[legacyCity] && window.location.pathname === '/') {
 const cityFromUrl = getCityFromUrl();
 const unsupportedCity = getRequestedCity();
 let currentCity = cityFromUrl || 'bengaluru';
-let searchQuery = ''; // kept for filter compatibility
+let searchQuery = '';
+let activeFilter = '';
+let activeDateFilter = '';
 let emailCaptured = !!localStorage.getItem('userEmail');
 
 // ── Analytics ──
@@ -1071,6 +1131,34 @@ function groupByDate(events) {
   return groups;
 }
 
+function getDateRange(filter, tz) {
+  const now = new Date();
+  const todayStr = getDateInTz(now, tz);
+  const tomorrow = new Date(now); tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowStr = getDateInTz(tomorrow, tz);
+  // Day of week: 0=Sun
+  const dow = now.getDay();
+  if (filter === 'today') return { start: todayStr, end: todayStr };
+  if (filter === 'tomorrow') return { start: tomorrowStr, end: tomorrowStr };
+  if (filter === 'this-week') {
+    // Through Sunday
+    const sun = new Date(now); sun.setDate(sun.getDate() + (7 - dow));
+    return { start: todayStr, end: getDateInTz(sun, tz) };
+  }
+  if (filter === 'this-weekend') {
+    // Saturday and Sunday of this week
+    const sat = new Date(now); sat.setDate(sat.getDate() + (6 - dow));
+    const sun = new Date(now); sun.setDate(sun.getDate() + (7 - dow));
+    return { start: getDateInTz(sat, tz), end: getDateInTz(sun, tz) };
+  }
+  if (filter === 'next-week') {
+    const nextMon = new Date(now); nextMon.setDate(nextMon.getDate() + (8 - dow));
+    const nextSun = new Date(now); nextSun.setDate(nextSun.getDate() + (14 - dow));
+    return { start: getDateInTz(nextMon, tz), end: getDateInTz(nextSun, tz) };
+  }
+  return null;
+}
+
 function renderEvents(events) {
   const content = document.getElementById('content');
   // Filter out past events (only show today and future in the event's timezone)
@@ -1080,7 +1168,19 @@ function renderEvents(events) {
       const eventDateStr = getDateInTz(new Date(e.start_at), tz);
       const todayStr = getDateInTz(new Date(), tz);
       if (eventDateStr < todayStr) return false;
+      // Date filter
+      if (activeDateFilter) {
+        const range = getDateRange(activeDateFilter, tz);
+        if (range && (eventDateStr < range.start || eventDateStr > range.end)) return false;
+      }
     }
+    // Filter tag
+    if (activeFilter) {
+      const f = activeFilter.toLowerCase();
+      const searchable = ((e.name||'') + ' ' + (e.tags||'') + ' ' + (e.calendar_name||'') + ' ' + (e.hosts||'')).toLowerCase();
+      if (!searchable.includes(f)) return false;
+    }
+    // Search query
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
     return (e.name||'').toLowerCase().includes(q)
@@ -1447,6 +1547,43 @@ function renderMap(events) {
       hero.classList.add('mobile-moved');
     }
   }
+
+  // Search box
+  const searchBox = document.getElementById('searchBox');
+  let searchTimeout;
+  searchBox.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      searchQuery = e.target.value.trim();
+      if (searchQuery) track('search', { query: searchQuery, city: CITIES[currentCity].label });
+      renderEvents(allEvents[currentCity] || []);
+      if (mapInstance) renderMap(allEvents[currentCity] || []);
+    }, 200);
+  });
+
+  // Category filter tags
+  document.getElementById('filterTags').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-tag');
+    if (!btn) return;
+    document.querySelectorAll('#filterTags .filter-tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter || '';
+    if (activeFilter) track('filter_tag', { filter: activeFilter, city: CITIES[currentCity].label });
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+  });
+
+  // Date filter tags
+  document.getElementById('dateFilters').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-tag');
+    if (!btn) return;
+    document.querySelectorAll('#dateFilters .filter-tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    activeDateFilter = btn.dataset.date || '';
+    if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+  });
 
   // Show banner for unsupported cities
   if (unsupportedCity) {
