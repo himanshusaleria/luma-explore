@@ -1149,10 +1149,13 @@ function renderEvents(events) {
   html += '</div>'; // close timeline
 
   if (isGated) {
+    const remaining = totalCount - 5;
+    const nextFew = filtered.slice(5, 8).map(e => escHtml(e.name)).join('</li><li>');
     html += `<div class="gate-banner">
-      <h3>See all ${totalCount} events</h3>
-      <p>You're viewing the first 5. Subscribe to unlock all ${totalCount} events including ${hiddenCount} hidden ones.</p>
-      <button onclick="openSubscribe()">Unlock all events</button>
+      <h3>You're missing ${remaining} more events</h3>
+      <p>Including:</p>
+      <ul style="font-size:13px;color:#444;text-align:left;max-width:400px;margin:0 auto 16px;padding-left:20px;line-height:1.8;"><li>${nextFew}</li><li>...and ${remaining - 3} more</li></ul>
+      <button onclick="openSubscribe()">Enter email to see all ${totalCount} events</button>
     </div>`;
   }
 
