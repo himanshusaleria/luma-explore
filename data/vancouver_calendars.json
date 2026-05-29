@@ -148,5 +148,20 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-27T17:20:09.582891+00:00"
+  },
+  "cal-CvuDnsONPxinxqk": {
+    "name": "Atelier",
+    "slug": "atelier.place",
+    "added": "2026-05-29T03:42:37.804157+00:00"
+  },
+  "cal-bveaymYTj6mMs10": {
+    "name": "North House",
+    "slug": "northhouse",
+    "added": "2026-05-29T03:42:37.804181+00:00"
+  },
+  "cal-wCgcTxUHx7C86Lv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-29T03:42:37.804189+00:00"
   }
 }
