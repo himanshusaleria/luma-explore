@@ -94,5 +94,29 @@
     "waitlist_active": false,
     "source": "featured",
     "tags": ""
+  },
+  {
+    "event_id": "evt-C5EafgdGC2Uhhtj",
+    "name": "AI Engineers Day with OpenAI, Peak XV and Activate",
+    "url": "https://lu.ma/7h38q56g",
+    "start_at": "2026-05-28T10:30:00.000Z",
+    "end_at": "2026-05-28T14:30:00.000Z",
+    "timezone": "Asia/Kolkata",
+    "location_type": "offline",
+    "city": "Mumbai",
+    "sublocality": "Ambedkar Nagar",
+    "country": "India",
+    "latitude": 19.07,
+    "longitude": 72.875,
+    "cover_url": "https://images.lumacdn.com/uploads/hb/ea3088fc-4015-4632-96d4-9e44dc6eb96c.jpg",
+    "guest_count": 0,
+    "hosts": "Peak XV, Pratyush Choudhury",
+    "calendar_name": "Peak XV",
+    "calendar_slug": "peakxvpartners",
+    "event_type": "independent",
+    "visibility": "public",
+    "waitlist_active": false,
+    "source": "featured",
+    "tags": ""
   }
 ]
