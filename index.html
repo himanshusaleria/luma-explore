@@ -217,6 +217,8 @@
   }
   .filter-tag:hover { border-color: #999; color: #1a1a1a; }
   .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .filter-row-label { font-size: 11px; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
 
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
@@ -827,16 +829,28 @@
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
   </div>
-  <div class="filter-tags" id="filterTags">
-    <button class="filter-tag active" data-filter="">All</button>
-    <button class="filter-tag" data-filter="ai">AI</button>
-    <button class="filter-tag" data-filter="startup">Startup</button>
-    <button class="filter-tag" data-filter="networking">Networking</button>
-    <button class="filter-tag" data-filter="hackathon">Hackathon</button>
-    <button class="filter-tag" data-filter="crypto">Crypto</button>
-    <button class="filter-tag" data-filter="design">Design</button>
-    <button class="filter-tag" data-filter="social">Social</button>
-    <button class="filter-tag" data-filter="wellness">Wellness</button>
+  <div class="filter-tags" style="gap:12px;">
+    <div class="filter-row" id="dateFilters">
+      <span class="filter-row-label">When</span>
+      <button class="filter-tag active" data-date="">All dates</button>
+      <button class="filter-tag" data-date="today">Today</button>
+      <button class="filter-tag" data-date="tomorrow">Tomorrow</button>
+      <button class="filter-tag" data-date="this-week">This week</button>
+      <button class="filter-tag" data-date="this-weekend">Weekend</button>
+      <button class="filter-tag" data-date="next-week">Next week</button>
+    </div>
+    <div class="filter-row" id="filterTags">
+      <span class="filter-row-label">Type</span>
+      <button class="filter-tag active" data-filter="">All types</button>
+      <button class="filter-tag" data-filter="ai">AI</button>
+      <button class="filter-tag" data-filter="startup">Startup</button>
+      <button class="filter-tag" data-filter="networking">Networking</button>
+      <button class="filter-tag" data-filter="hackathon">Hackathon</button>
+      <button class="filter-tag" data-filter="crypto">Crypto</button>
+      <button class="filter-tag" data-filter="design">Design</button>
+      <button class="filter-tag" data-filter="social">Social</button>
+      <button class="filter-tag" data-filter="wellness">Wellness</button>
+    </div>
   </div>
   <div id="mapContainer" class="map-container">
     <div id="map" style="width:100%; height:500px; border-radius:12px;"></div>
@@ -939,6 +953,7 @@ const cityFromUrl = urlParams.get('city');
 let currentCity = (cityFromUrl && CITIES[cityFromUrl]) ? cityFromUrl : 'bengaluru';
 let searchQuery = '';
 let activeFilter = '';
+let activeDateFilter = '';
 let emailCaptured = !!localStorage.getItem('userEmail');
 
 // ── Analytics ──
@@ -1068,6 +1083,34 @@ function groupByDate(events) {
   return groups;
 }
 
+function getDateRange(filter, tz) {
+  const now = new Date();
+  const todayStr = getDateInTz(now, tz);
+  const tomorrow = new Date(now); tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowStr = getDateInTz(tomorrow, tz);
+  // Day of week: 0=Sun
+  const dow = now.getDay();
+  if (filter === 'today') return { start: todayStr, end: todayStr };
+  if (filter === 'tomorrow') return { start: tomorrowStr, end: tomorrowStr };
+  if (filter === 'this-week') {
+    // Through Sunday
+    const sun = new Date(now); sun.setDate(sun.getDate() + (7 - dow));
+    return { start: todayStr, end: getDateInTz(sun, tz) };
+  }
+  if (filter === 'this-weekend') {
+    // Saturday and Sunday of this week
+    const sat = new Date(now); sat.setDate(sat.getDate() + (6 - dow));
+    const sun = new Date(now); sun.setDate(sun.getDate() + (7 - dow));
+    return { start: getDateInTz(sat, tz), end: getDateInTz(sun, tz) };
+  }
+  if (filter === 'next-week') {
+    const nextMon = new Date(now); nextMon.setDate(nextMon.getDate() + (8 - dow));
+    const nextSun = new Date(now); nextSun.setDate(nextSun.getDate() + (14 - dow));
+    return { start: getDateInTz(nextMon, tz), end: getDateInTz(nextSun, tz) };
+  }
+  return null;
+}
+
 function renderEvents(events) {
   const content = document.getElementById('content');
   // Filter out past events (only show today and future in the event's timezone)
@@ -1077,6 +1120,11 @@ function renderEvents(events) {
       const eventDateStr = getDateInTz(new Date(e.start_at), tz);
       const todayStr = getDateInTz(new Date(), tz);
       if (eventDateStr < todayStr) return false;
+      // Date filter
+      if (activeDateFilter) {
+        const range = getDateRange(activeDateFilter, tz);
+        if (range && (eventDateStr < range.start || eventDateStr > range.end)) return false;
+      }
     }
     // Filter tag
     if (activeFilter) {
@@ -1465,14 +1513,26 @@ function renderMap(events) {
     }, 200);
   });
 
-  // Filter tags
+  // Category filter tags
   document.getElementById('filterTags').addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-tag');
     if (!btn) return;
-    document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('#filterTags .filter-tag').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
     activeFilter = btn.dataset.filter || '';
     if (activeFilter) track('filter_tag', { filter: activeFilter, city: CITIES[currentCity].label });
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+  });
+
+  // Date filter tags
+  document.getElementById('dateFilters').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-tag');
+    if (!btn) return;
+    document.querySelectorAll('#dateFilters .filter-tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    activeDateFilter = btn.dataset.date || '';
+    if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
     renderEvents(allEvents[currentCity] || []);
     if (mapInstance) renderMap(allEvents[currentCity] || []);
   });
