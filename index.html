@@ -219,6 +219,25 @@
   .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .filter-row-label { font-size: 11px; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+  .mobile-filters { display: none; }
+  .mobile-filter-select {
+    flex: 1;
+    padding: 8px 28px 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background: #f9f9f9;
+    color: #1a1a1a;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+  }
 
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
@@ -704,6 +723,11 @@
       background-position: 8px center;
     }
     .btn-submit { display: none; }
+    .desktop-filters { display: none !important; }
+    .mobile-filters { display: flex; flex-direction: column; gap: 8px; padding: 10px 0; max-width: 900px; margin: 0 auto; }
+    .mobile-type-chips { display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+    .mobile-type-chips::-webkit-scrollbar { display: none; }
+    .mobile-type-chips .filter-tag { font-size: 11px; padding: 4px 10px; flex-shrink: 0; }
 
     /* Hero: hidden on mobile, moved after events list */
     .hero { display: none; }
@@ -810,12 +834,10 @@
 <!-- Top Nav -->
 <div class="top-nav">
   <div class="nav-left">
-    <a class="nav-logo" href="#">
+    <a class="nav-logo" href="/">
       <div class="nav-logo-icon">E</div>
       <span>Event Explorer</span>
     </a>
-    <div class="nav-divider"></div>
-    <div class="city-selector" id="citySelector"></div>
   </div>
   <div class="nav-right">
     <input type="text" class="search-box" id="searchBox" placeholder="Search events, hosts, tags...">
@@ -848,7 +870,12 @@
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
   </div>
-  <div class="filter-tags" style="gap:12px;">
+  <!-- Desktop filters (tags) -->
+  <div class="filter-tags desktop-filters" style="gap:12px;">
+    <div class="filter-row" id="cityFilters">
+      <span class="filter-row-label">City</span>
+      <div class="city-selector" id="citySelector"></div>
+    </div>
     <div class="filter-row" id="dateFilters">
       <span class="filter-row-label">When</span>
       <button class="filter-tag active" data-date="">All dates</button>
@@ -861,6 +888,31 @@
     <div class="filter-row" id="filterTags">
       <span class="filter-row-label">Type</span>
       <button class="filter-tag active" data-filter="">All types</button>
+      <button class="filter-tag" data-filter="ai">AI</button>
+      <button class="filter-tag" data-filter="startup">Startup</button>
+      <button class="filter-tag" data-filter="networking">Networking</button>
+      <button class="filter-tag" data-filter="hackathon">Hackathon</button>
+      <button class="filter-tag" data-filter="crypto">Crypto</button>
+      <button class="filter-tag" data-filter="design">Design</button>
+      <button class="filter-tag" data-filter="social">Social</button>
+      <button class="filter-tag" data-filter="wellness">Wellness</button>
+    </div>
+  </div>
+  <!-- Mobile filters (dropdowns + chips) -->
+  <div class="mobile-filters" id="mobileFilters">
+    <div style="display:flex;gap:8px;width:100%;">
+      <select class="mobile-filter-select" id="mobileCitySelect"></select>
+      <select class="mobile-filter-select" id="mobileDateSelect">
+        <option value="">All dates</option>
+        <option value="today">Today</option>
+        <option value="tomorrow">Tomorrow</option>
+        <option value="this-week">This week</option>
+        <option value="this-weekend">Weekend</option>
+        <option value="next-week">Next week</option>
+      </select>
+    </div>
+    <div class="mobile-type-chips" id="mobileTypeChips">
+      <button class="filter-tag active" data-filter="">All</button>
       <button class="filter-tag" data-filter="ai">AI</button>
       <button class="filter-tag" data-filter="startup">Startup</button>
       <button class="filter-tag" data-filter="networking">Networking</button>
@@ -998,9 +1050,25 @@ if (legacyCity && CITIES[legacyCity] && window.location.pathname === '/') {
 }
 const cityFromUrl = getCityFromUrl();
 const unsupportedCity = getRequestedCity();
-let currentCity = cityFromUrl || 'bengaluru';
+// Auto-detect default city from browser timezone
+function detectCityFromTimezone() {
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  // Direct city matches
+  if (tz === 'Asia/Kolkata' || tz === 'Asia/Calcutta') return 'bengaluru';
+  if (tz === 'Asia/Singapore') return 'singapore';
+  if (tz === 'America/Toronto' || tz === 'America/Iqaluit') return 'toronto';
+  if (tz === 'America/Vancouver') return 'vancouver';
+  if (tz === 'America/Montreal') return 'montreal';
+  // Country-level defaults
+  if (tz.startsWith('America/') && (tz.includes('Edmonton') || tz.includes('Winnipeg') || tz.includes('Regina') || tz.includes('Halifax') || tz.includes('St_Johns'))) return 'toronto';
+  if (tz.startsWith('America/')) return 'sf'; // US timezones
+  if (tz.startsWith('Asia/')) return 'bengaluru'; // other Asian
+  if (tz.startsWith('Europe/')) return 'sf'; // closest English hub
+  return 'bengaluru';
+}
+let currentCity = cityFromUrl || detectCityFromTimezone();
 let searchQuery = '';
-let activeFilter = '';
+let activeFilters = new Set(); // multiselect for type
 let activeDateFilter = '';
 let emailCaptured = !!localStorage.getItem('userEmail');
 
@@ -1171,10 +1239,13 @@ function filterEvents(events) {
         if (range && (eventDateStr < range.start || eventDateStr > range.end)) return false;
       }
     }
-    if (activeFilter) {
-      const f = activeFilter.toLowerCase();
+    if (activeFilters.size > 0) {
       const searchable = ((e.name||'') + ' ' + (e.tags||'') + ' ' + (e.calendar_name||'') + ' ' + (e.hosts||'')).toLowerCase();
-      if (!searchable.includes(f)) return false;
+      let matchesAny = false;
+      for (const f of activeFilters) {
+        if (searchable.includes(f.toLowerCase())) { matchesAny = true; break; }
+      }
+      if (!matchesAny) return false;
     }
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
@@ -1401,8 +1472,6 @@ window.addEventListener('popstate', async (e) => {
 });
 
 function renderCityTabs() {
-  const container = document.getElementById('citySelector');
-
   // Build select with country optgroups
   let options = '';
   for (const country of COUNTRIES) {
@@ -1416,14 +1485,34 @@ function renderCityTabs() {
     options += '</optgroup>';
   }
 
+  // Desktop city selector (in filters area)
+  const container = document.getElementById('citySelector');
   container.innerHTML = `<select class="city-select" id="citySelect">${options}</select>`;
-
   document.getElementById('citySelect').addEventListener('change', async (e) => {
     currentCity = e.target.value;
     track('city_switch', { city: CITIES[currentCity].label });
     await loadCity(currentCity);
     switchCity(currentCity);
+    // Sync mobile dropdown
+    const mobileSelect = document.getElementById('mobileCitySelect');
+    if (mobileSelect) mobileSelect.value = currentCity;
   });
+
+  // Mobile city selector
+  const mobileSelect = document.getElementById('mobileCitySelect');
+  if (mobileSelect) {
+    mobileSelect.innerHTML = options;
+    mobileSelect.value = currentCity;
+    mobileSelect.addEventListener('change', async (e) => {
+      currentCity = e.target.value;
+      track('city_switch', { city: CITIES[currentCity].label });
+      await loadCity(currentCity);
+      switchCity(currentCity);
+      // Sync desktop dropdown
+      const desktopSelect = document.getElementById('citySelect');
+      if (desktopSelect) desktopSelect.value = currentCity;
+    });
+  }
 }
 
 // ── Map View ──
@@ -1554,19 +1643,72 @@ function renderMap(events) {
     }, 200);
   });
 
-  // Category filter tags
+  // Shared helper to apply filters and re-render
+  function applyFilters() {
+    renderEvents(allEvents[currentCity] || []);
+    if (mapInstance) renderMap(allEvents[currentCity] || []);
+  }
+
+  // Category filter tags (desktop) — multiselect
+  function handleTypeClick(btn, container) {
+    const filter = btn.dataset.filter;
+    if (filter === '' || filter === undefined) {
+      // "All" clicked — clear everything
+      activeFilters.clear();
+      container.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+    } else {
+      // Toggle this filter
+      container.querySelector('[data-filter=""]').classList.remove('active');
+      if (activeFilters.has(filter)) {
+        activeFilters.delete(filter);
+        btn.classList.remove('active');
+      } else {
+        activeFilters.add(filter);
+        btn.classList.add('active');
+      }
+      // If nothing selected, re-activate "All"
+      if (activeFilters.size === 0) {
+        container.querySelector('[data-filter=""]').classList.add('active');
+      }
+    }
+    if (activeFilters.size) track('filter_tag', { filter: [...activeFilters].join(','), city: CITIES[currentCity].label });
+    applyFilters();
+  }
+
   document.getElementById('filterTags').addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-tag');
     if (!btn) return;
-    document.querySelectorAll('#filterTags .filter-tag').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter || '';
-    if (activeFilter) track('filter_tag', { filter: activeFilter, city: CITIES[currentCity].label });
-    renderEvents(allEvents[currentCity] || []);
-    if (mapInstance) renderMap(allEvents[currentCity] || []);
+    handleTypeClick(btn, document.getElementById('filterTags'));
+    // Sync mobile chips
+    syncTypeChips(document.getElementById('mobileTypeChips'));
   });
 
-  // Date filter tags
+  // Mobile type chips — multiselect
+  const mobileTypeChips = document.getElementById('mobileTypeChips');
+  if (mobileTypeChips) {
+    mobileTypeChips.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-tag');
+      if (!btn) return;
+      handleTypeClick(btn, mobileTypeChips);
+      // Sync desktop tags
+      syncTypeChips(document.getElementById('filterTags'));
+    });
+  }
+
+  function syncTypeChips(container) {
+    if (!container) return;
+    container.querySelectorAll('.filter-tag').forEach(t => {
+      const f = t.dataset.filter;
+      if (f === '' || f === undefined) {
+        t.classList.toggle('active', activeFilters.size === 0);
+      } else {
+        t.classList.toggle('active', activeFilters.has(f));
+      }
+    });
+  }
+
+  // Date filter tags (desktop)
   document.getElementById('dateFilters').addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-tag');
     if (!btn) return;
@@ -1574,9 +1716,25 @@ function renderMap(events) {
     btn.classList.add('active');
     activeDateFilter = btn.dataset.date || '';
     if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
-    renderEvents(allEvents[currentCity] || []);
-    if (mapInstance) renderMap(allEvents[currentCity] || []);
+    // Sync mobile dropdown
+    const mobileDate = document.getElementById('mobileDateSelect');
+    if (mobileDate) mobileDate.value = activeDateFilter;
+    applyFilters();
   });
+
+  // Mobile date dropdown
+  const mobileDateSelect = document.getElementById('mobileDateSelect');
+  if (mobileDateSelect) {
+    mobileDateSelect.addEventListener('change', (e) => {
+      activeDateFilter = e.target.value;
+      if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
+      // Sync desktop tags
+      document.querySelectorAll('#dateFilters .filter-tag').forEach(t => {
+        t.classList.toggle('active', (t.dataset.date || '') === activeDateFilter);
+      });
+      applyFilters();
+    });
+  }
 
   // Show banner for unsupported cities
   if (unsupportedCity) {
