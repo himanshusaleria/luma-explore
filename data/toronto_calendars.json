@@ -1328,5 +1328,25 @@
     "name": "Personal",
     "slug": null,
     "added": "2026-05-27T20:20:20.169573+00:00"
+  },
+  "cal-GfLIqnuMOBpz0l7": {
+    "name": "UAtech.events",
+    "slug": "uatech.events",
+    "added": "2026-05-28T16:00:36.719824+00:00"
+  },
+  "cal-Jg3A8xOGAMIaMhv": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-28T16:00:36.719862+00:00"
+  },
+  "cal-1rEEm4F9IcFaTe1": {
+    "name": "General Magic Calendar",
+    "slug": "general-magic",
+    "added": "2026-05-28T21:55:26.074938+00:00"
+  },
+  "cal-H9wHhDHkY1IzUdp": {
+    "name": "Climate Tech Canada - TOCW 2026",
+    "slug": "ctc-tocw26",
+    "added": "2026-05-29T03:42:54.330644+00:00"
   }
 }
