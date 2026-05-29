@@ -13,7 +13,7 @@
     "latitude": 18.589180799999998,
     "longitude": 73.7577709,
     "cover_url": "https://images.unsplash.com/photo-1570356811230-2f3b816ebb29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjQyMjF8MHwxfHNlYXJjaHw3fHxwdW5lfGVufDB8fHx8MTc3OTIwODk2MHwy&ixlib=rb-4.1.0&q=80&w=1080",
-    "guest_count": 39,
+    "guest_count": 41,
     "hosts": "Ashish Gakrey ",
     "calendar_name": "Ashish Gakrey - HR Shapers",
     "calendar_slug": null,
@@ -61,7 +61,7 @@
     "latitude": 18.5765933,
     "longitude": 73.76527399999999,
     "cover_url": "https://images.lumacdn.com/event-covers/gi/66f1f15d-fb98-4896-9b0d-5ee008a82e12.png",
-    "guest_count": 177,
+    "guest_count": 182,
     "hosts": "JS Community, Jagdip Pathare, Palak Gupta, Pranali Pawar, VIKRANT KHEDKAR, Shri Shah, Smridhi Gupta, Pooja lande",
     "calendar_name": "Personal",
     "calendar_slug": null,
@@ -69,7 +69,7 @@
     "visibility": "public",
     "waitlist_active": false,
     "source": "snowball",
-    "tags": "Tech"
+    "tags": "AI"
   },
   {
     "event_id": "evt-JwSBjGpowNkMABf",
@@ -181,7 +181,7 @@
     "latitude": 18.521852,
     "longitude": 73.846013,
     "cover_url": "https://images.lumacdn.com/uploads/7k/6cdd8e5a-e726-4681-b363-e4223faaf319.png",
-    "guest_count": 1,
+    "guest_count": 4,
     "hosts": "Dhan",
     "calendar_name": "Personal",
     "calendar_slug": null,
