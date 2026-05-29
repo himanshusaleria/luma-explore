@@ -193,36 +193,22 @@
   }
   .btn-submit:hover { background: #333; }
 
-  /* ── Filter Tags ─────────────────────────────────── */
-  .filter-tags {
+  /* ── Filter Bar ──────────────────────────────────── */
+  .filter-bar {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    gap: 10px;
     padding: 12px 0;
     max-width: 900px;
     margin: 0 auto;
   }
-  .filter-tag {
-    padding: 5px 12px;
-    border-radius: 16px;
-    border: 1px solid #e5e5e5;
-    background: #fff;
-    color: #555;
-    font-size: 12px;
-    font-family: inherit;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
+  .filter-dropdowns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
-  .filter-tag:hover { border-color: #999; color: #1a1a1a; }
-  .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
-  .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .filter-row-label { font-size: 11px; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
-  .mobile-filters { display: none; }
-  .mobile-filter-select {
-    flex: 1;
-    padding: 8px 28px 8px 10px;
+  .filter-select {
+    padding: 7px 28px 7px 10px;
     border-radius: 8px;
     border: 1px solid #e5e5e5;
     background: #f9f9f9;
@@ -238,6 +224,33 @@
     background-repeat: no-repeat;
     background-position: right 8px center;
   }
+  .filter-select:hover { border-color: #ccc; }
+  .filter-select:focus { border-color: #999; }
+  .type-chips {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .type-chips::-webkit-scrollbar { display: none; }
+  .filter-tag {
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #555;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .filter-tag:hover { border-color: #999; color: #1a1a1a; }
+  .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
 
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
@@ -723,11 +736,9 @@
       background-position: 8px center;
     }
     .btn-submit { display: none; }
-    .desktop-filters { display: none !important; }
-    .mobile-filters { display: flex; flex-direction: column; gap: 8px; padding: 10px 0; max-width: 900px; margin: 0 auto; }
-    .mobile-type-chips { display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
-    .mobile-type-chips::-webkit-scrollbar { display: none; }
-    .mobile-type-chips .filter-tag { font-size: 11px; padding: 4px 10px; flex-shrink: 0; }
+    .filter-dropdowns { flex-wrap: wrap; }
+    .filter-select, .city-select { flex: 1; min-width: 0; font-size: 13px; }
+    .type-chips .filter-tag { font-size: 11px; padding: 4px 10px; }
 
     /* Hero: hidden on mobile, moved after events list */
     .hero { display: none; }
@@ -870,39 +881,11 @@
     <h2 class="section-title">Events<span class="city-name" id="cityLabel"></span></h2>
     <div class="event-count-label" id="eventCount"></div>
   </div>
-  <!-- Desktop filters (tags) -->
-  <div class="filter-tags desktop-filters" style="gap:12px;">
-    <div class="filter-row" id="cityFilters">
-      <span class="filter-row-label">City</span>
+  <!-- Filters (dropdowns + type chips) -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-dropdowns">
       <div class="city-selector" id="citySelector"></div>
-    </div>
-    <div class="filter-row" id="dateFilters">
-      <span class="filter-row-label">When</span>
-      <button class="filter-tag active" data-date="">All dates</button>
-      <button class="filter-tag" data-date="today">Today</button>
-      <button class="filter-tag" data-date="tomorrow">Tomorrow</button>
-      <button class="filter-tag" data-date="this-week">This week</button>
-      <button class="filter-tag" data-date="this-weekend">Weekend</button>
-      <button class="filter-tag" data-date="next-week">Next week</button>
-    </div>
-    <div class="filter-row" id="filterTags">
-      <span class="filter-row-label">Type</span>
-      <button class="filter-tag active" data-filter="">All types</button>
-      <button class="filter-tag" data-filter="ai">AI</button>
-      <button class="filter-tag" data-filter="startup">Startup</button>
-      <button class="filter-tag" data-filter="networking">Networking</button>
-      <button class="filter-tag" data-filter="hackathon">Hackathon</button>
-      <button class="filter-tag" data-filter="crypto">Crypto</button>
-      <button class="filter-tag" data-filter="design">Design</button>
-      <button class="filter-tag" data-filter="social">Social</button>
-      <button class="filter-tag" data-filter="wellness">Wellness</button>
-    </div>
-  </div>
-  <!-- Mobile filters (dropdowns + chips) -->
-  <div class="mobile-filters" id="mobileFilters">
-    <div style="display:flex;gap:8px;width:100%;">
-      <select class="mobile-filter-select" id="mobileCitySelect"></select>
-      <select class="mobile-filter-select" id="mobileDateSelect">
+      <select class="filter-select" id="dateSelect">
         <option value="">All dates</option>
         <option value="today">Today</option>
         <option value="tomorrow">Tomorrow</option>
@@ -911,7 +894,7 @@
         <option value="next-week">Next week</option>
       </select>
     </div>
-    <div class="mobile-type-chips" id="mobileTypeChips">
+    <div class="type-chips" id="typeChips">
       <button class="filter-tag active" data-filter="">All</button>
       <button class="filter-tag" data-filter="ai">AI</button>
       <button class="filter-tag" data-filter="startup">Startup</button>
@@ -1493,26 +1476,7 @@ function renderCityTabs() {
     track('city_switch', { city: CITIES[currentCity].label });
     await loadCity(currentCity);
     switchCity(currentCity);
-    // Sync mobile dropdown
-    const mobileSelect = document.getElementById('mobileCitySelect');
-    if (mobileSelect) mobileSelect.value = currentCity;
   });
-
-  // Mobile city selector
-  const mobileSelect = document.getElementById('mobileCitySelect');
-  if (mobileSelect) {
-    mobileSelect.innerHTML = options;
-    mobileSelect.value = currentCity;
-    mobileSelect.addEventListener('change', async (e) => {
-      currentCity = e.target.value;
-      track('city_switch', { city: CITIES[currentCity].label });
-      await loadCity(currentCity);
-      switchCity(currentCity);
-      // Sync desktop dropdown
-      const desktopSelect = document.getElementById('citySelect');
-      if (desktopSelect) desktopSelect.value = currentCity;
-    });
-  }
 }
 
 // ── Map View ──
@@ -1676,64 +1640,18 @@ function renderMap(events) {
     applyFilters();
   }
 
-  document.getElementById('filterTags').addEventListener('click', (e) => {
+  // Type chips — multiselect
+  document.getElementById('typeChips').addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-tag');
     if (!btn) return;
-    handleTypeClick(btn, document.getElementById('filterTags'));
-    // Sync mobile chips
-    syncTypeChips(document.getElementById('mobileTypeChips'));
+    handleTypeClick(btn, document.getElementById('typeChips'));
   });
 
-  // Mobile type chips — multiselect
-  const mobileTypeChips = document.getElementById('mobileTypeChips');
-  if (mobileTypeChips) {
-    mobileTypeChips.addEventListener('click', (e) => {
-      const btn = e.target.closest('.filter-tag');
-      if (!btn) return;
-      handleTypeClick(btn, mobileTypeChips);
-      // Sync desktop tags
-      syncTypeChips(document.getElementById('filterTags'));
-    });
-  }
-
-  function syncTypeChips(container) {
-    if (!container) return;
-    container.querySelectorAll('.filter-tag').forEach(t => {
-      const f = t.dataset.filter;
-      if (f === '' || f === undefined) {
-        t.classList.toggle('active', activeFilters.size === 0);
-      } else {
-        t.classList.toggle('active', activeFilters.has(f));
-      }
-    });
-  }
-
-  // Date filter tags (desktop)
-  document.getElementById('dateFilters').addEventListener('click', (e) => {
-    const btn = e.target.closest('.filter-tag');
-    if (!btn) return;
-    document.querySelectorAll('#dateFilters .filter-tag').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    activeDateFilter = btn.dataset.date || '';
+  // Date dropdown
+  document.getElementById('dateSelect').addEventListener('change', (e) => {
+    activeDateFilter = e.target.value;
     if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
-    // Sync mobile dropdown
-    const mobileDate = document.getElementById('mobileDateSelect');
-    if (mobileDate) mobileDate.value = activeDateFilter;
     applyFilters();
-  });
-
-  // Mobile date dropdown
-  const mobileDateSelect = document.getElementById('mobileDateSelect');
-  if (mobileDateSelect) {
-    mobileDateSelect.addEventListener('change', (e) => {
-      activeDateFilter = e.target.value;
-      if (activeDateFilter) track('date_filter', { filter: activeDateFilter, city: CITIES[currentCity].label });
-      // Sync desktop tags
-      document.querySelectorAll('#dateFilters .filter-tag').forEach(t => {
-        t.classList.toggle('active', (t.dataset.date || '') === activeDateFilter);
-      });
-      applyFilters();
-    });
   }
 
   // Show banner for unsupported cities
