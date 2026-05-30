@@ -226,31 +226,6 @@
   }
   .filter-select:hover { border-color: #ccc; }
   .filter-select:focus { border-color: #999; }
-  .type-chips {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-  }
-  .type-chips::-webkit-scrollbar { display: none; }
-  .filter-tag {
-    padding: 5px 12px;
-    border-radius: 16px;
-    border: 1px solid #e5e5e5;
-    background: #fff;
-    color: #555;
-    font-size: 12px;
-    font-family: inherit;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .filter-tag:hover { border-color: #999; color: #1a1a1a; }
-  .filter-tag.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
 
   /* ── Hero Banner ─────────────────────────────────── */
   .hero {
@@ -738,7 +713,6 @@
     .btn-submit { display: none; }
     .filter-dropdowns { flex-wrap: wrap; }
     .filter-select, .city-select { flex: 1; min-width: 0; font-size: 13px; }
-    .type-chips .filter-tag { font-size: 11px; padding: 4px 10px; }
 
     /* Hero: hidden on mobile, moved after events list */
     .hero { display: none; }
@@ -894,17 +868,17 @@
         <option value="next-week">Next week</option>
       </select>
     </div>
-    <div class="type-chips" id="typeChips">
-      <button class="filter-tag active" data-filter="">All</button>
-      <button class="filter-tag" data-filter="ai">AI</button>
-      <button class="filter-tag" data-filter="startup">Startup</button>
-      <button class="filter-tag" data-filter="networking">Networking</button>
-      <button class="filter-tag" data-filter="hackathon">Hackathon</button>
-      <button class="filter-tag" data-filter="crypto">Crypto</button>
-      <button class="filter-tag" data-filter="design">Design</button>
-      <button class="filter-tag" data-filter="social">Social</button>
-      <button class="filter-tag" data-filter="wellness">Wellness</button>
-    </div>
+      <select class="filter-select" id="typeSelect">
+        <option value="">All types</option>
+        <option value="ai">AI</option>
+        <option value="startup">Startup</option>
+        <option value="networking">Networking</option>
+        <option value="hackathon">Hackathon</option>
+        <option value="crypto">Crypto</option>
+        <option value="design">Design</option>
+        <option value="social">Social</option>
+        <option value="wellness">Wellness</option>
+      </select>
   </div>
   <div id="mapContainer" class="map-container">
     <div id="map" style="width:100%; height:500px; border-radius:12px;"></div>
@@ -1051,7 +1025,7 @@ function detectCityFromTimezone() {
 }
 let currentCity = cityFromUrl || detectCityFromTimezone();
 let searchQuery = '';
-let activeFilters = new Set(); // multiselect for type
+let activeFilter = '';
 let activeDateFilter = '';
 let emailCaptured = !!localStorage.getItem('userEmail');
 
@@ -1222,13 +1196,9 @@ function filterEvents(events) {
         if (range && (eventDateStr < range.start || eventDateStr > range.end)) return false;
       }
     }
-    if (activeFilters.size > 0) {
+    if (activeFilter) {
       const searchable = ((e.name||'') + ' ' + (e.tags||'') + ' ' + (e.calendar_name||'') + ' ' + (e.hosts||'')).toLowerCase();
-      let matchesAny = false;
-      for (const f of activeFilters) {
-        if (searchable.includes(f.toLowerCase())) { matchesAny = true; break; }
-      }
-      if (!matchesAny) return false;
+      if (!searchable.includes(activeFilter.toLowerCase())) return false;
     }
     if (!searchQuery) return true;
     const q = searchQuery.toLowerCase();
@@ -1613,37 +1583,11 @@ function renderMap(events) {
   }
 
   // Category filter tags (desktop) — multiselect
-  function handleTypeClick(btn, container) {
-    const filter = btn.dataset.filter;
-    if (filter === '' || filter === undefined) {
-      // "All" clicked — clear everything
-      activeFilters.clear();
-      container.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
-    } else {
-      // Toggle this filter
-      container.querySelector('[data-filter=""]').classList.remove('active');
-      if (activeFilters.has(filter)) {
-        activeFilters.delete(filter);
-        btn.classList.remove('active');
-      } else {
-        activeFilters.add(filter);
-        btn.classList.add('active');
-      }
-      // If nothing selected, re-activate "All"
-      if (activeFilters.size === 0) {
-        container.querySelector('[data-filter=""]').classList.add('active');
-      }
-    }
-    if (activeFilters.size) track('filter_tag', { filter: [...activeFilters].join(','), city: CITIES[currentCity].label });
+  // Type dropdown
+  document.getElementById('typeSelect').addEventListener('change', (e) => {
+    activeFilter = e.target.value;
+    if (activeFilter) track('filter_tag', { filter: activeFilter, city: CITIES[currentCity].label });
     applyFilters();
-  }
-
-  // Type chips — multiselect
-  document.getElementById('typeChips').addEventListener('click', (e) => {
-    const btn = e.target.closest('.filter-tag');
-    if (!btn) return;
-    handleTypeClick(btn, document.getElementById('typeChips'));
   });
 
   // Date dropdown
