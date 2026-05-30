@@ -2083,5 +2083,15 @@
     "name": "TOA",
     "slug": null,
     "added": "2026-05-30T19:18:01.164982+00:00"
+  },
+  "cal-BBcl1Y4stEh37GR": {
+    "name": "Vizcom",
+    "slug": "vizcom",
+    "added": "2026-05-30T20:59:58.817770+00:00"
+  },
+  "cal-LCyLV203mvCL6bl": {
+    "name": "Hackathon",
+    "slug": null,
+    "added": "2026-05-30T20:59:58.817797+00:00"
   }
 }
