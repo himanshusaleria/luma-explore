@@ -2048,5 +2048,25 @@
     "name": "twill",
     "slug": "twill",
     "added": "2026-05-29T15:37:17.061123+00:00"
+  },
+  "cal-UT9glE1mEThf4im": {
+    "name": "Freestyle",
+    "slug": "freestyle-sh",
+    "added": "2026-05-30T03:31:37.807281+00:00"
+  },
+  "cal-kbGVPfkhvHVM5oB": {
+    "name": "The Pro",
+    "slug": "thepro",
+    "added": "2026-05-30T03:31:37.807296+00:00"
+  },
+  "cal-NyYJQ98Ku0cykY2": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-30T03:31:37.807309+00:00"
+  },
+  "cal-6DfBAYa12EEv68U": {
+    "name": "Personal",
+    "slug": null,
+    "added": "2026-05-30T03:31:37.807325+00:00"
   }
 }
